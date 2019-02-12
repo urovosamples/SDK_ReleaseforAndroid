@@ -1,0 +1,1 @@
+include ':BarcodeScan', ':sdklibrary', ':BarcodescanConfig', ':Magmanager', ':PrinterSample', ':IccManagerSample', ':PICCManager', ':SLE4442Sample', ':DeviceManager', ':PinPadSample'

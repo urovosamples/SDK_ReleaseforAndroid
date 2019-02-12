@@ -1,0 +1,5 @@
+<resources>
+
+    <string name="app_name">DeviceManager</string>
+    <string name="action_settings">Version</string>
+</resources>

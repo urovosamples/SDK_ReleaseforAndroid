@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/SinoSOFT/!svn/ver/86860/NewPostalService/res/raw
+END
+success.wav
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/SinoSOFT/!svn/ver/86860/NewPostalService/res/raw/success.wav
+END
+error.wav
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/SinoSOFT/!svn/ver/86860/NewPostalService/res/raw/error.wav
+END
+scan.wav
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/SinoSOFT/!svn/ver/86860/NewPostalService/res/raw/scan.wav
+END

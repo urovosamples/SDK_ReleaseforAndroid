@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SLE4442</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Version</string>
+    
+    <!-- Button string -->
+    <string name="btn_detect">Detect</string>
+    <string name="btn_initSle4442">Init 4442</string>
+    <string name="btn_reset">Reset 4442</string>
+    
+    
+    <string name="btn_readErrCount">Read Err Count</string>
+    <string name="btn_verifyPassword">Verify Password</string>
+    <string name="btn_changePassword">Change Password</string>
+    <string name="btn_readMainMem">Read Main Memory</string>
+    <string name="btn_readProctectionMem">Read Prot Memory</string>
+    
+    <string name="btn_writeMainMem">Write Main Memory</string>  
+    <string name="btn_writeProcMem">Write Prot Memory</string> 
+    
+    <!-- EditText string -->
+	<string name="et_password">Password</string>
+	<string name="et_memAddr">Address</string>
+	<string name="et_memLen">Length</string>
+	<string name="et_dataToWrite">HEX data to write</string>
+</resources>

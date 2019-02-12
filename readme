@@ -1,0 +1,146 @@
+Device hardware API:
+
+API Reference folder: API Docs
+
+libs folder: API jar file
+
+SDK_release folder: API demo
+
+BarcodeScan  DeviceManager pmInstall to Run ALL Devices
+
+ICCManager  MagManager  PICCManager PinPad SLE4442 Printer to Run I9000S and I9000A devices;Android4.3
+ 
+PASMDemo to Run I9000S and I9000A, i6200, i6200s;Android4.3
+
+NFCDemo to Run I6100s i6200s
+
+
+Version log:
+<Android4.3 Android5.1 Android6.0 Android7.1 OS> Release SDK <v3.0.0416>
+
+Requirements:
+
+Changed:
+1.Add init TYPE B prime protocol Interface to PiccManager calss.
+public int primeCard_init()
+public int primeCard_apduTransmit(byte[] sent,
+                                  int sentlen,
+                                  byte[] rsp)
+
+
+Dependencies:
+
+Version log:
+<Android4.3 Android5.1 OS> Release SDK <v2.4.0810>
+
+Requirements:
+
+Changed:
+1.PiccManager add request_norats(byte[] mode, byte[] atq) Interface
+
+Version log:
+<Android4.3 Android5.1 Android6.0 Android7.1 OS> Release SDK <v3.0.0416>
+
+Requirements:
+
+Changed:
+1.Update DeviceManger java doc.add: How to startup the system to check whether the OTA server has any new updates.
+2.Add: third party APP to install apk Demo.
+note:You must add the following permissions to the AndroidManifest.xml file.
+<uses-permission android:name="android.permission.HIDE_UNINSTALL_PACKAGES" />
+<uses-permission android:name="android.permission.HIDE_INSTALL_PACKAGES" />
+
+
+Dependencies:
+
+Version log:
+<Android4.3 Android5.1 OS> Release SDK <v2.4.0810>
+
+Requirements:
+
+Changed:
+1.PiccManager add request_norats(byte[] mode, byte[] atq) Interface 
+
+
+Dependencies:
+Version log:
+<Android4.3 Android5.1 OS> Release SDK <v2.4.0210>
+
+Requirements:
+
+Changed:
+1.KeyMapManager add implements for remap key event:
+
+
+Dependencies:
+Version log:
+<Android4.3 Android5.1 OS> Release SDK <v2.4.0106>
+
+Requirements:
+
+Changed:
+1.IccManager add implements for at88sc102 card:
+
+
+Dependencies:
+Version log:
+<Android4.3 Android5.1 OS> Release SDK <v2.3.1212>
+
+Requirements:
+
+Changed:
+1.DeviceManager add implements for i9000S Android4.3 ROM version 12/02/2016:
+/**
+ * Return  the currently active docker connected state .  
+ * @return true The device is in Ethernet mode or USB Host mode
+ */
+public boolean getDockerState() {
+}
+
+Dependencies:
+
+Version log:
+<Android4.3 Android5.1 OS> Release SDK <v2.3.1205>
+
+Requirements:
+
+Changed:
+1.SEManager add int getPinBlockEx(android.os.Bundle bundle, PedInputListener listener) implements
+ 
+Dependencies:
+
+<Android4.3 OS> Release SDK <v2.3.706>
+
+Requirements:
+
+Changed:
+1.update PiccManager IDCARD implements
+(1)idcard_init()
+(2)idcard_apduTransmit(byte[] sent, int sentlen, byte[] rsp) 
+2.update libs platform_sdk_v2.3.706.jar
+3.remove debug info.
+Dependencies:
+
+<Android4.3 OS> Release SDK <v2.3.602>
+
+Requirements:
+
+Changed:
+1.update BarcodeScan app
+2.update MagManager app
+3.update libs platform_sdk_v2.3.602.jar
+Dependencies:
+
+
+<Android4.3 OS> Release SDK <v2.3.406>
+
+Requirements:
+
+Changed:
+From v2.2.3 to v2.3.406 release changed and added note:
+
+1.API Docs update.
+2.Demo APP add Version info.
+3.add NFCDemo and PinPad app.
+4.ISO4442 rename to SLE4442.
+Dependencies:

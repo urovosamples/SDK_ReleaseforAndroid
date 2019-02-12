@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:keepScreenOn="true">
+	<EditText android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_weight="4"
+		android:scrollbarStyle="insideOverlay" android:id="@+id/EditTextReception"
+		android:hint="Reception" android:gravity="top"></EditText>
+        <Button android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:id="@+id/code" android:text="@string/code"  android:lines="1"></Button>
+        <Button android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:id="@+id/writecard" android:text="@string/writecard"  android:lines="1"></Button>
+</LinearLayout>
