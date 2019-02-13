@@ -20,16 +20,16 @@ Need more information about getting started with Urovo Android device? Check the
 - API Reference 
 - SDK_release ALL samples for android devices.
   - sdklibrary sdk develop library
-  -  BarcodeScan 
-  -  BarcodescanConfig
-  -  DeviceManager
-  -  Smart POS samples
-   -  IccManagerSample
-   -  Magmanager
-   -  PICCManager
-   -  PinPadSample
-   -  PrinterSample
-   -  SLE4442Sample
+  - BarcodeScan 
+  - BarcodescanConfig
+  - DeviceManager
+  [Smart POS samples]
+	- IccManagerSample
+	- Magmanager
+	- PICCManager
+	- PinPadSample
+	- PrinterSample
+	- SLE4442Sample
 
 
 
