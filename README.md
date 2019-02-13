@@ -1,4 +1,4 @@
-Read this in other launguages: [简体中文](https://github.com/urovosamples/SDK_ReleaseforAndroid/README.zh-cn.md)
+Read this in other launguages: [简体中文](https://github.com/urovosamples/SDK_ReleaseforAndroid/blob/master/README.zh-cn.md)
 
 # SDK_ReleaseforAndroid
 This repository contains all the samples files for Urovo Android Smart POS Payment Terminal;Handheld Data Terminal, including the revision history.
