@@ -115,6 +115,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 switch (action) {
                     case MotionEvent.ACTION_DOWN:
                         //resetStatusView();
+                        scanResult.requestFocus();
                         if(idmode[1] == Triggering.CONTINUOUS.toInt()) {
                             scanButton.setBackgroundResource(R.drawable.scan_button_down);
                         /*if(vibrator != null)
@@ -148,11 +149,22 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                     barcode_result.setText("" + scanResult.getText());
                     decode_length.setText("" + scanResult.getText().length());
                     scanResult.setText("");
+                    scanResult.requestFocus();
+                    return true;
                 }
                 return false;
             }
         });
     }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == 138 || keyCode == 120 || keyCode == 520 || keyCode == 521 || keyCode == 522) {
+            scanResult.requestFocus();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
     @Override
     protected void onPause() {
         // TODO Auto-generated method stub
