@@ -10,6 +10,8 @@ This repository contains all the samples files for Urovo Android Smart POS Payme
 ```sh
 git clone https://github.com/urovosamples/SDK_ReleaseforAndroid.git
 ```
+-Download last release
+https://github.com/urovosamples/SDK_ReleaseforAndroid/archive/master.zip
 
 - Open the project in [Android Studio][studio].
 - Compile and deploy to your Urovo Android device (such as a Smart POS I9000S model, PDA I6310 model).
