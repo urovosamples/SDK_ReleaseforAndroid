@@ -610,7 +610,7 @@ public class PrinterManagerActivity extends AppCompatActivity {
     }
 
     void doPrint(int type) {
-        Intent intent = new Intent("urovo.prnt.message");
+        Intent intent = new Intent("device.prnt.message");
         if (checkTempThreshold())
             return;
         int ret = printer.prn_getStatus();
@@ -892,7 +892,7 @@ public class PrinterManagerActivity extends AppCompatActivity {
 
                         case FORWARD:
                             printer.prn_paperForWard(4);
-                            Intent intent = new Intent("urovo.prnt.message");
+                            Intent intent = new Intent("device.prnt.message");
                             intent.putExtra("ret", 100);
                             sendBroadcast(intent);
                             break;
