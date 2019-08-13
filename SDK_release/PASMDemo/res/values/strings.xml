@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PSAM</string>
+    <string name="action_settings">Version</string>
+    <string name="hello_world">Hello world!</string>
+<string name="btn_send">Send APDU</string>
+<string name="btn_send_hint">HEX, 16 byte (e.g. 0A4F&#8230;)</string>
+<string name="btn_reset">Reset</string>
+<string name="btn_def_apdu">DEF APDU</string>
+<string name="btn_detect">Detect</string>
+<string name="btn_init_ic">Init</string>
+<string name="btn_init_sle4442">Init 4442</string>
+</resources>

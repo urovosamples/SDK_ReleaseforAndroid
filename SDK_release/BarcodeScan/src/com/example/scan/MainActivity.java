@@ -17,12 +17,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,13 +35,16 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     private ImageView scanButton;
     private TextView barcode_result, decode_length,decode_symbology;
     private EditText scanResult;
+    private EditText scanResult2;
     private CheckBox continuousScan;
     private RadioGroup mRadioGroup;
     private ScanManager mScanManager;
     int[] idbuf = new int[]{PropertyID.WEDGE_INTENT_ACTION_NAME, PropertyID.WEDGE_INTENT_DATA_STRING_TAG};
-    int[] idmodebuf = new int[]{PropertyID.WEDGE_KEYBOARD_ENABLE, PropertyID.TRIGGERING_MODES};
+    int[] idmodebuf = new int[]{PropertyID.WEDGE_KEYBOARD_ENABLE, PropertyID.TRIGGERING_MODES, PropertyID.LABEL_APPEND_ENTER};
     String[] action_value_buf = new String[]{ScanManager.ACTION_DECODE, ScanManager.BARCODE_STRING_TAG};
     int[] idmode;
+    private Spinner mAppendCharType;
+    private int mAppendCharValue;
     private BroadcastReceiver mScanReceiver = new BroadcastReceiver() {
 
         @Override
@@ -95,6 +102,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
             }
         });
         scanResult = (EditText) findViewById(R.id.scanResult);
+        scanResult2= (EditText) findViewById(R.id.scanResult2);
         mRadioGroup = (RadioGroup) findViewById(R.id.mode_output);
         mRadioGroup.setOnCheckedChangeListener(this);
         RadioButton keyboardMode = (RadioButton) findViewById(R.id.keyboard_output);
@@ -102,6 +110,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         RadioButton intentMode = (RadioButton) findViewById(R.id.intent_output);
         if(idmode[0] == 0) {
             scanResult.setVisibility(View.GONE);
+            scanResult2.setVisibility(View.GONE);
             intentMode.setChecked(true);
         }
         decode_symbology = (TextView) findViewById(R.id.symbology_result);
@@ -150,6 +159,68 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                     decode_length.setText("" + scanResult.getText().length());
                     scanResult.setText("");
                     scanResult.requestFocus();
+                    //Toast.makeText(MainActivity.this, "EditorAction " + event.toString(), Toast.LENGTH_LONG).show();
+                    return true;
+                } else if(KeyEvent.KEYCODE_TAB == keyCode && event.getAction() == KeyEvent.ACTION_DOWN){
+                    barcode_result.setText("" + scanResult.getText());
+                    decode_length.setText("" + scanResult.getText().length());
+                    scanResult.setText("");
+                    //Toast.makeText(MainActivity.this, "EditorAction " + event.toString(), Toast.LENGTH_LONG).show();
+                }
+                return false;
+            }
+        });
+        mAppendCharType = (Spinner)findViewById(R.id.spinner_barcode);
+        ArrayAdapter mBarcodeTypeAdapter = ArrayAdapter.createFromResource(
+                this, R.array.appendCharType,
+                android.R.layout.simple_spinner_item);
+
+        mBarcodeTypeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mAppendCharType.setAdapter(mBarcodeTypeAdapter);
+        mAppendCharValue = idmode[2];
+        mAppendCharType.setSelection(mAppendCharValue);
+        mAppendCharType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+                // TODO Auto-generated method stub
+                mAppendCharValue = position;
+                int[] idappend = new int[1];
+                idappend[0] = PropertyID.LABEL_APPEND_ENTER;
+                idmode[0] = mAppendCharValue;
+                mScanManager.setParameterInts(idappend, idmode);
+                if(mAppendCharValue == 2) {
+                    scanResult2.requestFocus();
+                    idappend[0] = PropertyID.WEDGE_KEYBOARD_TYPE;
+                    idmode[0] = 3;
+                    mScanManager.setParameterInts(idappend, idmode);
+                } else if(mAppendCharValue == 3) {
+                    idappend[0] = PropertyID.WEDGE_KEYBOARD_TYPE;
+                    idmode[0] = 2;
+                    mScanManager.setParameterInts(idappend, idmode);
+                    scanResult.requestFocus();
+                } else {
+                    idappend[0] = PropertyID.WEDGE_KEYBOARD_TYPE;
+                    idmode[0] = 0;
+                    mScanManager.setParameterInts(idappend, idmode);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // TODO Auto-generated method stub
+            }
+        });
+        scanResult2.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if(actionId == EditorInfo.IME_ACTION_DONE) {
+                    barcode_result.setText("" + scanResult2.getText());
+                    decode_length.setText("" + scanResult2.getText().length());
+                    scanResult2.setText("");
+
+                    Toast.makeText(MainActivity.this, "EditorAction DNOE event", Toast.LENGTH_LONG).show();
                     return true;
                 }
                 return false;
@@ -160,6 +231,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if(keyCode == 138 || keyCode == 120 || keyCode == 520 || keyCode == 521 || keyCode == 522) {
+            if(mAppendCharValue != 2)
             scanResult.requestFocus();
         }
         return super.onKeyDown(keyCode, event);

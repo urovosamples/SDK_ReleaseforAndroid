@@ -9,4 +9,10 @@
     <string name="keyboard_output">Keyboard Output</string>
     <string name="intent_output">Intent Output</string>
     <string name="continuous_scan">Continuous Scan</string>
+    <array name="appendCharType">
+        <item>None</item>
+        <item>Carriage return</item>
+        <item>Line feed</item>
+        <item>TAB</item>
+    </array>
 </resources>

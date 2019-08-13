@@ -1,6 +1,7 @@
 package com.example.devicemanager;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.device.DeviceManager;
@@ -14,6 +15,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     DeviceManager mDevice;
@@ -84,7 +88,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    private static String getCurrentDate() {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+        Date curDate = new Date(System.currentTimeMillis());
+        String str = formatter.format(curDate);
 
+        return str;
+    }
     @Override
     protected void onDestroy() {
         // TODO Auto-generated method stub
