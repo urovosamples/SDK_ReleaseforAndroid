@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.iccmanager"
+    android:versionCode="1"
+    android:versionName="2.3.406" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icc"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.iccmanager.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.iccmanager.ICCActivity" android:label="@string/icc"/>
+        <activity android:name="com.example.iccmanager.PSAMActivity" android:label="@string/psam"/>
+        <activity android:name="com.example.iccmanager.SLE4442Activity" android:label="@string/sle4442"/>
+    </application>
+
+</manifest>

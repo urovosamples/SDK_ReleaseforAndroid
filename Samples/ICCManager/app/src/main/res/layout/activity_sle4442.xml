@@ -1,0 +1,166 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+	<EditText 
+        android:id="@+id/et_memData"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:editable="false"
+        android:isScrollContainer="true"
+    	android:scrollbarStyle="insideOverlay" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+           
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:orientation="horizontal" >   
+	        
+	        <Button
+	            android:id="@+id/btn_detect"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:text="@string/btn_detect" />
+	        
+<!-- 	        <Button
+	            android:id="@+id/btn_initSle4442"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:text="@string/btn_initSle4442" /> -->
+	        
+	        <Button
+	            android:id="@+id/btn_reset"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:text="@string/btn_reset" />
+		</LinearLayout>
+		
+	   <LinearLayout
+			android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="1"
+		    android:orientation="horizontal"
+	        android:focusable="true"
+		    android:focusableInTouchMode="true">
+		
+	       	<LinearLayout
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		       	android:layout_weight="1"
+		        android:orientation="horizontal">
+		      
+			      <EditText 
+			          android:id="@+id/et_password"
+			          android:layout_width="0dp"
+			          android:layout_height="fill_parent"
+			          android:layout_weight="1"
+			          android:inputType="textCapCharacters"
+			          android:hint="@string/et_password" />
+			      <Button
+				          android:id="@+id/btn_readErrCount"
+				          android:layout_width="0dp"
+				          android:layout_height="fill_parent"
+				          android:layout_weight="1"
+				          android:text="@string/btn_readErrCount" />
+		      </LinearLayout>
+		      
+		      <LinearLayout
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		       	android:layout_weight="1"
+		        android:orientation="horizontal">
+		      
+			      <Button
+			          android:id="@+id/btn_verifyPassword"
+			          android:layout_width="0dp"
+			          android:layout_height="fill_parent"
+			          android:layout_weight="1"
+			          android:text="@string/btn_verifyPassword" />
+			      
+			      <Button
+			          android:id="@+id/btn_changePassword"
+			          android:layout_width="0dp"
+			          android:layout_height="fill_parent"
+			          android:layout_weight="1"
+			          android:text="@string/btn_changePassword" />
+		      </LinearLayout>
+		 </LinearLayout>
+	    
+		<LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	       	android:layout_weight="1"
+	        android:orientation="horizontal">
+	        
+	       <EditText 
+	            android:id="@+id/et_memAddr"
+	            android:layout_width="0dp"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="1"
+	            android:inputType="textPassword|number"
+	            android:hint="@string/et_memAddr" />
+	       
+	       <EditText 
+	            android:id="@+id/et_memLen"
+	            android:layout_width="0dp"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="1"
+	            android:inputType="textPassword|number"
+	            android:hint="@string/et_memLen" />
+	        
+	        <Button
+	            android:id="@+id/btn_readMainMem"
+	            android:layout_width="0dp"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="1"
+	            android:text="@string/btn_readMainMem" />
+	        
+			<Button
+	            android:id="@+id/btn_readProctectionMem"
+	            android:layout_width="0dp"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="1"
+	            android:text="@string/btn_readProctectionMem" />
+		</LinearLayout>
+		
+		<LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	       	android:layout_weight="1"
+	        android:orientation="horizontal">
+	        
+	       <EditText 
+	            android:id="@+id/et_dataToWrite"
+	            android:layout_width="0dp"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="2"
+	            android:inputType="textCapCharacters"
+	            android:hint="@string/et_dataToWrite" />
+	        
+	        <Button
+	            android:id="@+id/btn_writeMainMem"
+	            android:layout_width="0dp"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="1"
+	            android:text="@string/btn_writeMainMem" />
+	        
+			<Button
+	            android:id="@+id/btn_writeProcMem"
+	            android:layout_width="0dp"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="1"
+	            android:text="@string/btn_writeProcMem" />	
+		</LinearLayout>
+		 
+    </LinearLayout>
+</LinearLayout>

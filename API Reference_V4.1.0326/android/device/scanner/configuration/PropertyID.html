@@ -1,0 +1,3719 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<!-- UBX SDK API for Android V3.1.1 -->
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>
+PropertyID
+</TITLE>
+
+<META NAME="date" CONTENT="2018-05-14">
+
+<script src="../../../../assets/jquery-1.6.2.min.js"></script>
+		<!--<link rel="stylesheet" href="../../../../assets/bootstrap.min.css">-->
+		<script src="../../../../assets/bootstrap.min.js"></script>
+		<link href="../../../../assets/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+		<!--<link rel="stylesheet" type="text/css" href="../../../../assets/reset.css">-->
+		<link rel="stylesheet" type="text/css" href="../../../../assets/menu.css">
+		<script type="text/javascript" src="../../../../assets/menu.js"></script>
+		
+		<link href="../../../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />
+		<link href="../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
+		<script src="../../../../assets/search_autocomplete.js" type="text/javascript"></script>
+		<script src="../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
+		<script src="../../../../assets/doclava-developer-docs.js" type="text/javascript"></script>
+		<script src="../../../../assets/prettify.js" type="text/javascript"></script>
+		<!--<script src="../../../../assets/doclava-developer-reference.js" type="text/javascript"></script>-->
+		<script src="navtree_data.js" type="text/javascript"></script>
+		<script src="../../../../assets/customizations.js" type="text/javascript"></script>
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PropertyID";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+	<div id="topdiv" class="clearfx">
+		<div id="menu">
+			<ul> <span class="style-summart">Summary:</span>
+				
+				<li  class="cur">
+					<a href="#field_summary">FIELD</a>
+				</li>
+				<li>
+					<a href="#constructor_summary">CONSTR</a>
+				</li>
+				<li>
+					<a href="#methods_inherited_from_class_java.lang.Object">METHOD</a>
+				</li>
+			</ul>
+			<ul> <span class="style-summart">DETAIL:</span>
+			
+				<li  class="cur">
+					<A HREF="#field_detail">FIELD</A>
+				</li>
+				<li>
+					<a href="#constructor_detail">CONSTR</a>
+				</li>
+				
+			</ul>
+			<a class="totop" href="#topdiv"> </a>
+		</div>
+		<div class="bodyright">
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="class-div"><H2>
+<FONT SIZE="-1">
+android.device.scanner.configuration</FONT>
+<BR>
+Class PropertyID</H2></div>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>android.device.scanner.configuration.PropertyID</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public final class <B>PropertyID</B><DT>extends java.lang.Object</DL>
+</PRE>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#AUSTRALIAN_POST_ENABLE">AUSTRALIAN_POST_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Australia Post decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#AZTEC_ENABLE">AZTEC_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Aztec Code decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#AZTEC_INVERSE">AZTEC_INVERSE</A></B></CODE>
+
+<BR>
+Set the Aztec inverse decoder setting: Regular Only/ Inverse Only/ Inverse Autodetect. Note: The parameter values below are ONLY supported on platforms interfacing to the Zebra Technologies imagers.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#C25_ENABLE">C25_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether chinese 2 of 5 post decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODABAR_CLSI">CODABAR_CLSI</A></B></CODE>
+
+<BR>
+Enable this parameter to strip the start and stop characters and insert a space after the first, fifth, and tenth
+ characters of a 14-character Codabar symbol.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODABAR_ENABLE">CODABAR_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Codabar decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODABAR_ENABLE_CHECK">CODABAR_ENABLE_CHECK</A></B></CODE>
+
+<BR>
+This property specifies whether Codabar check digit verification is enable.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODABAR_LENGTH1">CODABAR_LENGTH1</A></B></CODE>
+
+<BR>
+Set minimun length for Codabar. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODABAR_LENGTH2">CODABAR_LENGTH2</A></B></CODE>
+
+<BR>
+Set maximun length for Codabar. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODABAR_NOTIS">CODABAR_NOTIS</A></B></CODE>
+
+<BR>
+Enable this parameter to strip the start and stop characters from a decoded Codabar symbol.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODABAR_SEND_CHECK">CODABAR_SEND_CHECK</A></B></CODE>
+
+<BR>
+This property specifies whetherto transmit Codabar data with or without the check digit.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODABAR_SEND_START">CODABAR_SEND_START</A></B></CODE>
+
+<BR>
+Start/Stop characters identify the leading and trailing ends of the bar code.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE_ISBT_128">CODE_ISBT_128</A></B></CODE>
+
+<BR>
+ISBT 128 is a variant of Code128 used in the blood bank industry.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE_ISBT_Concatenation_MODE">CODE_ISBT_Concatenation_MODE</A></B></CODE>
+
+<BR>
+Select an option for concatenating pairs of ISBT code types: 
+<br>0 : Disable ISBT Concatenation - The device does not concatenate pairs of ISBT codes it encounters.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE11_ENABLE">CODE11_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Codes11 decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE11_ENABLE_CHECK">CODE11_ENABLE_CHECK</A></B></CODE>
+
+<BR>
+This feature allows the decoder to check the integrity of all Code11 symbols to verify that the data complies
+ with the specified check digit algorithm.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE11_LENGTH1">CODE11_LENGTH1</A></B></CODE>
+
+<BR>
+Set minimun length for Code11. Range: 0 to 55.
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE11_LENGTH2">CODE11_LENGTH2</A></B></CODE>
+
+<BR>
+Set maximun length for Code11. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE11_SEND_CHECK">CODE11_SEND_CHECK</A></B></CODE>
+
+<BR>
+This property specifies whether or not to transmit the Code11 check digit(s).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE128_CHECK_ISBT_TABLE">CODE128_CHECK_ISBT_TABLE</A></B></CODE>
+
+<BR>
+The ISBT specification includes a table that lists several types of ISBT bar codes that are commonly used in pairs.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE128_ENABLE">CODE128_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Code128 decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE128_GS1_ENABLE">CODE128_GS1_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether GS1-128 decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE128_IGNORE_FNC4">CODE128_IGNORE_FNC4</A></B></CODE>
+
+<BR>
+This feature applies to Code128 bar codes with an embedded <FNC4> character.
+ <br> 0 : Disable Ignore Code128; The character is not transmitted but the following
+ character has 128 added to it.
+ <br> 1 : Enable Ignore Code128; This strips the character from the decode data. The
+ remaining characters do not change.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE128_LENGTH1">CODE128_LENGTH1</A></B></CODE>
+
+<BR>
+Set minimun length for Code128. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE128_LENGTH2">CODE128_LENGTH2</A></B></CODE>
+
+<BR>
+Set maximun length for Code128. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE128_REDUCED_QUIET_ZONE">CODE128_REDUCED_QUIET_ZONE</A></B></CODE>
+
+<BR>
+Enable or disable decoding Code128 bar codes with reduced quiet zones. 
+ The property value should be set as follows:
+ </br>0 : Disallow short quiet zone symbols.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE128_SECURITY_LEVEL">CODE128_SECURITY_LEVEL</A></B></CODE>
+
+<BR>
+Code128 bar codes are vulnerable to misdecodes, particularly when Code128 Lengths is set to Any Length.</TD>
+</TR>
+
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE32_ENABLE">CODE32_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Code32 decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE32_SEND_START">CODE32_SEND_START</A></B></CODE>
+
+<BR>
+Enable or disable adding the prefix character “A” to all Code32 bar codes.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE39_ENABLE">CODE39_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Code39 decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE39_ENABLE_CHECK">CODE39_ENABLE_CHECK</A></B></CODE>
+
+<BR>
+Enable this to check the integrity of all Code39 symbols to verify that the data complies with specified check digit algorithm.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE39_FULL_ASCII">CODE39_FULL_ASCII</A></B></CODE>
+
+<BR>
+Code39 Full ASCII is a variant of Code39 which pairs characters to encode the full ASCII character set.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE39_LENGTH1">CODE39_LENGTH1</A></B></CODE>
+
+<BR>
+Set minimun length for Code39. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE39_LENGTH2">CODE39_LENGTH2</A></B></CODE>
+
+<BR>
+Set maximun length for Code39. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE39_Quiet_Zone">CODE39_Quiet_Zone</A></B></CODE>
+
+<BR>
+Enable or disable decoding Code39 bar codes with reduced quiet zones.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE39_SECURITY_LEVEL">CODE39_SECURITY_LEVEL</A></B></CODE>
+
+<BR>
+The scanner offers four levels of decode security for Code39 barcodes.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE39_SEND_CHECK">CODE39_SEND_CHECK</A></B></CODE>
+
+<BR>
+This property specifies whether to transmit Code39 data with or without the check digit.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE39_START_STOP">CODE39_START_STOP</A></B></CODE>
+
+<BR>
+Start/Stop characters identify the leading and trailing ends of the bar code.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE93_ENABLE">CODE93_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Codabar decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE93_LENGTH1">CODE93_LENGTH1</A></B></CODE>
+
+<BR>
+Set minimun length for Code39. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODE93_LENGTH2">CODE93_LENGTH2</A></B></CODE>
+
+<BR>
+Set maximun length for Code39. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#CODING_FORMAT">CODING_FORMAT</A></B></CODE>
+
+<BR>
+This property specifies the character encoding to use for the bar code data.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#COMPOSITE_CC_AB_ENABLE">COMPOSITE_CC_AB_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Composite CC-A/B decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#COMPOSITE_CC_C_ENABLE">COMPOSITE_CC_C_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Composite CC-C decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#COMPOSITE_TLC39_ENABLE">COMPOSITE_TLC39_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Composite TLC-39 decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#D25_ENABLE">D25_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Discrete 2 of 5 decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#D25_LENGTH1">D25_LENGTH1</A></B></CODE>
+
+<BR>
+Set minimun length for Discrete 2 of 5. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#D25_LENGTH2">D25_LENGTH2</A></B></CODE>
+
+<BR>
+Set maximun length for Discrete 2 of 5. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DATAMATRIX_ENABLE">DATAMATRIX_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether DataMatrix decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DATAMATRIX_INVERSE">DATAMATRIX_INVERSE</A></B></CODE>
+
+<BR>
+Set the DATAMATRIX inverse decoder setting: Regular Only/ Inverse Only/ Inverse Autodetect. Note: The parameter values below are only supported on platforms interfacing to the Zebra Technologies imagers.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DATAMATRIX_LENGTH1">DATAMATRIX_LENGTH1</A></B></CODE>
+
+<BR>
+Set minimun length for DataMatrix. Range: 1 to 3166. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DATAMATRIX_LENGTH2">DATAMATRIX_LENGTH2</A></B></CODE>
+
+<BR>
+Set minimun length for DataMatrix. Range: 1 to 3166. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_2D_CENTERING_ENABLE">DEC_2D_CENTERING_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Centering mode decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_2D_CENTERING_MODE">DEC_2D_CENTERING_MODE</A></B></CODE>
+
+<BR>
+Mode Configuration settings:Off/Around Aimer/Field Of View. Note: The parameter values below are ONLY supported on platforms interfacing to the Honeywell 6703/6603 scanner.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_2D_LIGHTS_MODE">DEC_2D_LIGHTS_MODE</A></B></CODE>
+
+<BR>
+This property specifies whether the lights mode settings. Lights Configuration settings:(Illum/Aimer Off)/(Aimer Only)/(Illum Only)/(Alternating)/(Concurrent).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_2D_WINDOW_LOWER_RX">DEC_2D_WINDOW_LOWER_RX</A></B></CODE>
+
+<BR>
+Upper right X coordinate setting : default  386, min    0, max   415.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_2D_WINDOW_LOWER_RY">DEC_2D_WINDOW_LOWER_RY</A></B></CODE>
+
+<BR>
+Upper right Y coordinate setting : default  446, min  416, max   831.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_2D_WINDOW_UPPER_LX">DEC_2D_WINDOW_UPPER_LX</A></B></CODE>
+
+<BR>
+Upper left X coordinate setting : default  290, min    0, max   319.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_2D_WINDOW_UPPER_LY">DEC_2D_WINDOW_UPPER_LY</A></B></CODE>
+
+<BR>
+Upper left Y coordinate setting :default  350, min  320, max   639.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_ES_CONFORM_IMAGE">DEC_ES_CONFORM_IMAGE</A></B></CODE>
+
+<BR>
+The image must conform to the auto-exposure requirements, if not, it's rejected. Valid Values: Rang 0to 1.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_ES_CONFORM_TRIES">DEC_ES_CONFORM_TRIES</A></B></CODE>
+
+<BR>
+The number of time it will attempt to conform Valid Values: Rang 1 to 8.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_ES_FIXED_FRAME_RATE">DEC_ES_FIXED_FRAME_RATE</A></B></CODE>
+
+<BR>
+If exposure mode is FIXED, what is the frame rate (fixed, has no effect) Valid Values: Rang 1 to 30.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_ES_FIXED_GAIN">DEC_ES_FIXED_GAIN</A></B></CODE>
+
+<BR>
+If exposure mode is FIXED, what is the gain Valid Values: Rang 1 to 4.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_ES_MAX_EXP">DEC_ES_MAX_EXP</A></B></CODE>
+
+<BR>
+This is the maximum exposure allowed to use Valid Values: Rang 1 to 7874.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_ES_MAX_GAIN">DEC_ES_MAX_GAIN</A></B></CODE>
+
+<BR>
+This is the maximum gain allowed to use Valid Values: Rang 1 to 4.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_ES_TARGET_ACCEPT_GAP">DEC_ES_TARGET_ACCEPT_GAP</A></B></CODE>
+
+<BR>
+How close to the target while value must image be Valid Values: Rang 1 to 50.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_ES_TARGET_PERCENTILE">DEC_ES_TARGET_PERCENTILE</A></B></CODE>
+
+<BR>
+The percentile the white target value should be at Valid Values: Rang 1 to 99.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_ES_TARGET_VALUE">DEC_ES_TARGET_VALUE</A></B></CODE>
+
+<BR>
+Target white value in image to try and achieve Valid Values: Rang 1 to 255.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_OCR_MODE">DEC_OCR_MODE</A></B></CODE>
+
+<BR>
+Note: The parameter values below are ONLY supported on platforms interfacing to the Honeywell 6703/6603 scanner.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_OCR_TEMPLATE">DEC_OCR_TEMPLATE</A></B></CODE>
+
+<BR>
+Note: The parameter values below are ONLY supported on platforms interfacing to the Honeywell 6703/6603 scanner.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_OCR_USER_TEMPLATE">DEC_OCR_USER_TEMPLATE</A></B></CODE>
+
+<BR>
+Note: The parameter values below are ONLY supported on platforms interfacing to the Honeywell 6703/6603 scanner.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_ILLUM_POWER_LEVEL">DEC_ILLUM_POWER_LEVEL</A></B></CODE>
+
+<BR>
+This parameter sets the level of illumination by altering laser/LED power. Power Level(1/2/3/4/5/6/7).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_PICKLIST_AIM_DELAY">DEC_PICKLIST_AIM_DELAY</A></B></CODE>
+
+<BR>
+Note: The parameter values below are ONLY supported on platforms interfacing to the Honeywell 3680 scanner.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DEC_PICKLIST_AIM_MODE">DEC_PICKLIST_AIM_MODE</A></B></CODE>
+
+<BR>
+Note: The parameter values below are ONLY supported on platforms interfacing to the Honeywell 3680 scanner.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DOTCODE_ENABLE">DOTCODE_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Dotcode decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#DPM_DECODE_MODE">DPM_DECODE_MODE</A></B></CODE>
+
+<BR>
+This property specifies whether DPM decoding is enabled during the execution of Decode.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#EAN_EXT_ENABLE_2_5_DIGIT">EAN_EXT_ENABLE_2_5_DIGIT</A></B></CODE>
+
+<BR>
+This parameter determines whether or not EAN supplemental 2/5 should be transmitted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#EAN13_BOOKLAND_FORMAT">EAN13_BOOKLAND_FORMAT</A></B></CODE>
+
+<BR>
+Select one of the following
+ formats for Bookland data:
+ </br> 0 : Bookland ISBN-10; The decoder reports Bookland data starting with 978 in traditional 10-digit
+ format with the special Bookland check digit for backward-compatibility.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#EAN13_BOOKLANDEAN">EAN13_BOOKLANDEAN</A></B></CODE>
+
+<BR>
+This property specifies Enable or disable Bookland EAN.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#EAN13_ENABLE">EAN13_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether EAN-13 decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#EAN13_SEND_CHECK">EAN13_SEND_CHECK</A></B></CODE>
+
+<BR>
+This property specifies whether transmit EAN-13 check digit.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#EAN8_ENABLE">EAN8_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether EAN-8 decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#EAN8_SEND_CHECK">EAN8_SEND_CHECK</A></B></CODE>
+
+<BR>
+This property specifies whether transmit EAN-8 check digit.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#EAN8_TO_EAN13">EAN8_TO_EAN13</A></B></CODE>
+
+<BR>
+Enable this parameter to add five leading zeros to decoded EAN-8 symbols to make them compatible in format
+ to EAN-13 symbols.</TD>
+</TR>
+
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#FULL_READ_MODE">FULL_READ_MODE</A></B></CODE>
+
+<BR>
+Note: The property value below is ONLY supported on platforms interfacing to the Zebra Technologies imagers.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#FUZZY_1D_PROCESSING">FUZZY_1D_PROCESSING</A></B></CODE>
+
+<BR>
+This option is enabled by default to optimize decode performance on 1D bar codes, including damaged and
+ poor quality symbols.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#GOOD_READ_BEEP_ENABLE">GOOD_READ_BEEP_ENABLE</A></B></CODE>
+
+<BR>
+To set Scanner success beep when keystroke output enable <code>WEDGE_KEYBOARD_ENABLE</code>. Select valid value from the following options：
+ </br> 0 : None
+ </br> 1 : Short
+ </br> 2 : Sharp</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#GOOD_READ_VIBRATE_ENABLE">GOOD_READ_VIBRATE_ENABLE</A></B></CODE>
+
+<BR>
+To set Scanner success vibrate when keystroke output enable.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#GS1_14_ENABLE">GS1_14_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether GS1 DataBar-14 decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#GS1_14_TO_UPC_EAN">GS1_14_TO_UPC_EAN</A></B></CODE>
+
+<BR>
+This parameter only applies to GS1 DataBar-14 and GS1 DataBar Limited symbols not decoded as part of a
+ Composite symbol.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#GS1_EXP_ENABLE">GS1_EXP_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether GS1 DataBar Expanded decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#GS1_EXP_LENGTH1">GS1_EXP_LENGTH1</A></B></CODE>
+
+<BR>
+Set minimun length for GS1 DataBar Expanded. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#GS1_EXP_LENGTH2">GS1_EXP_LENGTH2</A></B></CODE>
+
+<BR>
+Set maximun length for GS1 DataBar Expanded. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#GS1_LIMIT_ENABLE">GS1_LIMIT_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether GS1 DataBar Limited decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#GS1_LIMIT_Security_Level">GS1_LIMIT_Security_Level</A></B></CODE>
+
+<BR>
+There are four levels of decode security for GS1 DataBar Limited bar codes.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#GS1128__UCCEAN_Composite">GS1128__UCCEAN_Composite</A></B></CODE>
+
+<BR>
+GS1-128 Emulation Mode for UCC/EAN Composite Codes.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#HANXIN_ENABLE">HANXIN_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Han Xin decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#HANXIN_INVERSE">HANXIN_INVERSE</A></B></CODE>
+
+<BR>
+Note: The parameter values below are ONLY supported on platforms interfacing to the Zebra Technologies imagers.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#I25_ENABLE">I25_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Interleaved 2 of 5 decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#I25_ENABLE_CHECK">I25_ENABLE_CHECK</A></B></CODE>
+
+<BR>
+Enable this feature to check the integrity of all I 2 of 5 symbols to verify the data complies with either the
+ specified Uniform Symbology Specification (USS), or the Optical Product Code Council (OPCC) check digit
+ algorithm.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#I25_LENGTH1">I25_LENGTH1</A></B></CODE>
+
+<BR>
+Set minimun length for Interleaved 2 of 5. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#I25_LENGTH2">I25_LENGTH2</A></B></CODE>
+
+<BR>
+Set maximun length for Interleaved 2 of 5. Range: 0 to 55.
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#I25_QUIET_ZONE">I25_QUIET_ZONE</A></B></CODE>
+
+<BR>
+Enable or disable decoding I 2 of 5 bar codes with reduced quiet zones
+ The property value should be set as follows:
+ </br>0: Disallow short quiet zone symbols.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#I25_SECURITY_LEVEL">I25_SECURITY_LEVEL</A></B></CODE>
+
+<BR>
+Interleaved 2 of 5 bar codes are vulnerable to misdecodes, particularly when I 2 of 5 Lengths is set to Any Length.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#I25_SEND_CHECK">I25_SEND_CHECK</A></B></CODE>
+
+<BR>
+This property specifies whetherto transmit I 2 of 5 data with or without the check digit.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#I25_TO_EAN13">I25_TO_EAN13</A></B></CODE>
+
+<BR>
+Enable this parameter to convert 14-character I 2 of 5 codes to EAN-13, and transmit to the host as EAN-13.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#IMAGE_EXPOSURE_MODE">IMAGE_EXPOSURE_MODE</A></B></CODE>
+
+<BR>
+This property specifies the exposure mode that will be used during image capture.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#IMAGE_FIXED_EXPOSURE">IMAGE_FIXED_EXPOSURE</A></B></CODE>
+
+<BR>
+If exposure mode is FIXED, what is the exposure <CODE>IMAGE_FIXED_EXPOSURE</CODE>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#IMAGE_ONE_D_INVERSE">IMAGE_ONE_D_INVERSE</A></B></CODE>
+
+<BR>
+This property specifies whether the 1D inverse decoder setting:
+ </br>  0 : Regular Only; the decoder decodes regular 1D bar codes only.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#IMAGE_PICKLIST_MODE">IMAGE_PICKLIST_MODE</A></B></CODE>
+
+<BR>
+To set 2D Scanner Mobile Phone/Display Mode. This mode improves bar code reading performance on mobile phones and electronic displays.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#JAPANESE_POST_ENABLE">JAPANESE_POST_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Japan Postal decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#KIX_CODE_ENABLE">KIX_CODE_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Netherlands KIX Code decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#LABEL_APPEND_ENTER">LABEL_APPEND_ENTER</A></B></CODE>
+
+<BR>
+To set Scanner success append the action key character when keystroke output enable. Select valid value from the following options：
+ </br> 0 : None
+ </br> 1 : Carriage return
+ </br> 2 : IME action done
+ </br> 3 : TAB</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#LABEL_FORMAT_SEPARATOR_CHAR">LABEL_FORMAT_SEPARATOR_CHAR</A></B></CODE>
+
+<BR>
+When a bar code is scanned, the bar code data contains the Group Seperator char will hava replace <CODE>LABEL_SEPARATOR_ENABLE</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#LABEL_MATCHER_PATTERN">LABEL_MATCHER_PATTERN</A></B></CODE>
+
+<BR>
+When a bar code is scanned, changed the bar code data with this form of regular expression.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#LABEL_MATCHER_REPLACEMENT">LABEL_MATCHER_REPLACEMENT</A></B></CODE>
+
+<BR>
+When a bar code is scanned, with the Hex value characters to replace the bar code data, if it is contains <code>LABEL_MATCHER_TARGETREGEX</code> setting hex characters.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#LABEL_MATCHER_TARGETREGEX">LABEL_MATCHER_TARGETREGEX</A></B></CODE>
+
+<BR>
+When a bar code is scanned, the bar code data contains the Hex value characters will hava replace <code>LABEL_MATCHER_REPLACEMENT</code></a>
+ set the replace source characters are Hex value characters.Example:this “j”  Hex ID is “6A”.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#LABEL_PREFIX">LABEL_PREFIX</A></B></CODE>
+
+<BR>
+When a bar code is scanned, additional Prefix characters is sent to the App along with the bar code data.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#LABEL_SEPARATOR_ENABLE">LABEL_SEPARATOR_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether the bar code data replace the separator char <code>LABEL_FORMAT_SEPARATOR_CHAR</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#LABEL_SUFFIX">LABEL_SUFFIX</A></B></CODE>
+
+<BR>
+When a bar code is scanned, additional Suffix characters is sent to the App along with the bar code data.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#LASER_ON_TIME">LASER_ON_TIME</A></B></CODE>
+
+<BR>
+Set the maximum time decode processing continues during a scan attempt.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#LINEAR_1D_QUIET_ZONE_LEVEL">LINEAR_1D_QUIET_ZONE_LEVEL</A></B></CODE>
+
+<BR>
+This feature sets the level of aggressiveness in decoding bar codes with a reduced quiet zone (the area in front
+ of and at the end of a bar code), and applies to symbologies enabled by a Reduced Quiet Zone parameter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#LINEAR_CODE_TYPE_SECURITY_LEVEL">LINEAR_CODE_TYPE_SECURITY_LEVEL</A></B></CODE>
+
+<BR>
+To set  Scanner linear code type security level. Parameters Values:0 to 3, default 1.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#M25_ENABLE">M25_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Matrix 2 of 5 decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#M25_ENABLE_CHECK">M25_ENABLE_CHECK</A></B></CODE>
+
+<BR>
+The check digit is the last character of the symbol used to verify the integrity of the data.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#M25_LENGTH1">M25_LENGTH1</A></B></CODE>
+
+<BR>
+Set minimun length for Matrix 2 of 5. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#M25_LENGTH2">M25_LENGTH2</A></B></CODE>
+
+<BR>
+Set maximun length for Matrix 2 of 5. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#M25_SEND_CHECK">M25_SEND_CHECK</A></B></CODE>
+
+<BR>
+This property specifies whether to transmit Matrix 2 of 5 data with or without the check digit.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#MAXICODE_ENABLE">MAXICODE_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether MaxiCode decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#MICROPDF417_ENABLE">MICROPDF417_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether MicroPDF417 decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#MICROQRCODE_ENABLE">MICROQRCODE_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether MicroQR Code decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#MSI_CHECK_2_MOD_11">MSI_CHECK_2_MOD_11</A></B></CODE>
+
+<BR>
+Select one of two algorithms for the verification of the second MSI check digit:
+ <br>1 : MOD 10/MOD 10
+ <br>0 : MOD 10/MOD 11</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#MSI_ENABLE">MSI_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether MSI decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#MSI_LENGTH1">MSI_LENGTH1</A></B></CODE>
+
+<BR>
+Set minimun length for MSI. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#MSI_LENGTH2">MSI_LENGTH2</A></B></CODE>
+
+<BR>
+Set maximun length for MSI. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#MSI_REQUIRE_2_CHECK">MSI_REQUIRE_2_CHECK</A></B></CODE>
+
+<BR>
+With MSI symbols, one check digit is mandatory and always verified by the reader.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#MSI_SEND_CHECK">MSI_SEND_CHECK</A></B></CODE>
+
+<BR>
+Select whether to transmit MSI data with or without the check digit.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#PDF417_ENABLE">PDF417_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether PDF417 decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#QRCODE_ENABLE">QRCODE_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether QR Code decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#QRCODE_INVERSE">QRCODE_INVERSE</A></B></CODE>
+
+<BR>
+Note: The parameter values below are ONLY supported on platforms interfacing to the Zebra Technologies imagers.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#REMOVE_NONPRINT_CHAR">REMOVE_NONPRINT_CHAR</A></B></CODE>
+
+<BR>
+This property specifies whether the bar code data remove the nonprint char.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#ROYAL_MAIL_ENABLE">ROYAL_MAIL_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether ROYAL mail decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#SEND_GOOD_READ_BEEP_ENABLE">SEND_GOOD_READ_BEEP_ENABLE</A></B></CODE>
+
+<BR>
+To set Scanner success beep or vibrate when SendBroadcast. SendBroadcast Values: 
+ <br><CODE>WEDGE_INTENT_ACTION_NAME</CODE> and 
+  <CODE>WEDGE_INTENT_DATA_STRING_TAG</CODE>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#SEND_GOOD_READ_VIBRATE_ENABLE">SEND_GOOD_READ_VIBRATE_ENABLE</A></B></CODE>
+
+<BR>
+To set Scanner success vibrate when SendBroadcast. SendBroadcast Values: 
+  <br><CODE>WEDGE_INTENT_ACTION_NAME</CODE> and 
+  <CODE>WEDGE_INTENT_DATA_STRING_TAG</CODE>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#SEND_LABEL_PREFIX_SUFFIX">SEND_LABEL_PREFIX_SUFFIX</A></B></CODE>
+
+<BR>
+This property specifies whether Data format mode.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#TIMEOUT_BETWEEN_SAME_SYMBOL">TIMEOUT_BETWEEN_SAME_SYMBOL</A></B></CODE>
+
+<BR>
+To set  Scanner decoding timeout between same symbol.
+ </br>Parameters Values:  value * 100 ms; value is 1 to 99, default 10.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#TRANSMIT_CODE_ID">TRANSMIT_CODE_ID</A></B></CODE>
+
+<BR>
+A Code ID character identifies the code type of a scanned bar code.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#TRIGGERING_LOCK">TRIGGERING_LOCK</A></B></CODE>
+
+<BR>
+This property specifies whether the scan trigger inactive (disable the scan button).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#TRIGGERING_MODES">TRIGGERING_MODES</A></B></CODE>
+
+<BR>
+To set Scanner trigger modes. 
+ </br>Parameters Values:  <A HREF="../../../../android/device/scanner/configuration/Triggering.html" title="enum in android.device.scanner.configuration"><CODE>Triggering</CODE></A></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#TRIOPTIC_ENABLE">TRIOPTIC_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Trioptic decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#UCC_COUPON_EXT_CODE">UCC_COUPON_EXT_CODE</A></B></CODE>
+
+<BR>
+Enable this parameter to decode UPC-A bar codes starting with digit ‘5’, EAN-13 bar codes starting with digit
+ ‘99’, and UPC-A/EAN-128 Coupon Codes.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#UCC_COUPON_EXT_REPORT_MODE">UCC_COUPON_EXT_REPORT_MODE</A></B></CODE>
+
+<BR>
+Traditional coupon symbols (old coupon symbols) are composed of two bar codes: UPC/EAN and Code128.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#UCC_EAN_ZERO_EXTEND">UCC_EAN_ZERO_EXTEND</A></B></CODE>
+
+<BR>
+Enable this parameter to add five leading zeros to decoded EAN-8 symbols to make them compatible in format
+  to EAN-13 symbols.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#UCC_REDUCED_QUIET_ZONE">UCC_REDUCED_QUIET_ZONE</A></B></CODE>
+
+<BR>
+Enable or disable decoding UPC bar codes with reduced quiet zones.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#UPC_EAN_SECURITY_LEVEL">UPC_EAN_SECURITY_LEVEL</A></B></CODE>
+
+<BR>
+To set Scanner linear code type security level. Parameters Values:  0 to 3, default 1.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#UPCA_ENABLE">UPCA_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether UPC-A decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#UPCA_SEND_CHECK">UPCA_SEND_CHECK</A></B></CODE>
+
+<BR>
+The check digit is the last character of the symbol used to verify the integrity of the data.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#UPCA_SEND_SYS">UPCA_SEND_SYS</A></B></CODE>
+
+<BR>
+Preamble characters are part of the UPC symbol, and include Country Code and System Character.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#UPCA_TO_EAN13">UPCA_TO_EAN13</A></B></CODE>
+
+<BR>
+When UPC-A Converted to EAN-13 is selected, UPC-A bar codes are converted to 13 digit EAN-13 codes by adding a
+ zero to the front.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#UPCE_ENABLE">UPCE_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether UPC-E decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#UPCE_SEND_CHECK">UPCE_SEND_CHECK</A></B></CODE>
+
+<BR>
+The check digit is the last character of the symbol used to verify the integrity of the data.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#UPCE_SEND_SYS">UPCE_SEND_SYS</A></B></CODE>
+
+<BR>
+Preamble characters are part of the UPC symbol, and include Country Code and System Character.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#UPCE_TO_UPCA">UPCE_TO_UPCA</A></B></CODE>
+
+<BR>
+Enable this to convert UPC-E (zero suppressed) decoded data to UPC-A format before transmission.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#UPCE1_ENABLE">UPCE1_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether UPC-E1 decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#UPCE1_SEND_CHECK">UPCE1_SEND_CHECK</A></B></CODE>
+
+<BR>
+The check digit is the last character of the symbol used to verify the integrity of the data.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#UPCE1_SEND_SYS">UPCE1_SEND_SYS</A></B></CODE>
+
+<BR>
+Preamble characters are part of the UPC symbol, and include Country Code and System Character.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#UPCE1_TO_UPCA">UPCE1_TO_UPCA</A></B></CODE>
+
+<BR>
+Enable this to convert UPC-E1 decoded data to UPC-A format before transmission.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#UPU_FICS_ENABLE">UPU_FICS_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether UPU FICS Postal decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#US_PLANET_ENABLE">US_PLANET_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether US Planet decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#US_POSTAL_SEND_CHECK">US_POSTAL_SEND_CHECK</A></B></CODE>
+
+<BR>
+Select whether to transmit US Postal data, which includes both US Postnet and US Planet, with or without the
+ check digit.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#US_POSTNET_ENABLE">US_POSTNET_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether US Postnet/US Postal decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#USPS_4STATE_ENABLE">USPS_4STATE_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether USPS 4CB/One Code/Intelligent Mail decoding is enabled.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#WEDGE_INTENT_ACTION_NAME">WEDGE_INTENT_ACTION_NAME</A></B></CODE>
+
+<BR>
+The intent action name is to receive barcode data. The default is "android.intent.ACTION_DECODE_DATA".</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#WEDGE_INTENT_DATA_STRING_TAG">WEDGE_INTENT_DATA_STRING_TAG</A></B></CODE>
+
+<BR>
+A string tag represents the barcode string. The default is "barcode_string".</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#WEDGE_INTENT_LABEL_TYPE_TAG">WEDGE_INTENT_LABEL_TYPE_TAG</A></B></CODE>
+
+<BR>
+A string tag represents the barcode type. The default is "barcodeType".</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#WEDGE_KEYBOARD_ENABLE">WEDGE_KEYBOARD_ENABLE</A></B></CODE>
+
+<BR>
+This property specifies whether Keyboard mode is enabled. If the configured PropertyID.WEDGE_KEYBOARD_ENABLE is 1, append the barcode text to TextBox, input method, or send the barcode text as key events.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#WEDGE_KEYBOARD_TYPE">WEDGE_KEYBOARD_TYPE</A></B></CODE>
+
+<BR>
+This property specifies select an option for keystroke types. Values:
+ </br>0 : Auto append text to TextBox.
+ </br>1 : If there is no TextBox, append text to input method.
+ </br>2 : Send key event.
+ </br>3 : Auto append text to input method.
+ </TD>
+
+</TR>
+</TABLE></div>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../android/device/scanner/configuration/PropertyID.html#PropertyID()">PropertyID</A></B>()</CODE>
+
+<BR>
+PropertyID class contains all supported Scanner sub-system reader properties.
+  </TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+</TABLE></div>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 160px; font-size: 16px;"><B>FIELD DETAIL</B></FONT></div></div>
+
+<A NAME="SEND_GOOD_READ_BEEP_ENABLE"><!-- --></A><H3>
+SEND_GOOD_READ_BEEP_ENABLE</H3>
+<PRE>
+public static final int <B>SEND_GOOD_READ_BEEP_ENABLE</B></PRE>
+<DL>
+<DD>To set Scanner success beep or vibrate when SendBroadcast. SendBroadcast Values: 
+ <br><CODE>WEDGE_INTENT_ACTION_NAME</CODE> and 
+  <CODE>WEDGE_INTENT_DATA_STRING_TAG</CODE>.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.SEND_GOOD_READ_BEEP_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SEND_GOOD_READ_VIBRATE_ENABLE"><!-- --></A><H3>
+SEND_GOOD_READ_VIBRATE_ENABLE</H3>
+<PRE>
+public static final int <B>SEND_GOOD_READ_VIBRATE_ENABLE</B></PRE>
+<DL>
+<DD>To set Scanner success vibrate when SendBroadcast. SendBroadcast Values: 
+  <br><CODE>WEDGE_INTENT_ACTION_NAME</CODE> and 
+  <CODE>WEDGE_INTENT_DATA_STRING_TAG</CODE>.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.SEND_GOOD_READ_VIBRATE_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TRIGGERING_MODES"><!-- --></A><H3>
+TRIGGERING_MODES</H3>
+<PRE>
+public static final int <B>TRIGGERING_MODES</B></PRE>
+<DL>
+<DD>To set Scanner trigger modes
+ </br>Parameters Values:  <A HREF="../../../../android/device/scanner/configuration/Triggering.html" title="enum in android.device.scanner.configuration"><CODE>Triggering</CODE></A>
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.TRIGGERING_MODES">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="GOOD_READ_BEEP_ENABLE"><!-- --></A><H3>
+GOOD_READ_BEEP_ENABLE</H3>
+<PRE>
+public static final int <B>GOOD_READ_BEEP_ENABLE</B></PRE>
+<DL>
+<DD>To set Scanner success beep when keystroke output enable <code>WEDGE_KEYBOARD_ENABLE</code>. Select valid value from the following options：
+ </br> 0 : None
+ </br> 1 : Short
+ </br> 2 : Sharp
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.GOOD_READ_BEEP_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="GOOD_READ_VIBRATE_ENABLE"><!-- --></A><H3>
+GOOD_READ_VIBRATE_ENABLE</H3>
+<PRE>
+public static final int <B>GOOD_READ_VIBRATE_ENABLE</B></PRE>
+<DL>
+<DD>To set Scanner success vibrate when keystroke output enable.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.GOOD_READ_VIBRATE_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="LABEL_APPEND_ENTER"><!-- --></A><H3>
+LABEL_APPEND_ENTER</H3>
+<PRE>
+public static final int <B>LABEL_APPEND_ENTER</B></PRE>
+<DL>
+<DD>To set Scanner success append the action key character when keystroke output enable. Select valid value from the following options：
+ </br> 0 : None
+ </br> 1 : Carriage return
+ </br> 2 : IME action done
+ </br> 3 : TAB
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.LABEL_APPEND_ENTER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="LABEL_FORMAT_SEPARATOR_CHAR"><!-- --></A><H3>
+LABEL_FORMAT_SEPARATOR_CHAR</H3>
+<PRE>
+public static final int <B>LABEL_FORMAT_SEPARATOR_CHAR</B></PRE>
+<DL>
+<DD>When a bar code is scanned, the bar code data contains the Group Seperator char will hava replace <CODE>LABEL_SEPARATOR_ENABLE</CODE>.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.LABEL_FORMAT_SEPARATOR_CHAR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="IMAGE_PICKLIST_MODE"><!-- --></A><H3>
+IMAGE_PICKLIST_MODE</H3>
+<PRE>
+public static final int <B>IMAGE_PICKLIST_MODE</B></PRE>
+<DL>
+<DD>To set 2D Scanner Mobile Phone/Display Mode.This mode improves bar code reading performance on mobile phones and electronic displays.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.IMAGE_PICKLIST_MODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TRANSMIT_CODE_ID"><!-- --></A><H3>
+TRANSMIT_CODE_ID</H3>
+<PRE>
+public static final int <B>TRANSMIT_CODE_ID</B></PRE>
+<DL>
+<DD>A Code ID character identifies the code type of a scanned bar code.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.TRANSMIT_CODE_ID">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TRIGGERING_LOCK"><!-- --></A><H3>
+TRIGGERING_LOCK</H3>
+<PRE>
+public static final int <B>TRIGGERING_LOCK</B></PRE>
+<DL>
+<DD>This property specifies whether the scan trigger inactive (disable the scan button).
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.TRIGGERING_LOCK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="IMAGE_ONE_D_INVERSE"><!-- --></A><H3>
+IMAGE_ONE_D_INVERSE</H3>
+<PRE>
+public static final int <B>IMAGE_ONE_D_INVERSE</B></PRE>
+<DL>
+<DD>This property specifies whether the 1D inverse decoder setting:
+ </br> 0 : Regular Only; the decoder decodes regular 1D bar codes only.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.IMAGE_ONE_D_INVERSE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="LABEL_MATCHER_PATTERN"><!-- --></A><H3>
+LABEL_MATCHER_PATTERN</H3>
+<PRE>
+public static final int <B>LABEL_MATCHER_PATTERN</B></PRE>
+<DL>
+<DD>When a bar code is scanned, changed the bar code data with this form of regular expression.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.LABEL_MATCHER_PATTERN">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="LABEL_MATCHER_REPLACEMENT"><!-- --></A><H3>
+LABEL_MATCHER_REPLACEMENT</H3>
+<PRE>
+public static final int <B>LABEL_MATCHER_REPLACEMENT</B></PRE>
+<DL>
+<DD>When a bar code is scanned, with the Hex value characters to replace the bar code data, if it is contains <code>LABEL_MATCHER_TARGETREGEX</code> setting hex characters.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.LABEL_MATCHER_REPLACEMENT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="LABEL_MATCHER_TARGETREGEX"><!-- --></A><H3>
+LABEL_MATCHER_TARGETREGEX</H3>
+<PRE>
+public static final int <B>LABEL_MATCHER_TARGETREGEX</B></PRE>
+<DL>
+<DD>When a bar code is scanned, the bar code data contains the Hex value characters will hava replace <code>LABEL_MATCHER_REPLACEMENT</code></a>
+ set the replace source characters are Hex value characters.Example:this “j”  Hex ID is “6A”.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.LABEL_MATCHER_TARGETREGEX">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="SEND_LABEL_PREFIX_SUFFIX"><!-- --></A><H3>
+SEND_LABEL_PREFIX_SUFFIX</H3>
+<PRE>
+public static final int <B>SEND_LABEL_PREFIX_SUFFIX</B></PRE>
+<DL>
+<DD>This property specifies whether Data format mode.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.SEND_LABEL_PREFIX_SUFFIX">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="LABEL_PREFIX"><!-- --></A><H3>
+LABEL_PREFIX</H3>
+<PRE>
+public static final int <B>LABEL_PREFIX</B></PRE>
+<DL>
+<DD>When a bar code is scanned, additional Prefix characters is sent to the App along with the bar code data.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.LABEL_PREFIX">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="LABEL_SEPARATOR_ENABLE"><!-- --></A><H3>
+LABEL_SEPARATOR_ENABLE</H3>
+<PRE>
+public static final int <B>LABEL_SEPARATOR_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether the bar code data replace the separator char <code>LABEL_FORMAT_SEPARATOR_CHAR</code>.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.LABEL_SEPARATOR_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="LABEL_SUFFIX"><!-- --></A><H3>
+LABEL_SUFFIX</H3>
+<PRE>
+public static final int <B>LABEL_SUFFIX</B></PRE>
+<DL>
+<DD>When a bar code is scanned, additional Suffix characters is sent to the App along with the bar code data.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.LABEL_SUFFIX">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="LASER_ON_TIME"><!-- --></A><H3>
+LASER_ON_TIME</H3>
+<PRE>
+public static final int <B>LASER_ON_TIME</B></PRE>
+<DL>
+<DD>Set the maximum time decode processing continues during a scan attempt.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.LASER_ON_TIME">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TIMEOUT_BETWEEN_SAME_SYMBOL"><!-- --></A><H3>
+TIMEOUT_BETWEEN_SAME_SYMBOL</H3>
+<PRE>
+public static final int <B>TIMEOUT_BETWEEN_SAME_SYMBOL</B></PRE>
+<DL>
+<DD>To set  Scanner decoding timeout between same symbol.
+ </br>Parameters Values:  value * 100 ms; value is 1 to 99, default 10.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.TIMEOUT_BETWEEN_SAME_SYMBOL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="LINEAR_1D_QUIET_ZONE_LEVEL"><!-- --></A><H3>
+LINEAR_1D_QUIET_ZONE_LEVEL</H3>
+<PRE>
+public static final int <B>LINEAR_1D_QUIET_ZONE_LEVEL</B></PRE>
+<DL>
+<DD>This feature sets the level of aggressiveness in decoding bar codes with a reduced quiet zone (the area in front
+ of and at the end of a bar code), and applies to symbologies enabled by a Reduced Quiet Zone parameter.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.LINEAR_1D_QUIET_ZONE_LEVEL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="LINEAR_CODE_TYPE_SECURITY_LEVEL"><!-- --></A><H3>
+LINEAR_CODE_TYPE_SECURITY_LEVEL</H3>
+<PRE>
+public static final int <B>LINEAR_CODE_TYPE_SECURITY_LEVEL</B></PRE>
+<DL>
+<DD>To set  Scanner linear code type security level. Parameters Values:0 to 3, default 1.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.LINEAR_CODE_TYPE_SECURITY_LEVEL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="FULL_READ_MODE"><!-- --></A><H3>
+FULL_READ_MODE</H3>
+<PRE>
+public static final int <B>FULL_READ_MODE</B></PRE>
+<DL>
+<DD>Note: The property value below is ONLY supported on platforms interfacing to the Zebra Technologies imagers.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.FULL_READ_MODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="FUZZY_1D_PROCESSING"><!-- --></A><H3>
+FUZZY_1D_PROCESSING</H3>
+<PRE>
+public static final int <B>FUZZY_1D_PROCESSING</B></PRE>
+<DL>
+<DD>This option is enabled by default to optimize decode performance on 1D bar codes, including damaged and
+ poor quality symbols.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.FUZZY_1D_PROCESSING">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODING_FORMAT"><!-- --></A><H3>
+CODING_FORMAT</H3>
+<PRE>
+public static final int <B>CODING_FORMAT</B></PRE>
+<DL>
+<DD>This property specifies the character encoding to use for the bar code data.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODING_FORMAT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="IMAGE_EXPOSURE_MODE"><!-- --></A><H3>
+IMAGE_EXPOSURE_MODE</H3>
+<PRE>
+public static final int <B>IMAGE_EXPOSURE_MODE</B></PRE>
+<DL>
+<DD>This property specifies the exposure mode that will be used during image capture.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.IMAGE_EXPOSURE_MODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="IMAGE_FIXED_EXPOSURE"><!-- --></A><H3>
+IMAGE_FIXED_EXPOSURE</H3>
+<PRE>
+public static final int <B>IMAGE_FIXED_EXPOSURE</B></PRE>
+<DL>
+<DD>If exposure mode is FIXED, what is the exposure <CODE>IMAGE_FIXED_EXPOSURE</CODE>.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.IMAGE_FIXED_EXPOSURE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE39_ENABLE"><!-- --></A><H3>
+CODE39_ENABLE</H3>
+<PRE>
+public static final int <B>CODE39_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Code39 decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE39_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE39_ENABLE_CHECK"><!-- --></A><H3>
+CODE39_ENABLE_CHECK</H3>
+<PRE>
+public static final int <B>CODE39_ENABLE_CHECK</B></PRE>
+<DL>
+<DD>Enable this to check the integrity of all Code39 symbols to verify that the data complies with specified check digit algorithm.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE39_ENABLE_CHECK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE39_SEND_CHECK"><!-- --></A><H3>
+CODE39_SEND_CHECK</H3>
+<PRE>
+public static final int <B>CODE39_SEND_CHECK</B></PRE>
+<DL>
+<DD>This property specifies whether to transmit Code39 data with or without the check digit.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE39_SEND_CHECK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE39_START_STOP"><!-- --></A><H3>
+CODE39_START_STOP</H3>
+<PRE>
+public static final int <B>CODE39_START_STOP</B></PRE>
+<DL>
+<DD>Start/Stop characters identify the leading and trailing ends of the bar code.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE39_START_STOP">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE39_FULL_ASCII"><!-- --></A><H3>
+CODE39_FULL_ASCII</H3>
+<PRE>
+public static final int <B>CODE39_FULL_ASCII</B></PRE>
+<DL>
+<DD>Code39 Full ASCII is a variant of Code39 which pairs characters to encode the full ASCII character set.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE39_FULL_ASCII">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE39_LENGTH1"><!-- --></A><H3>
+CODE39_LENGTH1</H3>
+<PRE>
+public static final int <B>CODE39_LENGTH1</B></PRE>
+<DL>
+<DD>Set minimun length for Code39. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE39_LENGTH1">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE39_LENGTH2"><!-- --></A><H3>
+CODE39_LENGTH2</H3>
+<PRE>
+public static final int <B>CODE39_LENGTH2</B></PRE>
+<DL>
+<DD>Set maximun length for Code39. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE39_LENGTH2">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE39_Quiet_Zone"><!-- --></A><H3>
+CODE39_Quiet_Zone</H3>
+<PRE>
+public static final int <B>CODE39_Quiet_Zone</B></PRE>
+<DL>
+<DD>Enable or disable decoding Code39 bar codes with reduced quiet zones.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE39_Quiet_Zone">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE39_SECURITY_LEVEL"><!-- --></A><H3>
+CODE39_SECURITY_LEVEL</H3>
+<PRE>
+public static final int <B>CODE39_SECURITY_LEVEL</B></PRE>
+<DL>
+<DD>The scanner offers four levels of decode security for Code39 barcodes.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE39_SECURITY_LEVEL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TRIOPTIC_ENABLE"><!-- --></A><H3>
+TRIOPTIC_ENABLE</H3>
+<PRE>
+public static final int <B>TRIOPTIC_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Trioptic decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.TRIOPTIC_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE32_ENABLE"><!-- --></A><H3>
+CODE32_ENABLE</H3>
+<PRE>
+public static final int <B>CODE32_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Code32 decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE32_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE32_SEND_START"><!-- --></A><H3>
+CODE32_SEND_START</H3>
+<PRE>
+public static final int <B>CODE32_SEND_START</B></PRE>
+<DL>
+<DD>Enable or disable adding the prefix character “A” to all Code32 bar codes.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE32_SEND_START">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="C25_ENABLE"><!-- --></A><H3>
+C25_ENABLE</H3>
+<PRE>
+public static final int <B>C25_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether chinese 2 of 5 post decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.C25_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="D25_ENABLE"><!-- --></A><H3>
+D25_ENABLE</H3>
+<PRE>
+public static final int <B>D25_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Discrete 2 of 5 decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.D25_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="D25_LENGTH1"><!-- --></A><H3>
+D25_LENGTH1</H3>
+<PRE>
+public static final int <B>D25_LENGTH1</B></PRE>
+<DL>
+<DD>Set minimun length for Discrete 2 of 5. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.D25_LENGTH1">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="D25_LENGTH2"><!-- --></A><H3>
+D25_LENGTH2</H3>
+<PRE>
+public static final int <B>D25_LENGTH2</B></PRE>
+<DL>
+<DD>Set maximun length for Discrete 2 of 5. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.D25_LENGTH2">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="M25_ENABLE"><!-- --></A><H3>
+M25_ENABLE</H3>
+<PRE>
+public static final int <B>M25_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Matrix 2 of 5 decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.M25_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="M25_ENABLE_CHECK"><!-- --></A><H3>
+M25_ENABLE_CHECK</H3>
+<PRE>
+public static final int <B>M25_ENABLE_CHECK</B></PRE>
+<DL>
+<DD>The check digit is the last character of the symbol used to verify the integrity of the data.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.M25_ENABLE_CHECK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="M25_LENGTH1"><!-- --></A><H3>
+M25_LENGTH1</H3>
+<PRE>
+public static final int <B>M25_LENGTH1</B></PRE>
+<DL>
+<DD>Set minimun length for Matrix 2 of 5. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.M25_LENGTH1">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="M25_LENGTH2"><!-- --></A><H3>
+M25_LENGTH2</H3>
+<PRE>
+public static final int <B>M25_LENGTH2</B></PRE>
+<DL>
+<DD>Set maximun length for Matrix 2 of 5. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.M25_LENGTH2">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="M25_SEND_CHECK"><!-- --></A><H3>
+M25_SEND_CHECK</H3>
+<PRE>
+public static final int <B>M25_SEND_CHECK</B></PRE>
+<DL>
+<DD>This property specifies whether to transmit Matrix 2 of 5 data with or without the check digit.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.M25_SEND_CHECK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE11_ENABLE"><!-- --></A><H3>
+CODE11_ENABLE</H3>
+<PRE>
+public static final int <B>CODE11_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Code11 decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE11_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE11_ENABLE_CHECK"><!-- --></A><H3>
+CODE11_ENABLE_CHECK</H3>
+<PRE>
+public static final int <B>CODE11_ENABLE_CHECK</B></PRE>
+<DL>
+<DD>This feature allows the decoder to check the integrity of all Code11 symbols to verify that the data complies
+ with the specified check digit algorithm.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE11_ENABLE_CHECK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE11_SEND_CHECK"><!-- --></A><H3>
+CODE11_SEND_CHECK</H3>
+<PRE>
+public static final int <B>CODE11_SEND_CHECK</B></PRE>
+<DL>
+<DD>This property specifies whether or not to transmit the Code11 check digit(s).
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE11_SEND_CHECK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE128_CHECK_ISBT_TABLE"><!-- --></A><H3>
+CODE128_CHECK_ISBT_TABLE</H3>
+<PRE>
+public static final int <B>CODE128_CHECK_ISBT_TABLE</B></PRE>
+<DL>
+<DD>The ISBT specification includes a table that lists several types of ISBT bar codes that are commonly used in pairs.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE128_CHECK_ISBT_TABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE11_LENGTH1"><!-- --></A><H3>
+CODE11_LENGTH1</H3>
+<PRE>
+public static final int <B>CODE11_LENGTH1</B></PRE>
+<DL>
+<DD>Set minimun length for Code11. Range: 0 to 55.
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE11_LENGTH1">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE11_LENGTH2"><!-- --></A><H3>
+CODE11_LENGTH2</H3>
+<PRE>
+public static final int <B>CODE11_LENGTH2</B></PRE>
+<DL>
+<DD>Set maximun length for Code11. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE11_LENGTH2">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="I25_ENABLE"><!-- --></A><H3>
+I25_ENABLE</H3>
+<PRE>
+public static final int <B>I25_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Interleaved 2 of 5 decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.I25_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="I25_ENABLE_CHECK"><!-- --></A><H3>
+I25_ENABLE_CHECK</H3>
+<PRE>
+public static final int <B>I25_ENABLE_CHECK</B></PRE>
+<DL>
+<DD>Enable this feature to check the integrity of all I 2 of 5 symbols to verify the data complies with either the
+ specified Uniform Symbology Specification (USS), or the Optical Product Code Council (OPCC) check digit
+ algorithm.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.I25_ENABLE_CHECK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="I25_SEND_CHECK"><!-- --></A><H3>
+I25_SEND_CHECK</H3>
+<PRE>
+public static final int <B>I25_SEND_CHECK</B></PRE>
+<DL>
+<DD>This property specifies whetherto transmit I 2 of 5 data with or without the check digit.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.I25_SEND_CHECK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="I25_LENGTH1"><!-- --></A><H3>
+I25_LENGTH1</H3>
+<PRE>
+public static final int <B>I25_LENGTH1</B></PRE>
+<DL>
+<DD>Set minimun length for Interleaved 2 of 5. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.I25_LENGTH1">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="I25_LENGTH2"><!-- --></A><H3>
+I25_LENGTH2</H3>
+<PRE>
+public static final int <B>I25_LENGTH2</B></PRE>
+<DL>
+<DD>Set maximun length for Interleaved 2 of 5. Range: 0 to 55.
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.I25_LENGTH2">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="I25_QUIET_ZONE"><!-- --></A><H3>
+I25_QUIET_ZONE</H3>
+<PRE>
+public static final int <B>I25_QUIET_ZONE</B></PRE>
+<DL>
+<DD>Enable or disable decoding I 2 of 5 bar codes with reduced quiet zones
+ The property value should be set as follows:
+ </br>0: Disallow short quiet zone symbols.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.I25_QUIET_ZONE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="I25_SECURITY_LEVEL"><!-- --></A><H3>
+I25_SECURITY_LEVEL</H3>
+<PRE>
+public static final int <B>I25_SECURITY_LEVEL</B></PRE>
+<DL>
+<DD>Interleaved 2 of 5 bar codes are vulnerable to misdecodes, particularly when I 2 of 5 Lengths is set to Any
+ Length.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.I25_SECURITY_LEVEL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="I25_TO_EAN13"><!-- --></A><H3>
+I25_TO_EAN13</H3>
+<PRE>
+public static final int <B>I25_TO_EAN13</B></PRE>
+<DL>
+<DD>Enable this parameter to convert 14-character I 2 of 5 codes to EAN-13, and transmit to the host as EAN-13.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.I25_TO_EAN13">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODABAR_ENABLE"><!-- --></A><H3>
+CODABAR_ENABLE</H3>
+<PRE>
+public static final int <B>CODABAR_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Codabar decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODABAR_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODABAR_ENABLE_CHECK"><!-- --></A><H3>
+CODABAR_ENABLE_CHECK</H3>
+<PRE>
+public static final int <B>CODABAR_ENABLE_CHECK</B></PRE>
+<DL>
+<DD>This property specifies whether Codabar check digit verification is enable.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODABAR_ENABLE_CHECK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODABAR_NOTIS"><!-- --></A><H3>
+CODABAR_NOTIS</H3>
+<PRE>
+public static final int <B>CODABAR_NOTIS</B></PRE>
+<DL>
+<DD>Enable this parameter to strip the start and stop characters from a decoded Codabar symbol.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODABAR_NOTIS">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODABAR_SEND_CHECK"><!-- --></A><H3>
+CODABAR_SEND_CHECK</H3>
+<PRE>
+public static final int <B>CODABAR_SEND_CHECK</B></PRE>
+<DL>
+<DD>This property specifies whetherto transmit Codabar data with or without the check digit.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODABAR_SEND_CHECK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODABAR_SEND_START"><!-- --></A><H3>
+CODABAR_SEND_START</H3>
+<PRE>
+public static final int <B>CODABAR_SEND_START</B></PRE>
+<DL>
+<DD>Start/Stop characters identify the leading and trailing ends of the bar code.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODABAR_SEND_START">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODABAR_CLSI"><!-- --></A><H3>
+CODABAR_CLSI</H3>
+<PRE>
+public static final int <B>CODABAR_CLSI</B></PRE>
+<DL>
+<DD>Enable this parameter to strip the start and stop characters and insert a space after the first, fifth, and tenth
+ characters of a 14-character Codabar symbol.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODABAR_CLSI">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODABAR_LENGTH1"><!-- --></A><H3>
+CODABAR_LENGTH1</H3>
+<PRE>
+public static final int <B>CODABAR_LENGTH1</B></PRE>
+<DL>
+<DD>Set minimun length for Codabar. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODABAR_LENGTH1">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODABAR_LENGTH2"><!-- --></A><H3>
+CODABAR_LENGTH2</H3>
+<PRE>
+public static final int <B>CODABAR_LENGTH2</B></PRE>
+<DL>
+<DD>Set maximun length for Codabar. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODABAR_LENGTH2">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE93_ENABLE"><!-- --></A><H3>
+CODE93_ENABLE</H3>
+<PRE>
+public static final int <B>CODE93_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Code93 decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE93_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE93_LENGTH1"><!-- --></A><H3>
+CODE93_LENGTH1</H3>
+<PRE>
+public static final int <B>CODE93_LENGTH1</B></PRE>
+<DL>
+<DD>Set minimun length for Code39. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE93_LENGTH1">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE93_LENGTH2"><!-- --></A><H3>
+CODE93_LENGTH2</H3>
+<PRE>
+public static final int <B>CODE93_LENGTH2</B></PRE>
+<DL>
+<DD>Set maximun length for Code39. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE93_LENGTH2">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE128_ENABLE"><!-- --></A><H3>
+CODE128_ENABLE</H3>
+<PRE>
+public static final int <B>CODE128_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Code128 decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE128_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE128_LENGTH1"><!-- --></A><H3>
+CODE128_LENGTH1</H3>
+<PRE>
+public static final int <B>CODE128_LENGTH1</B></PRE>
+<DL>
+<DD>Set minimun length for Code128. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE128_LENGTH1">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE128_LENGTH2"><!-- --></A><H3>
+CODE128_LENGTH2</H3>
+<PRE>
+public static final int <B>CODE128_LENGTH2</B></PRE>
+<DL>
+<DD>Set maximun length for Code128. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE128_LENGTH2">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE128_REDUCED_QUIET_ZONE"><!-- --></A><H3>
+CODE128_REDUCED_QUIET_ZONE</H3>
+<PRE>
+public static final int <B>CODE128_REDUCED_QUIET_ZONE</B></PRE>
+<DL>
+<DD>Enable or disable decoding Code128 bar codes with reduced quiet zones. 
+ The property value should be set as follows:
+ </br>0 : Disallow short quiet zone symbols.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE128_REDUCED_QUIET_ZONE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE128_SECURITY_LEVEL"><!-- --></A><H3>
+CODE128_SECURITY_LEVEL</H3>
+<PRE>
+public static final int <B>CODE128_SECURITY_LEVEL</B></PRE>
+<DL>
+<DD>Code128 bar codes are vulnerable to misdecodes, particularly when Code128 Lengths is set to Any Length.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE128_SECURITY_LEVEL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE_ISBT_128"><!-- --></A><H3>
+CODE_ISBT_128</H3>
+<PRE>
+public static final int <B>CODE_ISBT_128</B></PRE>
+<DL>
+<DD>ISBT 128 is a variant of Code128 used in the blood bank industry.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE_ISBT_128">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE_ISBT_Concatenation_MODE"><!-- --></A><H3>
+CODE_ISBT_Concatenation_MODE</H3>
+<PRE>
+public static final int <B>CODE_ISBT_Concatenation_MODE</B></PRE>
+<DL>
+<DD>Select an option for concatenating pairs of ISBT code types: 
+<br>0 : Disable ISBT Concatenation - The device does not concatenate pairs of ISBT codes it encounters.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE_ISBT_Concatenation_MODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE128_GS1_ENABLE"><!-- --></A><H3>
+CODE128_GS1_ENABLE</H3>
+<PRE>
+public static final int <B>CODE128_GS1_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether GS1-128 decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE128_GS1_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE128_IGNORE_FNC4"><!-- --></A><H3>
+CODE128_IGNORE_FNC4</H3>
+<PRE>
+public static final int <B>CODE128_IGNORE_FNC4</B></PRE>
+<DL>
+<DD>This feature applies to Code128 bar codes with an embedded <FNC4> character.
+ <br> 0 : Disable Ignore Code128; The character is not transmitted but the following
+ character has 128 added to it.
+ <br> 1 : Enable Ignore Code128; This strips the character from the decode data. The
+ remaining characters do not change.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.CODE128_IGNORE_FNC4">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UPCA_ENABLE"><!-- --></A><H3>
+UPCA_ENABLE</H3>
+<PRE>
+public static final int <B>UPCA_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether UPC-A decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.UPCA_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UPCA_SEND_CHECK"><!-- --></A><H3>
+UPCA_SEND_CHECK</H3>
+<PRE>
+public static final int <B>UPCA_SEND_CHECK</B></PRE>
+<DL>
+<DD>The check digit is the last character of the symbol used to verify the integrity of the data.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.UPCA_SEND_CHECK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UPCA_SEND_SYS"><!-- --></A><H3>
+UPCA_SEND_SYS</H3>
+<PRE>
+public static final int <B>UPCA_SEND_SYS</B></PRE>
+<DL>
+<DD>Preamble characters are part of the UPC symbol, and include Country Code and System Character.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.UPCA_SEND_SYS">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UPCA_TO_EAN13"><!-- --></A><H3>
+UPCA_TO_EAN13</H3>
+<PRE>
+public static final int <B>UPCA_TO_EAN13</B></PRE>
+<DL>
+<DD>When UPC-A Converted to EAN-13 is selected, UPC-A bar codes are converted to 13 digit EAN-13 codes by adding a
+ zero to the front.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.UPCA_TO_EAN13">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UPCE_ENABLE"><!-- --></A><H3>
+UPCE_ENABLE</H3>
+<PRE>
+public static final int <B>UPCE_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether UPC-E decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.UPCE_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UPCE_SEND_CHECK"><!-- --></A><H3>
+UPCE_SEND_CHECK</H3>
+<PRE>
+public static final int <B>UPCE_SEND_CHECK</B></PRE>
+<DL>
+<DD>The check digit is the last character of the symbol used to verify the integrity of the data.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.UPCE_SEND_CHECK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UPCE_SEND_SYS"><!-- --></A><H3>
+UPCE_SEND_SYS</H3>
+<PRE>
+public static final int <B>UPCE_SEND_SYS</B></PRE>
+<DL>
+<DD>Preamble characters are part of the UPC symbol, and include Country Code and System Character.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.UPCE_SEND_SYS">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UPCE_TO_UPCA"><!-- --></A><H3>
+UPCE_TO_UPCA</H3>
+<PRE>
+public static final int <B>UPCE_TO_UPCA</B></PRE>
+<DL>
+<DD>Enable this to convert UPC-E (zero suppressed) decoded data to UPC-A format before transmission.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.UPCE_TO_UPCA">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UPCE1_ENABLE"><!-- --></A><H3>
+UPCE1_ENABLE</H3>
+<PRE>
+public static final int <B>UPCE1_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether UPC-E1 decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.UPCE1_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UPCE1_SEND_CHECK"><!-- --></A><H3>
+UPCE1_SEND_CHECK</H3>
+<PRE>
+public static final int <B>UPCE1_SEND_CHECK</B></PRE>
+<DL>
+<DD>The check digit is the last character of the symbol used to verify the integrity of the data.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.UPCE1_SEND_CHECK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UPCE1_SEND_SYS"><!-- --></A><H3>
+UPCE1_SEND_SYS</H3>
+<PRE>
+public static final int <B>UPCE1_SEND_SYS</B></PRE>
+<DL>
+<DD>Preamble characters are part of the UPC symbol, and include Country Code and System Character.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.UPCE1_SEND_SYS">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UPCE1_TO_UPCA"><!-- --></A><H3>
+UPCE1_TO_UPCA</H3>
+<PRE>
+public static final int <B>UPCE1_TO_UPCA</B></PRE>
+<DL>
+<DD>Enable this to convert UPC-E1 decoded data to UPC-A format before transmission.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.UPCE1_TO_UPCA">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EAN13_ENABLE"><!-- --></A><H3>
+EAN13_ENABLE</H3>
+<PRE>
+public static final int <B>EAN13_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether EAN-13 decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.EAN13_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EAN13_SEND_CHECK"><!-- --></A><H3>
+EAN13_SEND_CHECK</H3>
+<PRE>
+public static final int <B>EAN13_SEND_CHECK</B></PRE>
+<DL>
+<DD>This property specifies whether transmit EAN-13 check digit.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.EAN13_SEND_CHECK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EAN13_BOOKLANDEAN"><!-- --></A><H3>
+EAN13_BOOKLANDEAN</H3>
+<PRE>
+public static final int <B>EAN13_BOOKLANDEAN</B></PRE>
+<DL>
+<DD>This property specifies Enable or disable Bookland EAN.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.EAN13_BOOKLANDEAN">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EAN13_BOOKLAND_FORMAT"><!-- --></A><H3>
+EAN13_BOOKLAND_FORMAT</H3>
+<PRE>
+public static final int <B>EAN13_BOOKLAND_FORMAT</B></PRE>
+<DL>
+<DD>Select one of the following
+ formats for Bookland data:
+ </br>0 : Bookland ISBN-10; The decoder reports Bookland data starting with 978 in traditional 10-digit
+ format with the special Bookland check digit for backward-compatibility.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.EAN13_BOOKLAND_FORMAT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EAN8_ENABLE"><!-- --></A><H3>
+EAN8_ENABLE</H3>
+<PRE>
+public static final int <B>EAN8_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether EAN-8 decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.EAN8_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EAN8_SEND_CHECK"><!-- --></A><H3>
+EAN8_SEND_CHECK</H3>
+<PRE>
+public static final int <B>EAN8_SEND_CHECK</B></PRE>
+<DL>
+<DD>This property specifies whether transmit EAN-8 check digit.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.EAN8_SEND_CHECK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EAN8_TO_EAN13"><!-- --></A><H3>
+EAN8_TO_EAN13</H3>
+<PRE>
+public static final int <B>EAN8_TO_EAN13</B></PRE>
+<DL>
+<DD>Enable this parameter to add five leading zeros to decoded EAN-8 symbols to make them compatible in format
+ to EAN-13 symbols.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.EAN8_TO_EAN13">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EAN_EXT_ENABLE_2_5_DIGIT"><!-- --></A><H3>
+EAN_EXT_ENABLE_2_5_DIGIT</H3>
+<PRE>
+public static final int <B>EAN_EXT_ENABLE_2_5_DIGIT</B></PRE>
+<DL>
+<DD>This parameter determines whether or not EAN supplemental 2/5 should be transmitted.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.EAN_EXT_ENABLE_2_5_DIGIT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UPC_EAN_SECURITY_LEVEL"><!-- --></A><H3>
+UPC_EAN_SECURITY_LEVEL</H3>
+<PRE>
+public static final int <B>UPC_EAN_SECURITY_LEVEL</B></PRE>
+<DL>
+<DD>To set Scanner linear code type security level. Parameters Values:  0 to 3, default 1.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.UPC_EAN_SECURITY_LEVEL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UCC_COUPON_EXT_CODE"><!-- --></A><H3>
+UCC_COUPON_EXT_CODE</H3>
+<PRE>
+public static final int <B>UCC_COUPON_EXT_CODE</B></PRE>
+<DL>
+<DD>Traditional coupon symbols (old coupon symbols) are composed of two bar codes: UPC/EAN and Code128.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.UCC_COUPON_EXT_CODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UCC_COUPON_EXT_REPORT_MODE"><!-- --></A><H3>
+UCC_COUPON_EXT_REPORT_MODE</H3>
+<PRE>
+public static final int <B>UCC_COUPON_EXT_REPORT_MODE</B></PRE>
+<DL>
+<DD>Enable this parameter to add five leading zeros to decoded EAN-8 symbols to make them compatible in format
+  to EAN-13 symbols.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.UCC_COUPON_EXT_REPORT_MODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UCC_EAN_ZERO_EXTEND"><!-- --></A><H3>
+UCC_EAN_ZERO_EXTEND</H3>
+<PRE>
+public static final int <B>UCC_EAN_ZERO_EXTEND</B></PRE>
+<DL>
+<DD>Enable or disable decoding UPC bar codes with reduced quiet zones.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.UCC_EAN_ZERO_EXTEND">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UCC_REDUCED_QUIET_ZONE"><!-- --></A><H3>
+UCC_REDUCED_QUIET_ZONE</H3>
+<PRE>
+public static final int <B>UCC_REDUCED_QUIET_ZONE</B></PRE>
+<DL>
+<DD>Enable this parameter to decode UPC-A bar codes starting with digit ‘5’, EAN-13 bar codes starting with digit
+ ‘99’, and UPC-A/EAN-128 Coupon Codes.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.UCC_REDUCED_QUIET_ZONE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MSI_ENABLE"><!-- --></A><H3>
+MSI_ENABLE</H3>
+<PRE>
+public static final int <B>MSI_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether MSI decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.MSI_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MSI_REQUIRE_2_CHECK"><!-- --></A><H3>
+MSI_REQUIRE_2_CHECK</H3>
+<PRE>
+public static final int <B>MSI_REQUIRE_2_CHECK</B></PRE>
+<DL>
+<DD>With MSI symbols, one check digit is mandatory and always verified by the reader.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.MSI_REQUIRE_2_CHECK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MSI_SEND_CHECK"><!-- --></A><H3>
+MSI_SEND_CHECK</H3>
+<PRE>
+public static final int <B>MSI_SEND_CHECK</B></PRE>
+<DL>
+<DD>Select whether to transmit MSI data with or without the check digit.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.MSI_SEND_CHECK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MSI_CHECK_2_MOD_11"><!-- --></A><H3>
+MSI_CHECK_2_MOD_11</H3>
+<PRE>
+public static final int <B>MSI_CHECK_2_MOD_11</B></PRE>
+<DL>
+<DD>Select one of two algorithms for the verification of the second MSI check digit:
+ <br> 1 : MOD 10/MOD 10
+ <br> 0 : MOD 10/MOD 11
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.MSI_CHECK_2_MOD_11">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MSI_LENGTH1"><!-- --></A><H3>
+MSI_LENGTH1</H3>
+<PRE>
+public static final int <B>MSI_LENGTH1</B></PRE>
+<DL>
+<DD>Set minimun length for MSI. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.MSI_LENGTH1">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MSI_LENGTH2"><!-- --></A><H3>
+MSI_LENGTH2</H3>
+<PRE>
+public static final int <B>MSI_LENGTH2</B></PRE>
+<DL>
+<DD>Set maximun length for MSI. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.MSI_LENGTH2">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="GS1_14_ENABLE"><!-- --></A><H3>
+GS1_14_ENABLE</H3>
+<PRE>
+public static final int <B>GS1_14_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether GS1 DataBar-14 decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.GS1_14_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="GS1_14_TO_UPC_EAN"><!-- --></A><H3>
+GS1_14_TO_UPC_EAN</H3>
+<PRE>
+public static final int <B>GS1_14_TO_UPC_EAN</B></PRE>
+<DL>
+<DD>This parameter only applies to GS1 DataBar-14 and GS1 DataBar Limited symbols not decoded as part of a
+ Composite symbol.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.GS1_14_TO_UPC_EAN">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="GS1_LIMIT_ENABLE"><!-- --></A><H3>
+GS1_LIMIT_ENABLE</H3>
+<PRE>
+public static final int <B>GS1_LIMIT_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether GS1 DataBar Limited decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.GS1_LIMIT_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="GS1_LIMIT_Security_Level"><!-- --></A><H3>
+GS1_LIMIT_Security_Level</H3>
+<PRE>
+public static final int <B>GS1_LIMIT_Security_Level</B></PRE>
+<DL>
+<DD>There are four levels of decode security for GS1 DataBar Limited bar codes.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.GS1_LIMIT_Security_Level">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="GS1128__UCCEAN_Composite"><!-- --></A><H3>
+GS1128__UCCEAN_Composite</H3>
+<PRE>
+public static final int <B>GS1128__UCCEAN_Composite</B></PRE>
+<DL>
+<DD>GS1-128 Emulation Mode for UCC/EAN Composite Codes.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.GS1128__UCCEAN_Composite">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="GS1_EXP_ENABLE"><!-- --></A><H3>
+GS1_EXP_ENABLE</H3>
+<PRE>
+public static final int <B>GS1_EXP_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether GS1 DataBar Expanded decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.GS1_EXP_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="GS1_EXP_LENGTH1"><!-- --></A><H3>
+GS1_EXP_LENGTH1</H3>
+<PRE>
+public static final int <B>GS1_EXP_LENGTH1</B></PRE>
+<DL>
+<DD>Set minimun length for GS1 DataBar Expanded. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.GS1_EXP_LENGTH1">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="GS1_EXP_LENGTH2"><!-- --></A><H3>
+GS1_EXP_LENGTH2</H3>
+<PRE>
+public static final int <B>GS1_EXP_LENGTH2</B></PRE>
+<DL>
+<DD>Set maximun length for GS1 DataBar Expanded. Range: 0 to 55. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.GS1_EXP_LENGTH2">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="US_POSTNET_ENABLE"><!-- --></A><H3>
+US_POSTNET_ENABLE</H3>
+<PRE>
+public static final int <B>US_POSTNET_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether US Postnet/US Postal decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.US_POSTNET_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="US_PLANET_ENABLE"><!-- --></A><H3>
+US_PLANET_ENABLE</H3>
+<PRE>
+public static final int <B>US_PLANET_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether US Planet decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.US_PLANET_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="US_POSTAL_SEND_CHECK"><!-- --></A><H3>
+US_POSTAL_SEND_CHECK</H3>
+<PRE>
+public static final int <B>US_POSTAL_SEND_CHECK</B></PRE>
+<DL>
+<DD>Select whether to transmit US Postal data, which includes both US Postnet and US Planet, with or without the
+ check digit.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.US_POSTAL_SEND_CHECK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="USPS_4STATE_ENABLE"><!-- --></A><H3>
+USPS_4STATE_ENABLE</H3>
+<PRE>
+public static final int <B>USPS_4STATE_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether USPS 4CB/One Code/Intelligent Mail decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.USPS_4STATE_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="UPU_FICS_ENABLE"><!-- --></A><H3>
+UPU_FICS_ENABLE</H3>
+<PRE>
+public static final int <B>UPU_FICS_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether UPU FICS Postal decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.UPU_FICS_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ROYAL_MAIL_ENABLE"><!-- --></A><H3>
+ROYAL_MAIL_ENABLE</H3>
+<PRE>
+public static final int <B>ROYAL_MAIL_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether ROYAL mail decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.ROYAL_MAIL_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="AUSTRALIAN_POST_ENABLE"><!-- --></A><H3>
+AUSTRALIAN_POST_ENABLE</H3>
+<PRE>
+public static final int <B>AUSTRALIAN_POST_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Australia Post decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.AUSTRALIAN_POST_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="KIX_CODE_ENABLE"><!-- --></A><H3>
+KIX_CODE_ENABLE</H3>
+<PRE>
+public static final int <B>KIX_CODE_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Netherlands KIX Code decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.KIX_CODE_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="JAPANESE_POST_ENABLE"><!-- --></A><H3>
+JAPANESE_POST_ENABLE</H3>
+<PRE>
+public static final int <B>JAPANESE_POST_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Japan Postal decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.JAPANESE_POST_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PDF417_ENABLE"><!-- --></A><H3>
+PDF417_ENABLE</H3>
+<PRE>
+public static final int <B>PDF417_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether PDF417 decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.PDF417_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MICROPDF417_ENABLE"><!-- --></A><H3>
+MICROPDF417_ENABLE</H3>
+<PRE>
+public static final int <B>MICROPDF417_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether MicroPDF417 decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.MICROPDF417_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="COMPOSITE_CC_AB_ENABLE"><!-- --></A><H3>
+COMPOSITE_CC_AB_ENABLE</H3>
+<PRE>
+public static final int <B>COMPOSITE_CC_AB_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Composite CC-A/B decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.COMPOSITE_CC_AB_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="COMPOSITE_CC_C_ENABLE"><!-- --></A><H3>
+COMPOSITE_CC_C_ENABLE</H3>
+<PRE>
+public static final int <B>COMPOSITE_CC_C_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Composite CC-C decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.COMPOSITE_CC_C_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="COMPOSITE_TLC39_ENABLE"><!-- --></A><H3>
+COMPOSITE_TLC39_ENABLE</H3>
+<PRE>
+public static final int <B>COMPOSITE_TLC39_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Composite TLC-39 decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.COMPOSITE_TLC39_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="HANXIN_ENABLE"><!-- --></A><H3>
+HANXIN_ENABLE</H3>
+<PRE>
+public static final int <B>HANXIN_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Han Xin decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.HANXIN_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="HANXIN_INVERSE"><!-- --></A><H3>
+HANXIN_INVERSE</H3>
+<PRE>
+public static final int <B>HANXIN_INVERSE</B></PRE>
+<DL>
+<DD>Note: The parameter values below are ONLY supported on platforms interfacing to the Zebra Technologies imagers.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.HANXIN_INVERSE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DATAMATRIX_ENABLE"><!-- --></A><H3>
+DATAMATRIX_ENABLE</H3>
+<PRE>
+public static final int <B>DATAMATRIX_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether DataMatrix decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DATAMATRIX_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DATAMATRIX_LENGTH1"><!-- --></A><H3>
+DATAMATRIX_LENGTH1</H3>
+<PRE>
+public static final int <B>DATAMATRIX_LENGTH1</B></PRE>
+<DL>
+<DD>Set minimun length for DataMatrix. Range: 1 to 3166. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DATAMATRIX_LENGTH1">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DATAMATRIX_LENGTH2"><!-- --></A><H3>
+DATAMATRIX_LENGTH2</H3>
+<PRE>
+public static final int <B>DATAMATRIX_LENGTH2</B></PRE>
+<DL>
+<DD>Set minimun length for DataMatrix. Range: 1 to 3166. 
+ The length of a code refers to the number of characters (i.e., human readable characters), including check
+ digit(s) the code contains.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DATAMATRIX_LENGTH2">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DATAMATRIX_INVERSE"><!-- --></A><H3>
+DATAMATRIX_INVERSE</H3>
+<PRE>
+public static final int <B>DATAMATRIX_INVERSE</B></PRE>
+<DL>
+<DD>Set the DATAMATRIX inverse decoder setting: Regular Only/ Inverse Only/ Inverse Autodetect. Note: The parameter values below are only supported on platforms interfacing to the Zebra Technologies imagers.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DATAMATRIX_INVERSE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MAXICODE_ENABLE"><!-- --></A><H3>
+MAXICODE_ENABLE</H3>
+<PRE>
+public static final int <B>MAXICODE_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether MaxiCode decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.MAXICODE_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="QRCODE_ENABLE"><!-- --></A><H3>
+QRCODE_ENABLE</H3>
+<PRE>
+public static final int <B>QRCODE_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether QR Code decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.QRCODE_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="MICROQRCODE_ENABLE"><!-- --></A><H3>
+MICROQRCODE_ENABLE</H3>
+<PRE>
+public static final int <B>MICROQRCODE_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether MicroQR Code decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.MICROQRCODE_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="QRCODE_INVERSE"><!-- --></A><H3>
+QRCODE_INVERSE</H3>
+<PRE>
+public static final int <B>QRCODE_INVERSE</B></PRE>
+<DL>
+<DD>Note: The parameter values below are ONLY supported on platforms interfacing to the Zebra Technologies imagers.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.QRCODE_INVERSE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="REMOVE_NONPRINT_CHAR"><!-- --></A><H3>
+REMOVE_NONPRINT_CHAR</H3>
+<PRE>
+public static final int <B>REMOVE_NONPRINT_CHAR</B></PRE>
+<DL>
+<DD>This property specifies whether the bar code data remove the nonprint char.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.REMOVE_NONPRINT_CHAR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="AZTEC_ENABLE"><!-- --></A><H3>
+AZTEC_ENABLE</H3>
+<PRE>
+public static final int <B>AZTEC_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Aztec Code decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.AZTEC_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="AZTEC_INVERSE"><!-- --></A><H3>
+AZTEC_INVERSE</H3>
+<PRE>
+public static final int <B>AZTEC_INVERSE</B></PRE>
+<DL>
+<DD>Set the Aztec inverse decoder setting: Regular Only/ Inverse Only/ Inverse Autodetect. Note: The parameter values below are ONLY supported on platforms interfacing to the Zebra Technologies imagers.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.AZTEC_INVERSE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_2D_LIGHTS_MODE"><!-- --></A><H3>
+DEC_2D_LIGHTS_MODE</H3>
+<PRE>
+public static final int <B>DEC_2D_LIGHTS_MODE</B></PRE>
+<DL>
+<DD>This property specifies whether the lights mode settings. Lights Configuration settings:(Illum/Aimer Off)/(Aimer Only)/(Illum Only)/(Alternating)/(Concurrent).
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_2D_LIGHTS_MODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_2D_CENTERING_ENABLE"><!-- --></A><H3>
+DEC_2D_CENTERING_ENABLE</H3>
+<PRE>
+public static final int <B>DEC_2D_CENTERING_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Centering mode decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_2D_CENTERING_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_2D_CENTERING_MODE"><!-- --></A><H3>
+DEC_2D_CENTERING_MODE</H3>
+<PRE>
+public static final int <B>DEC_2D_CENTERING_MODE</B></PRE>
+<DL>
+<DD>Mode Configuration settings:Off/Around Aimer/Field Of View. Note: The parameter values below are ONLY supported on platforms interfacing to the Honeywell 6703/6603 scanner.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_2D_CENTERING_MODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_2D_WINDOW_UPPER_LX"><!-- --></A><H3>
+DEC_2D_WINDOW_UPPER_LX</H3>
+<PRE>
+public static final int <B>DEC_2D_WINDOW_UPPER_LX</B></PRE>
+<DL>
+<DD>Upper left X coordinate setting : default  290, min    0, max   319.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_2D_WINDOW_UPPER_LX">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_2D_WINDOW_UPPER_LY"><!-- --></A><H3>
+DEC_2D_WINDOW_UPPER_LY</H3>
+<PRE>
+public static final int <B>DEC_2D_WINDOW_UPPER_LY</B></PRE>
+<DL>
+<DD>Upper left Y coordinate setting :default  350, min  320, max   639.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_2D_WINDOW_UPPER_LY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_ES_CONFORM_IMAGE"><!-- --></A><H3>
+DEC_ES_CONFORM_IMAGE</H3>
+<PRE>
+public static final int <B>DEC_ES_CONFORM_IMAGE</B></PRE>
+<DL>
+<DD>The image must conform to the auto-exposure requirements, if not, it's rejected. Valid Values: Rang 0to 1.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_ES_CONFORM_IMAGE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_ES_CONFORM_TRIES"><!-- --></A><H3>
+DEC_ES_CONFORM_TRIES </H3>
+<PRE>
+public static final int <B>DEC_ES_CONFORM_TRIES </B></PRE>
+<DL>
+<DD>The number of time it will attempt to conform Valid Values: Rang 1 to 8.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_ES_CONFORM_TRIES">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_ES_FIXED_FRAME_RATE"><!-- --></A><H3>
+DEC_ES_FIXED_FRAME_RATE </H3>
+<PRE>
+public static final int <B>DEC_ES_FIXED_FRAME_RATE </B></PRE>
+<DL>
+<DD>If exposure mode is FIXED, what is the frame rate (fixed, has no effect) Valid Values: Rang 1 to 30.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_ES_FIXED_FRAME_RATE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_ES_FIXED_GAIN"><!-- --></A><H3>
+DEC_ES_FIXED_GAIN </H3>
+<PRE>
+public static final int <B>DEC_ES_FIXED_GAIN </B></PRE>
+<DL>
+<DD>If exposure mode is FIXED, what is the gain Valid Values: Rang 1 to 4.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_ES_FIXED_GAIN">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_ES_MAX_EXP"><!-- --></A><H3>
+DEC_ES_MAX_EXP </H3>
+<PRE>
+public static final int <B>DEC_ES_MAX_EXP </B></PRE>
+<DL>
+<DD>This is the maximum exposure allowed to use Valid Values: Rang 1 to 7874.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_ES_MAX_EXP">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_ES_MAX_GAIN"><!-- --></A><H3>
+DEC_ES_MAX_GAIN </H3>
+<PRE>
+public static final int <B>DEC_ES_MAX_GAIN </B></PRE>
+<DL>
+<DD>This is the maximum gain allowed to use Valid Values: Rang 1 to 4.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_ES_MAX_GAIN">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_ES_TARGET_ACCEPT_GAP"><!-- --></A><H3>
+DEC_ES_TARGET_ACCEPT_GAP </H3>
+<PRE>
+public static final int <B>DEC_ES_TARGET_ACCEPT_GAP </B></PRE>
+<DL>
+<DD>How close to the target while value must image be Valid Values: Rang 1 to 50.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_ES_TARGET_ACCEPT_GAP">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_ES_TARGET_PERCENTILE"><!-- --></A><H3>
+DEC_ES_TARGET_PERCENTILE </H3>
+<PRE>
+public static final int <B>DEC_ES_TARGET_PERCENTILE </B></PRE>
+<DL>
+<DD>The percentile the white target value should be at Valid Values: Rang 1 to 99.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_ES_TARGET_PERCENTILE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_ES_TARGET_VALUE"><!-- --></A><H3>
+DEC_ES_TARGET_VALUE </H3>
+<PRE>
+public static final int <B>DEC_ES_TARGET_VALUE </B></PRE>
+<DL>
+<DD>Target white value in image to try and achieve Valid Values: Rang 1 to 255.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_ES_TARGET_VALUE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_2D_WINDOW_LOWER_RX"><!-- --></A><H3>
+DEC_2D_WINDOW_LOWER_RX</H3>
+<PRE>
+public static final int <B>DEC_2D_WINDOW_LOWER_RX</B></PRE>
+<DL>
+<DD>Upper right X coordinate setting : default  386, min    0, max   415.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_2D_WINDOW_LOWER_RX">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_2D_WINDOW_LOWER_RY"><!-- --></A><H3>
+DEC_2D_WINDOW_LOWER_RY</H3>
+<PRE>
+public static final int <B>DEC_2D_WINDOW_LOWER_RY</B></PRE>
+<DL>
+<DD>Upper right Y coordinate setting : default  446, min  416, max   831.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_2D_WINDOW_LOWER_RY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_OCR_MODE"><!-- --></A><H3>
+DEC_OCR_MODE</H3>
+<PRE>
+public static final int <B>DEC_OCR_MODE</B></PRE>
+<DL>
+<DD>Note: The parameter values below are ONLY supported on platforms interfacing to the Honeywell 6703/6603 scanner.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_OCR_MODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_OCR_TEMPLATE"><!-- --></A><H3>
+DEC_OCR_TEMPLATE</H3>
+<PRE>
+public static final int <B>DEC_OCR_TEMPLATE</B></PRE>
+<DL>
+<DD>Note: The parameter values below are ONLY supported on platforms interfacing to the Honeywell 6703/6603 scanner.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_OCR_TEMPLATE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_OCR_USER_TEMPLATE"><!-- --></A><H3>
+DEC_OCR_USER_TEMPLATE</H3>
+<PRE>
+public static final int <B>DEC_OCR_USER_TEMPLATE</B></PRE>
+<DL>
+<DD>Note: The parameter values below are ONLY supported on platforms interfacing to the Honeywell 6703/6603 scanner.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_OCR_USER_TEMPLATE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_ILLUM_POWER_LEVEL"><!-- --></A><H3>
+DEC_ILLUM_POWER_LEVEL</H3>
+<PRE>
+public static final int <B>DEC_ILLUM_POWER_LEVEL</B></PRE>
+<DL>
+<DD>This parameter sets the level of illumination by altering laser/LED power. Power Level(1/2/3/4/5/6/7).
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_ILLUM_POWER_LEVEL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_PICKLIST_AIM_DELAY"><!-- --></A><H3>
+DEC_PICKLIST_AIM_DELAY</H3>
+<PRE>
+public static final int <B>DEC_PICKLIST_AIM_DELAY</B></PRE>
+<DL>
+<DD>Note: The parameter values below are ONLY supported on platforms interfacing to the Honeywell 3680 scanner.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_PICKLIST_AIM_DELAY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DEC_PICKLIST_AIM_MODE"><!-- --></A><H3>
+DEC_PICKLIST_AIM_MODE</H3>
+<PRE>
+public static final int <B>DEC_PICKLIST_AIM_MODE</B></PRE>
+<DL>
+<DD>Note: The parameter values below are ONLY supported on platforms interfacing to the Honeywell 3680 scanner.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DEC_PICKLIST_AIM_MODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DOTCODE_ENABLE"><!-- --></A><H3>
+DOTCODE_ENABLE</H3>
+<PRE>
+public static final int <B>DOTCODE_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Dotcode decoding is enabled.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DOTCODE_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DPM_DECODE_MODE"><!-- --></A><H3>
+DPM_DECODE_MODE</H3>
+<PRE>
+public static final int <B>DPM_DECODE_MODE</B></PRE>
+<DL>
+<DD>This property specifies whether DPM decoding is enabled during the execution of Decode.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.DPM_DECODE_MODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="WEDGE_KEYBOARD_ENABLE"><!-- --></A><H3>
+WEDGE_KEYBOARD_ENABLE</H3>
+<PRE>
+public static final int <B>WEDGE_KEYBOARD_ENABLE</B></PRE>
+<DL>
+<DD>This property specifies whether Keyboard mode is enabled. If the configured PropertyID.WEDGE_KEYBOARD_ENABLE is 1, append the barcode text to TextBox, input method, or send the barcode text as key events.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.WEDGE_KEYBOARD_ENABLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="WEDGE_KEYBOARD_TYPE"><!-- --></A><H3>
+WEDGE_KEYBOARD_TYPE</H3>
+<PRE>
+public static final int <B>WEDGE_KEYBOARD_TYPE</B></PRE>
+<DL>
+<DD>This property specifies select an option for keystroke types. Values:
+ </br> 0 : Auto append text to TextBox.
+ </br>1 : If there is no TextBox, append text to input method.
+ </br>2 : Send key event.
+ </br>3 : Auto append text to input method.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#android.device.scanner.configuration.PropertyID.WEDGE_KEYBOARD_TYPE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="WEDGE_INTENT_ACTION_NAME"><!-- --></A><H3>
+WEDGE_INTENT_ACTION_NAME</H3>
+<PRE>
+public static final int <B>WEDGE_INTENT_ACTION_NAME</B></PRE>
+<DL>
+<DD>The intent action name is to receive barcode data. The default is "android.intent.ACTION_DECODE_DATA".
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../android/device/ScanManager.html#ACTION_DECODE">ACTION_DECODE</A></DL>
+</DL>
+<HR>
+
+<A NAME="WEDGE_INTENT_LABEL_TYPE_TAG"><!-- --></A><H3>
+WEDGE_INTENT_LABEL_TYPE_TAG</H3>
+<PRE>
+public static final int <B>WEDGE_INTENT_LABEL_TYPE_TAG</B></PRE>
+<DL>
+<DD>A string tag represents the barcode type. The default is "barcodeType".
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../android/device/ScanManager.html#BARCODE_TYPE_TAG">BARCODE_TYPE_TAG</A></DL>
+</DL>
+<HR>
+
+<A NAME="WEDGE_INTENT_DATA_STRING_TAG"><!-- --></A><H3>
+WEDGE_INTENT_DATA_STRING_TAG</H3>
+<PRE>
+public static final int <B>WEDGE_INTENT_DATA_STRING_TAG</B></PRE>
+<DL>
+<DD>A string tag represents the barcode string. The default is "barcode_string". 
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../android/device/ScanManager.html#BARCODE_STRING_TAG">BARCODE_STRING_TAG</A></DL>
+</DL>
+<HR>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<div class="aaa"><div class="title-mask" style="width: 180px; font-size: 16px;"><B>Constructor Detail</B></div></div>
+<A NAME="PropertyID()"><!-- --></A><H3>
+PropertyID</H3>
+<PRE>
+public <B>PropertyID</B>()</PRE>
+<DL>
+<DD>This class contains all supported Scanner sub-system reader properties.
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+</div> </div></div> </body>
+</HTML>

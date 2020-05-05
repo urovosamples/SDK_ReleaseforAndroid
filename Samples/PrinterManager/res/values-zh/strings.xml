@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, PrinterManagerActivity!</string>
+    <string name="app_name">PrinterSample</string>
+    <string name="action_settings">设置</string>
+    
+    <string name="printer_temp_title">当前温度: </string>
+    <string name="printer_temp">0</string>
+    
+    <string name="printer_temp_threshold_title">设置温度阈值: </string>
+    <string name="printer_temp_threshold">0</string>
+    <string name="printer_temp_threshold_def">Def: 50</string>
+    
+    <string name="printer_barcode_title">条码输出类型</string>
+    
+    <string name="bt_set_temp_threshold">设置温度阈值</string>
+    
+    <string name="printer_temp_overheating">过热保护</string>
+    
+    <string name="tv_factoryTest">工厂测试</string>
+    <string name="cb_factoryTest">无电池测试</string>
+    <string name="btn_BACK">后退</string>
+    <string name="btn_FORWARD">前进(走纸)</string>
+    
+    <string name="btn_barcode">打印条码</string>
+    <string name="btn_prnBill">打印文字</string>
+    <string name="btn_prnPicture">打印图片</string>
+    
+    <string name="et_printer_def_hue">默认灰度: 0(0~4)</string>
+    <string name="bt_printer_set_hue">设置灰度</string>
+    <string name="et_printer_def_speed">默认速度: 9(0~9)</string>
+    <string name="bt_printer_set_speed">设置速度</string>
+    
+    <string name="mci_select_title">生产测试</string>
+    <string name="mci_select_content">生产测试</string>
+    <string name="mci_select_ok">确定</string>
+    <string name="mci_select_cancel">取消</string>
+    
+    <string name="tst_info_paper">缺纸!!!</string>
+    <string name="tst_info_temperature">过温保护!!!</string>
+    <string name="tst_info_voltage">"电池电压过低!!!"</string>
+    <string name="tst_info_busy">打印机忙!!!</string>
+    <string name="tst_info_error">打印机出错!!!</string>
+    <string name="tst_info_driver_error">打印机驱动出错!!!</string>
+    <string name="tst_info_select_picture">是否打印默认图片?</string>
+    <string name="tst_info_select_picture_msg">按"确定"打印默认图片，按"取消"从图库打印一张图片!！!</string>
+
+    <string name="tst_hint_content">请输入需打印信息！！！</string>
+    
+    <string-array name="barcode_type">
+	    <item>C25INTER</item>
+	    <item>CODE128</item>
+	    <item>CODE93</item>
+	    <item>RSS14</item>
+	    <item>UPCA</item>
+	    <item>PDF417</item>
+	    <item>QRCODE</item>
+	    <item>DATAMATRIX</item>
+	    <item>MICROPDF</item>
+	    <item>AZTEC</item>
+	</string-array>
+    <string name="cb_print_barcode">打印条码</string>
+
+</resources>

@@ -1,0 +1,1116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<!-- UBX SDK API for Android V3.1.1 -->
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>
+PiccManager
+</TITLE>
+
+<META NAME="date" CONTENT="2019-05-09">
+
+<script src="../../assets/jquery-1.6.2.min.js"></script>		<script src="../../assets/bootstrap.min.js"></script>		<link href="../../assets/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">		<link rel="stylesheet" type="text/css" href="../../assets/menu.css">		<script type="text/javascript" src="../../assets/menu.js"></script>		<link href="../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />		<link href="../../assets/customizations.css" rel="stylesheet" type="text/css" />		<script src="../../assets/search_autocomplete.js" type="text/javascript"></script>		<script src="../../assets/jquery-resizable.min.js" type="text/javascript"></script>		<script src="../../assets/doclava-developer-docs.js" type="text/javascript"></script>		<script src="../../assets/prettify.js" type="text/javascript"></script>		<script src="../../assets/customizations.js" type="text/javascript"></script><LINK REL ="stylesheet" TYPE="text/css" HREF="../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PiccManager";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+	<div id="topdiv" class="clearfx">
+		<div id="menu">
+			<ul> <span class="style-summart">Summary:</span>
+				
+				<li class="cur">
+					<a href="#constructor_summary">CONSTR</a>
+				</li>
+				<li>
+					<a href="#methods_inherited_from_class_java.lang.Object">METHOD</a>
+				</li>
+			</ul>
+			<ul> <span class="style-summart">DETAIL:</span>
+				
+				<li class="cur">
+					<a href="#constructor_detail">CONSTR</a>
+				</li>
+				<li>
+					<A HREF="#method_detail">METHOD</A>
+				</li>
+			</ul>
+			<a class="totop" href="#topdiv"> </a>
+		</div>
+		<div class="bodyright">
+<!-- ======== START OF CLASS DATA ======== -->
+<H2><div class="class-div">
+<FONT SIZE="-1">
+android.device</FONT>
+<BR>
+Class PiccManager</div></H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../resources/inherit.gif" ALT="extended by "><B>android.device.PiccManager</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>PiccManager</B><DT>extends java.lang.Object</DL>
+</PRE>
+
+<P>
+The PiccManager class is used to initialize and control RF Card reader. Including data transmission, storage, read-write and other operation interfaces.
+
+ <p>To read RF Card with this class, according to the following steps,</p>
+
+ <ol>
+ <li>Obtain an instance of RF Card reader with PiccManager picc = new PiccManager().
+
+ <li>Call <A HREF="../../android/device/PiccManager.html#open()"><CODE>open</CODE></A> to initialize the RF card reader.
+
+ <li>Start searching the RF card with <A HREF="../../android/device/PiccManager.html#request(byte[], byte[])"><CODE>request</CODE></A>. 
+ 
+ <li>Anti-collision and select card with <A HREF="../../android/device/PiccManager.html#antisel(byte[], byte[])"><CODE>antisel</CODE></A>.
+ 
+ <li>Attach the target before transmitting apdu command with <A HREF="../../android/device/PiccManager.html#activate()"><CODE>activate</CODE></A>.
+ 
+ <li>Transmit APDU command and get the response with <A HREF="../../android/device/PiccManager.html#apduTransmit(byte[], int, byte[], byte[])"><CODE>apduTransmit</CODE></A>.
+
+ <li>Detach the target. If needn't to send APDU again, use <A HREF="../../android/device/PiccManager.html#deactivate(byte)"><CODE>deactivate</CODE></A> to stop.
+ 
+ <li> Close the RF card reader. with <A HREF="../../android/device/PiccManager.html#close()"><CODE>close</CODE></A>.
+ <p>For more information about the RF card reader, read PiccManager sample.</p>
+ </ol>
+<P>
+
+<P>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#PiccManager()">PiccManager</A></B>()</CODE>
+
+<BR>
+The PiccManager class is used to initialize and control RF Card reader.</TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#open()">open</A></B>()</CODE>
+
+<BR>
+Open the RF card reader.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#close()">close</A></B>()</CODE>
+
+<BR>
+Close the RF card reader.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#activate()">activate</A></B>()</CODE>
+
+<BR>
+Activate card to start sending APDU.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#deactivate(byte)">deactivate</A></B>(byte&nbsp;mode)</CODE>
+
+<BR>
+Deactivate a card.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#activateEx(byte[])">activateEx</A></B>(byte[]&nbsp;art)</CODE>
+
+<BR>
+Activate card to start sending APDU.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#antisel(byte[], byte[])">antisel</A></B>(byte[]&nbsp;sn,
+        byte[]&nbsp;sak)</CODE>
+
+<BR>
+Anti-collision and select card and returns the serial number of the card.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#apduTransmit(byte[], int, byte[])">apduTransmit</A></B>(byte[]&nbsp;sent,
+             int&nbsp;sentLen,
+             byte[]&nbsp;rsp)</CODE>
+
+<BR>
+Transmit APDU exchange commands.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#apduTransmit(byte[], int, byte[], byte[])">apduTransmit</A></B>(byte[]&nbsp;cmd,
+             int&nbsp;cmdLen,
+             byte[]&nbsp;rsp,
+             byte[]&nbsp;sw)</CODE>
+
+<BR>
+Transmit APDU commands.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#apduTransmit(byte[], int, byte[], int, int)">apduTransmit</A></B>(byte[]&nbsp;cmd,
+             int&nbsp;cmdLen,
+             byte[]&nbsp;rsp,
+             int&nbsp;crc,
+             int&nbsp;speed)</CODE>
+
+<BR>
+Transmit APDU exchange commands.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#apduTransmit(int, int, byte[], int, byte[])">apduTransmit</A></B>(int&nbsp;cmd,
+             int&nbsp;num,
+             byte[]&nbsp;sent,
+             int&nbsp;sentLen,
+             byte[]&nbsp;rsp)</CODE>
+
+<BR>
+Transmit APDU commands for RF Card.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#apduTransmitFelica(byte[], int, byte[])">apduTransmitFelica</A></B>(byte[]&nbsp;cmd, 
+             int&nbsp;cmdLen, 
+             byte[]&nbsp;rsp)</CODE>
+
+<BR>
+Transfer APDU instruction to felica card.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#SetTimeOutFelica(int)">SetTimeOutFelica</A></B>(int&nbsp;timeOut)</CODE>
+
+<BR>
+Set the felica APDU instruction timeout. Default is no timeout.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#enableRATS(byte)">enableRATS</A></B>(byte&nbsp;value)</CODE>
+
+<BR>
+Request for answer to select.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#idcard_apduTransmit(byte[], int, byte[])">idcard_apduTransmit</A></B>(byte[]&nbsp;sent,
+                    int&nbsp;sentLen,
+                    byte[]&nbsp;rsp)</CODE>
+
+<BR>
+Transmit APDU commands.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#idcard_init()">idcard_init</A></B>()</CODE>
+
+<BR>
+Init the ID card.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#m1_amount(int)">m1_amount</A></B>(int&nbsp;blkNo)</CODE>
+
+<BR>
+Read the amount for the block number.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#m1_decrement(int, int)">m1_decrement</A></B>(int&nbsp;blkNO,
+             int&nbsp;iMoney)</CODE>
+
+<BR>
+Decrement the value block by iMoney amount.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#m1_increment(int, int)">m1_increment</A></B>(int&nbsp;blkNo,
+             int&nbsp;iMoney)</CODE>
+
+<BR>
+Increment the value block by iMoney amount.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#m1_init(int, int)">m1_init</A></B>(int&nbsp;blkNo,
+        int&nbsp;value)</CODE>
+
+<BR>
+Init the value block by value.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#m1_keyAuth(int, int, int, byte[], int, byte[])">m1_keyAuth</A></B>(int&nbsp;keyType,
+           int&nbsp;blnNo,
+           int&nbsp;keyLen,
+           byte[]&nbsp;keyBuf,
+           int&nbsp;iSeriNumLen,
+           byte[]&nbsp;seriNum)</CODE>
+
+<BR>
+Authenticate a key.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#m1_readBlock(int, byte[])">m1_readBlock</A></B>(int&nbsp;blkNo,
+             byte[]&nbsp;pReadBuf)</CODE>
+
+<BR>
+Read a block.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#m1_restore(int)">m1_restore</A></B>(int&nbsp;blkNo)</CODE>
+
+<BR>
+Move the content of a block into temporary data register.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#m1_transfer(int)">m1_transfer</A></B>(int&nbsp;blkNo)</CODE>
+
+<BR>
+Transfer from temporary internal data register to value block.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#m1_writeBlock(int, int, byte[])">m1_writeBlock</A></B>(int&nbsp;blkNo,
+              int&nbsp;iLenWriteBuf,
+              byte[]&nbsp;pWriteBuf)</CODE>
+
+<BR>
+Write a block into the card.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#mifareUlIncrCnt(byte, int)">mifareUlIncrCnt</A></B>(byte&nbsp;bCntNum,
+                int&nbsp;iCntValue)</CODE>
+
+<BR>
+Write the Mifare UltraLight counter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#mifareUlPageRead(int, byte[])">mifareUlPageRead</A></B>(int&nbsp;sectorNum,
+                 byte[]&nbsp;rsp)</CODE>
+
+<BR>
+Read the Mifare UltraLight data.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#mifareUlPageWrite(int, byte[])">mifareUlPageWrite</A></B>(int&nbsp;sectorNum,
+                  byte[]&nbsp;sent)</CODE>
+
+<BR>
+Write the Mifare UltraLight data.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#mifareUlReadCnt(byte, int[])">mifareUlReadCnt</A></B>(byte&nbsp;bCntNum,
+                int[]&nbsp;pCntValue)</CODE>
+
+<BR>
+Read Mifare UltraLight counter.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#primeCard_apduTransmit(byte[], int, byte[])">primeCard_apduTransmit</A></B>(byte[]&nbsp;sent,
+                       int&nbsp;sentLen,
+                       byte[]&nbsp;rsp)</CODE>
+
+<BR>
+Transmit APDU commands for type B.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#primeCard_init()">primeCard_init</A></B>()</CODE>
+
+<BR>
+Init for type B prime protocol.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#request_norats(byte[], byte[])">request_norats</A></B>(byte[]&nbsp;mode,
+               byte[]&nbsp;atq)</CODE>
+
+<BR>
+Request card and without RATS.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#request_type(byte, byte[], byte[])">request_type</A></B>(byte&nbsp;pollType,
+             byte[]&nbsp;mode,
+             byte[]&nbsp;atq)</CODE>
+
+<BR>
+Request Specify card type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#request(byte[], byte[])">request</A></B>(byte[]&nbsp;mode,
+        byte[]&nbsp;atq)</CODE>
+
+<BR>
+Request card.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PiccManager.html#transactionData(byte, byte[], int, byte[], int[])">transactionData</A></B>(byte&nbsp;bProtocol,
+                byte[]&nbsp;pSendBuf,
+                int&nbsp;bSendLen,
+                byte[]&nbsp;pRecvBuf,
+                int[]&nbsp;pRecvLen)</CODE>
+
+<BR>
+Transaction command.</TD>
+</TR>
+</TABLE></div>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 180px; font-size: 16px;"><B>Constructor Detail</B></div></div>
+
+
+<A NAME="PiccManager()"><!-- --></A><H3>
+PiccManager</H3>
+<PRE>
+public <B>PiccManager</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 160px; font-size: 16px;"><B>Method Detail</B></FONT></div></div>
+
+
+<A NAME="open()"><!-- --></A><H3>
+open</H3>
+<PRE>
+public int <B>open</B>()</PRE>
+<DL>
+<DD>Open the RF card reader.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>0 if successful, and negative number if failed.
+<DT><B>Example:</B><DD><CODE>PiccManager piccManager = new PiccManager();
+	<br>
+	int ret = piccManager.open();
+	<br>
+	if (ret != 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;//open failed
+	<br>
+	}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="enableRATS(byte)"><!-- --></A><H3>
+enableRATS</H3>
+<PRE>
+public int <B>enableRATS</B>(byte&nbsp;value)</PRE>
+<DL>
+<DD>Request for answer to select.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>value</CODE> - Enabled value. 1 is enable; 0 is disable.
+<DT><B>Returns:</B><DD>0 if successful, and negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="primeCard_init()"><!-- --></A><H3>
+primeCard_init</H3>
+<PRE>
+public int <B>primeCard_init</B>()</PRE>
+<DL>
+<DD>Init for type B prime protocol.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>0 if successful, and negative number if failed.
+<DT><B>Note:</B>This implement work on Android 5.1 FW version 20180508 and later.
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="primeCard_apduTransmit(byte[], int, byte[])"><!-- --></A><H3>
+primeCard_apduTransmit</H3>
+<PRE>
+public int <B>primeCard_apduTransmit</B>(byte[]&nbsp;sent,
+                                  int&nbsp;sentLen,
+                                  byte[]&nbsp;rsp)</PRE>
+<DL>
+<DD>Transmit APDU commands for type B.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>sent</CODE> - APDU command to be sent, the command format with ISO7816 transmission protocol.
+	<DD><CODE>sentLen</CODE> - APDU length.
+	<DD><CODE>rsp</CODE> - Response from card.
+<DT><B>Returns:</B><DD>The length of APDU commands, negative number if failed.
+<DT><B>Note:</B>This implement work on Android 5.1 FW version 20180508 and later.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="request(byte[], byte[])"><!-- --></A><H3>
+request</H3>
+<PRE>
+public int <B>request</B>(byte[]&nbsp;mode,
+                   byte[]&nbsp;atq)</PRE>
+<DL>
+<DD>Request card.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>mode</CODE> - The card type, could be 'A', 'B', 'F' or 'V'.
+	<DD><CODE>atq</CODE> - The ATQ.
+<DT><B>Returns:</B><DD>The length of ATQ.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="request_norats(byte[], byte[])"><!-- --></A><H3>
+request_norats</H3>
+<PRE>
+public int <B>request_norats</B>(byte[]&nbsp;mode,
+                          byte[]&nbsp;atq)</PRE>
+<DL>
+<DD>Request card and without RATS.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>mode</CODE> - The card type, could be 'A', 'B', 'F' or 'V'.
+	<DD><CODE>atq</CODE> - The ATQ.
+<DT><B>Returns:</B><DD>The length of ATQ.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="request_type(byte, byte[], byte[])"><!-- --></A><H3>
+request_type</H3>
+<PRE>
+public int <B>request_type</B>(byte&nbsp;pollType,
+                        byte[]&nbsp;mode,
+                        byte[]&nbsp;atq)</PRE>
+<DL>
+<DD>Request specify card type.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>pollType</CODE> - Value: 
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bit0 : A card
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bit1 : B card
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bit2 : Felica-212 card
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bit3 : Felica-424 card
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bit4 : 15693 card
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bit5 : 18000 card
+	<DD><CODE>mode</CODE> - The card type: 
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'A' : A card
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'B' : B card
+	<DD><CODE>atq</CODE> - The ATQ.
+<DT><B>Returns:</B><DD>The length of ATQ.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="antisel(byte[], byte[])"><!-- --></A><H3>
+antisel</H3>
+<PRE>
+public int <B>antisel</B>(byte[]&nbsp;sn,
+                   byte[]&nbsp;sak)</PRE>
+<DL>
+<DD>Anti-collision and select card and returns the serial number of the card.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>sn</CODE> - Serial number.
+	<DD><CODE>sak</CODE> - SAK.
+<DT><B>Returns:</B><DD>length of sn, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="activate()"><!-- --></A><H3>
+activate</H3>
+<PRE>
+public int <B>activate</B>()</PRE>
+<DL>
+<DD>Activate card to start sending APDU(skip this call for M1 card).
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.
+<DT><B>Example:</B><DD><CODE>
+	piccManager.open(); 
+	<br>int ret = piccManager.activate();
+	<br>
+	if (ret != 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;//activate failed
+	<br>
+	}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="activateEx(byte[])"><!-- --></A><H3>
+activateEx</H3>
+<PRE>
+public int <B>activateEx</B>(byte[]&nbsp;art)</PRE>
+<DL>
+<DD>Activate card to start sending APDU(skip this call for M1 card).
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>art</CODE> - Store the returned data.
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.
+<DT><B>Example:</B><DD><CODE>
+	piccManager.open(); 
+	<br>byte atr[] = new byte[32];
+	<br>
+	int ret = piccManager.activateEx(atr);
+	<br>
+	if (ret != 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;//activateEx failed
+	<br>
+	}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="apduTransmit(byte[], int, byte[], byte[])"><!-- --></A><H3>
+apduTransmit</H3>
+<PRE>
+public int <B>apduTransmit</B>(byte[]&nbsp;cmd,
+                        int&nbsp;cmdLen,
+                        byte[]&nbsp;rsp,
+                        byte[]&nbsp;sw)</PRE>
+<DL>
+<DD>Transmit APDU commands.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>cmd</CODE> - APDU command to be sent, the command format with ISO7816 transmission protocol.
+	<DD><CODE>cmdLen</CODE> - APDU length.
+	<DD><CODE>rsp</CODE> - Response from card.
+	<DD><CODE>sw</CODE> - Status bytes.
+<DT><B>Returns:</B><DD>the APDU length(Length of response data returned by card, excluding 2-byte SW), negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="apduTransmit(byte[], int, byte[])"><!-- --></A><H3>
+apduTransmit</H3>
+<PRE>
+public int <B>apduTransmit</B>(byte[]&nbsp;sent,
+                        int&nbsp;sentLen,
+                        byte[]&nbsp;rsp)</PRE>
+<DL>
+<DD>Transmit APDU exchange commands.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>sent</CODE> - APDU command to be sent.
+	<DD><CODE>sentLen</CODE> - APDU length.
+	<DD><CODE>rsp</CODE> - Response from card.
+<DT><B>Returns:</B><DD>The length of APDU commands, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="apduTransmit(byte[], int, byte[], int, int)"><!-- --></A><H3>
+apduTransmit</H3>
+<PRE>
+public int <B>apduTransmit</B>(byte[]&nbsp;cmd,
+                        int&nbsp;cmdLen,
+                        byte[]&nbsp;rsp,
+                        int&nbsp;crc,
+                        int&nbsp;speed)</PRE>
+<DL>
+<DD>Transmit APDU exchange commands.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>cmd</CODE> - APDU command to be sent.
+	<DD><CODE>cmdLen</CODE> - APDU length.
+	<DD><CODE>rsp</CODE> - Response from card.
+	<DD><CODE>crc</CODE> - APDU CRC.
+	<DD><CODE>speed</CODE> - APDU speed.
+<DT><B>Returns:</B><DD>The length of APDU commands, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="apduTransmitFelica(byte[], int, byte[])"><!-- --></A><H3>
+apduTransmitFelica</H3>
+<PRE>
+public int <B>apduTransmitFelica</B>(byte[]&nbsp;cmd,
+			      int&nbsp;cmdLen,
+			      byte[]&nbsp;rsp)</PRE>
+<DL>
+<DD>Transfer APDU instruction to felica card.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>cmd</CODE> - The BCD code of the APDU instruction to be sent to the card is required, and the command format conforms to the 7816 specification.
+	<DD><CODE>cmdLen</CODE> - APDU length.
+	<DD><CODE>rsp</CODE> - Response data returned by card, BCD code.
+<DT><B>Returns:</B><DD>Length of response data, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="SetTimeOutFelica(int)"><!-- --></A><H3>
+SetTimeOutFelica</H3>
+<PRE>
+public void <B>SetTimeOutFelica</B>(int&nbsp;timeOut)</PRE>
+<DL>
+<DD>Set the felica APDU instruction timeout. Default is no timeout.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>timeOut</CODE> - Timeout, in MS.
+<DT><B>Returns:</B><DD>none</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="deactivate(byte)"><!-- --></A><H3>
+deactivate</H3>
+<PRE>
+public int <B>deactivate</B>(byte&nbsp;mode)</PRE>
+<DL>
+<DD>Deavtivate a card.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>
+	<CODE>mode</CODE> - value:
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x00 : imply HALT, deactivate card and return without checking for card removal;
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x01 : imply REMOVE, deactivate card and check for card removal;
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x02 : imply EMV compliant card removal, and check for card removal.
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.
+<DD><B>Examples:</B><DD><CODE>piccManager.activate();
+	<br>public static final byte MODE = 0x00;
+	<br>
+	int ret = piccManager.deactivate(MODE);
+	<br>
+	if(ret != 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;//deactivate failed
+	<br>
+	}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="close()"><!-- --></A><H3>
+close</H3>
+<PRE>
+public int <B>close</B>()</PRE>
+<DL>
+<DD>Close the RF card reader.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.
+<DT><B>Example:</B><DD><CODE>int ret = piccManager.open(); 
+	<br>if(ret == 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;piccManager.close();
+	<br>
+	}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="m1_keyAuth(int, int, int, byte[], int, byte[])"><!-- --></A><H3>
+m1_keyAuth</H3>
+<PRE>
+public int <B>m1_keyAuth</B>(int&nbsp;keyType,
+                      int&nbsp;blnNo,
+                      int&nbsp;keyLen,
+                      byte[]&nbsp;keyBuf,
+                      int&nbsp;iSeriNumLen,
+                      byte[]&nbsp;seriNum)</PRE>
+<DL>
+<DD>Authenticate a key.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>keyType</CODE> - Key type: 
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 : A key
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 : B key
+	<DD><CODE>blnNo</CODE> - Block number.
+	<DD><CODE>keyLen</CODE> - key length.
+	<DD><CODE>keyBuf</CODE> - The key.
+	<DD><CODE>iSeriNumLen</CODE> - Serial number length.
+	<DD><CODE>seriNum</CODE> - Serial number.
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="m1_readBlock(int, byte[])"><!-- --></A><H3>
+m1_readBlock</H3>
+<PRE>
+public int <B>m1_readBlock</B>(int&nbsp;blkNo,
+                        byte[]&nbsp;pReadBuf)</PRE>
+<DL>
+<DD>Read a block.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>blkNo</CODE> - Block number.
+	<DD><CODE>pReadBuf</CODE> - To store the read data.
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="m1_writeBlock(int, int, byte[])"><!-- --></A><H3>
+m1_writeBlock</H3>
+<PRE>
+public int <B>m1_writeBlock</B>(int&nbsp;blkNo,
+                         int&nbsp;iLenWriteBuf,
+                         byte[]&nbsp;pWriteBuf)</PRE>
+<DL>
+<DD>Write a block into the card.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>blkNo</CODE> - The block number.
+	<DD><CODE>iLenWriteBuf</CODE> - Length of buffer to be written.
+	<DD><CODE>pWriteBuf</CODE> - The buffer to be written.
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="m1_increment(int, int)"><!-- --></A><H3>
+m1_increment</H3>
+<PRE>
+public int <B>m1_increment</B>(int&nbsp;blkNo,
+                        int&nbsp;iMoney)</PRE>
+<DL>
+<DD>Increment the value block by iMoney amount.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>blkNo</CODE> - The value block number.
+	<DD><CODE>iMoney</CODE> - The amount to be decremented.
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="m1_decrement(int, int)"><!-- --></A><H3>
+m1_decrement</H3>
+<PRE>
+public int <B>m1_decrement</B>(int&nbsp;blkNO,
+                        int&nbsp;iMoney)</PRE>
+<DL>
+<DD>Decrement the value block by iMoney amount.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>blkNO</CODE> - The value block number.
+	<DD><CODE>iMoney</CODE> - The amount to be decremented.
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="m1_restore(int)"><!-- --></A><H3>
+m1_restore</H3>
+<PRE>
+public int <B>m1_restore</B>(int&nbsp;blkNo)</PRE>
+<DL>
+<DD>Move the content of a block into temporary data register.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>blkNo</CODE> - The block number to be operated on.
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="m1_transfer(int)"><!-- --></A><H3>
+m1_transfer</H3>
+<PRE>
+public int <B>m1_transfer</B>(int&nbsp;blkNo)</PRE>
+<DL>
+<DD>Transfer from temporary internal data register to value block.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>blkNo</CODE> - The block number to be operated on.
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="m1_init(int, int)"><!-- --></A><H3>
+m1_init</H3>
+<PRE>
+public int <B>m1_init</B>(int&nbsp;blkNo,
+                   int&nbsp;value)</PRE>
+<DL>
+<DD>Init the value block by value.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>blkNo</CODE> - The value block number.
+	<DD><CODE>value</CODE> - The amount to be init.
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="m1_amount(int)"><!-- --></A><H3>
+m1_amount</H3>
+<PRE>
+public int <B>m1_amount</B>(int&nbsp;blkNo)</PRE>
+<DL>
+<DD>Read the amount for the block number.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>blkNo</CODE> - The value block number.
+<DT><B>Returns:</B><DD>The amount, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="idcard_init()"><!-- --></A><H3>
+idcard_init</H3>
+<PRE>
+public int <B>idcard_init</B>()</PRE>
+<DL>
+<DD>Init the ID card.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="idcard_apduTransmit(byte[], int, byte[])"><!-- --></A><H3>
+idcard_apduTransmit</H3>
+<PRE>
+public int <B>idcard_apduTransmit</B>(byte[]&nbsp;sent,
+                               int&nbsp;sentLen,
+                               byte[]&nbsp;rsp)</PRE>
+<DL>
+<DD>Transmit APDU commands.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>sent</CODE> - APDU command to be sent.
+	<DD><CODE>sentLen</CODE> - APDU length.
+	<DD><CODE>rsp</CODE> - Response from IDCard.
+<DT><B>Returns:</B><DD>The response data length, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="apduTransmit(int, int, byte[], int, byte[])"><!-- --></A><H3>
+apduTransmit</H3>
+<PRE>
+public int <B>apduTransmit</B>(int&nbsp;cmd,
+                        int&nbsp;num,
+                        byte[]&nbsp;sent,
+                        int&nbsp;sentLen,
+                        byte[]&nbsp;rsp)</PRE>
+<DL>
+<DD>Transmit APDU commands for RF Card.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>cmd</CODE> - Transmitted commands.
+	<DD><CODE>num</CODE> - Counter.
+	<DD><CODE>sent</CODE> - APDU command to be sent.
+	<DD><CODE>sendLen</CODE> - APDU length.
+	<DD><CODE>rsp</CODE> - Response from RF Card.
+<DT><B>Returns:</B><DD>The response data length, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mifareUlPageRead(int, byte[])"><!-- --></A><H3>
+mifareUlPageRead</H3>
+<PRE>
+public int <B>mifareUlPageRead</B>(int&nbsp;sectorNum,
+                            byte[]&nbsp;rsp)</PRE>
+<DL>
+<DD>Read the Mifare UltraLight data.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>sectorNum</CODE> - Read the sector number.
+	<DD><CODE>rsp</CODE> - Output, 4 byte data from card.
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mifareUlPageWrite(int, byte[])"><!-- --></A><H3>
+mifareUlPageWrite</H3>
+<PRE>
+public int <B>mifareUlPageWrite</B>(int&nbsp;sectorNum,
+                             byte[]&nbsp;sent)</PRE>
+<DL>
+<DD>Write the Mifare UltraLight data.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>sectorNum</CODE> - Write the sector number.
+	<DD><CODE>sent</CODE> - 4 byte data to write.
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mifareUlReadCnt(byte, int[])"><!-- --></A><H3>
+mifareUlReadCnt</H3>
+<PRE>
+public int <B>mifareUlReadCnt</B>(byte&nbsp;bCntNum,
+                           int[]&nbsp;pCntValue)</PRE>
+<DL>
+<DD>Read Mifare UltraLight counter.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>bCntNum</CODE> - Counter number 0 to 2.
+	<DD><CODE>pCntValue</CODE> - Output, the counter value.
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mifareUlIncrCnt(byte, int)"><!-- --></A><H3>
+mifareUlIncrCnt</H3>
+<PRE>
+public int <B>mifareUlIncrCnt</B>(byte&nbsp;bCntNum,
+                           int&nbsp;iCntValue)</PRE>
+<DL>
+<DD>Write the Mifare UltraLight counter.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>bCntNum</CODE> - Counter number 0 to 2.
+	<DD><CODE>iCntValue</CODE> - Count value to write.
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="transactionData(byte, byte[], int, byte[], int[])"><!-- --></A><H3>
+transactionData</H3>
+<PRE>
+public int <B>transactionData</B>(byte&nbsp;bProtocol,
+                           byte[]&nbsp;pSendBuf,
+                           int&nbsp;bSendLen,
+                           byte[]&nbsp;pRecvBuf,
+                           int[]&nbsp;pRecvLen)</PRE>
+<DL>
+<DD>Transaction command.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>bProtocol</CODE> - Card Type:
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 : 14443A
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 : 14443B
+	<DD><CODE>pSendBuf</CODE> - Send the command.
+	<DD><CODE>bSendLen</CODE> - Send command's length.
+	<DD><CODE>pRecvBuf</CODE> - Response data from the card.
+	<DD><CODE>pRecvLen</CODE> - Out data's length.
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+</div> </div></div> </body>
+</HTML>

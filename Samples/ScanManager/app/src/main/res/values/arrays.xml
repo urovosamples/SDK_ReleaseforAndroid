@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="scan_trigger_mode_entries">
+        <item>Pulse</item>
+        <item>Continuous</item>
+        <item>Host</item>
+    </string-array>
+    <string-array name="scan_trigger_mode_entryValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="scan_output_mode_entries">
+        <item>Intent</item>
+        <item>Text Focus</item>
+    </string-array>
+    <string-array name="scan_output_mode_entryValues">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="scan_sound_mode_entries">
+        <item>None</item>
+        <item>Short</item>
+        <item>Sharp</item>
+    </string-array>
+    <string-array name="scan_sound_mode_entryValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="scan_keyboard_output_type_entries">
+        <item>Auto text mode</item>
+        <item>Soft keyboard</item>
+        <item>Always Physical keyboard</item>
+        <item>Always Soft keyboard</item>
+    </string-array>
+    <string-array name="scan_keyboard_output_type_entryValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>

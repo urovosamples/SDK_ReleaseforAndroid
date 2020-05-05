@@ -1,0 +1,1474 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<!-- UBX SDK API for Android V3.1.1 -->
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>
+SEManager
+</TITLE>
+
+<META NAME="date" CONTENT="2019-05-09">
+
+<script src="../../assets/jquery-1.6.2.min.js"></script>		<script src="../../assets/bootstrap.min.js"></script>		<link href="../../assets/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">		<link rel="stylesheet" type="text/css" href="../../assets/menu.css">		<script type="text/javascript" src="../../assets/menu.js"></script>		<link href="../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />		<link href="../../assets/customizations.css" rel="stylesheet" type="text/css" />		<script src="../../assets/search_autocomplete.js" type="text/javascript"></script>		<script src="../../assets/jquery-resizable.min.js" type="text/javascript"></script>		<script src="../../assets/doclava-developer-docs.js" type="text/javascript"></script>		<script src="../../assets/prettify.js" type="text/javascript"></script>		<script src="../../assets/customizations.js" type="text/javascript"></script><LINK REL ="stylesheet" TYPE="text/css" HREF="../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="SEManager";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+	<div id="topdiv" class="clearfx">
+		<div id="menu">
+			<ul> <span class="style-summart">Summary:</span>
+				<li class="cur">
+					<a href="#nested_class_summary">NESTED</a>
+				</li>
+				<li >
+					<A HREF="#field_summary">FIELD</A>
+				</li>
+				<li>
+					<a href="#constructor_summary">CONSTR</a>
+				</li>
+				<li>
+					<a href="#methods_inherited_from_class_java.lang.Object">METHOD</a>
+				</li>
+			</ul>
+			<ul> <span class="style-summart">DETAIL:</span>
+				<li class="cur">
+					<A HREF="#field_detail">FIELD</A>
+				</li>
+				<li>
+					<a href="#constructor_detail">CONSTR</a>
+				</li>
+				<li>
+					<A HREF="#method_detail">METHOD</A>
+				</li>
+			</ul>
+			<a class="totop" href="#topdiv"> </a>
+		</div>
+		<div class="bodyright">
+<!-- ======== START OF CLASS DATA ======== -->
+<H2><div class="class-div">
+<FONT SIZE="-1">
+android.device</FONT>
+<BR>
+Class SEManager</div></H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../resources/inherit.gif" ALT="extended by "><B>android.device.SEManager</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>SEManager</B><DT>extends java.lang.Object</DL>
+</PRE>
+
+<P>
+The SEManager class is used to initialize and control the security processor hardware.
+
+ <p>To control the security processor hardware with this class, use the following steps:</p>
+
+ <ol>
+ <li>You can obtain an instance of this class by calling <A HREF="../../android/device/SEManager.html#SEManager()"><CODE>SEManager</CODE></A>.
+ 
+ <P>SEManager manager = new SEManager();</P>
+
+ <li>initialize the security processor with <A HREF="../../android/device/SEManager.html#open()"><CODE>open</CODE></A>. 
+ 
+ <li>delete the key on the specified index before download new key with <A HREF="../../android/device/SEManager.html#deleteKey(int, int, byte[], byte[])"><CODE>deleteKey</CODE></A>. 
+ 
+ <li>download Keys in security processor RAM with <A HREF="../../android/device/SEManager.html#downloadKey(int, int, int, byte[], int, byte[], byte[])"><CODE>downloadKey</CODE></A>. 
+ 
+ <li>using the downloaded key to encrypt the Data <A HREF="../../android/device/SEManager.html#encryptData(int, int, int, byte[], int, int, byte[], int, byte[], byte[])"><CODE>encryptData</CODE></A>. 
+ 
+ <li>Call <A HREF="../../android/device/SEManager.html#close()"><CODE>close</CODE></A> to close the security processor.
+ </ol>
+ <p>For more information about the smart card reader, read SEManager sample.</p>
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;interface</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.OperationPedInputListener.html" title="interface in android.device">SEManager.OperationPedInputListener</A></B></CODE>
+
+<BR>
+The application has to implement the appropriate listener.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;interface</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.PedInputListener.html" title="interface in android.device">SEManager.PedInputListener</A></B></CODE>
+
+<BR>
+The application has to implement the appropriate listener.</TD>
+</TR>
+</TABLE></div>
+&nbsp;<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#ECRC16_DATA">ECRC16_DATA</A></B></CODE>
+
+<BR>
+Data crc16 error.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#EENCRYPTKEYS_NOTDOWLOAD">EENCRYPTKEYS_NOTDOWLOAD</A></B></CODE>
+
+<BR>
+The encryption key for the key is not downloaded.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#EHEAD_CMD">EHEAD_CMD</A></B></CODE>
+
+<BR>
+Command head (CB) error.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#EKEYS_DOWNLOAD">EKEYS_DOWNLOAD</A></B></CODE>
+
+<BR>
+Keys download.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#EKEYS_EXISTS">EKEYS_EXISTS</A></B></CODE>
+
+<BR>
+Keys exists or cant't be overwrite.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#EKEYS_NOTDOWNLOAD">EKEYS_NOTDOWNLOAD</A></B></CODE>
+
+<BR>
+Keys not download.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#EKEYS_OUTOFSPACE">EKEYS_OUTOFSPACE</A></B></CODE>
+
+<BR>
+Keys out of space.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#EKEYS_RDORINIT">EKEYS_RDORINIT</A></B></CODE>
+
+<BR>
+Keys not ready or init.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#EKEYSNO_NOTFOUND">EKEYSNO_NOTFOUND</A></B></CODE>
+
+<BR>
+Keys number not found.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#EKEYSNO_OVERRANGE">EKEYSNO_OVERRANGE</A></B></CODE>
+
+<BR>
+Keys number out of range.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#ELENGTH_CMD">ELENGTH_CMD</A></B></CODE>
+
+<BR>
+Command length error.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#EMSG_FORMAT">EMSG_FORMAT</A></B></CODE>
+
+<BR>
+Message format error.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#EMSG_MAC">EMSG_MAC</A></B></CODE>
+
+<BR>
+Message mac error.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#ENOTSUP_ALGORITHM">ENOTSUP_ALGORITHM</A></B></CODE>
+
+<BR>
+Unsupported algorithm.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#ENOTSUP_CMD">ENOTSUP_CMD</A></B></CODE>
+
+<BR>
+Unsupported command.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#ENOTSUP_FORMAT">ENOTSUP_FORMAT</A></B></CODE>
+
+<BR>
+Unsupported format.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#ENOTSUP_KEYSLENGTH">ENOTSUP_KEYSLENGTH</A></B></CODE>
+
+<BR>
+Unsupported keys length.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#ENOTSUP_MODE">ENOTSUP_MODE</A></B></CODE>
+
+<BR>
+Unsupported mode.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#ENOTSUP_PINBLOCK_FORMAT">ENOTSUP_PINBLOCK_FORMAT</A></B></CODE>
+
+<BR>
+Unsupported pinblock format.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#ENOTSUP_SEPUSE">ENOTSUP_SEPUSE</A></B></CODE>
+
+<BR>
+Keys unsupported specified use.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#EPINBLOCK_CHAR">EPINBLOCK_CHAR</A></B></CODE>
+
+<BR>
+Pinblock char error.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#ERESERVED_0X1D">ERESERVED_0X1D</A></B></CODE>
+
+<BR>
+Parameters temporarily reserved.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#ESEPARATOR_CMD">ESEPARATOR_CMD</A></B></CODE>
+
+<BR>
+Command separator error.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#ESEPARATORLEN_CMD">ESEPARATORLEN_CMD</A></B></CODE>
+
+<BR>
+Command separator length error.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#EUSER_PINBLOCK_LENGTH">EUSER_PINBLOCK_LENGTH</A></B></CODE>
+
+<BR>
+User pinblock length error.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#EUSER_PINBLOCK_VALUE">EUSER_PINBLOCK_VALUE</A></B></CODE>
+
+<BR>
+User pinblock value error.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#EUSERNAME_LENGTH">EUSERNAME_LENGTH</A></B></CODE>
+
+<BR>
+Username length error.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#EUSERNAME_VALUE">EUSERNAME_VALUE</A></B></CODE>
+
+<BR>
+Username value error.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#S_OK">S_OK</A></B></CODE>
+
+<BR>
+Command execute Success</TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#SEManager()">SEManager</A></B>()</CODE>
+
+<BR>
+The SEManager class is used to initialize and control the security processor hardware.</TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#open()">open</A></B>()</CODE>
+
+<BR>
+Open security processor. <br/></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#close()">close</A></B>()</CODE>
+
+<BR>
+Close security processor. <br/></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#decryptData(int, int, int, byte[], int, int, byte[], int, byte[], byte[])">decryptData</A></B>(int&nbsp;KeyUsage,
+            int&nbsp;KeyNo,
+            int&nbsp;Algorithm,
+            byte[]&nbsp;StartValue,
+            int&nbsp;StartValueLen,
+            int&nbsp;PaddingChar,
+            byte[]&nbsp;DecryptData,
+            int&nbsp;DecryptDataLen,
+            byte[]&nbsp;ResponseData,
+            byte[]&nbsp;ResLen)</CODE>
+
+<BR>
+Decryption data.<br/></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#deleteKey(int, int, byte[], byte[])">deleteKey</A></B>(int&nbsp;KeyUsage,
+          int&nbsp;KeyNo,
+          byte[]&nbsp;ResponseData,
+          byte[]&nbsp;ResLen)</CODE>
+
+<BR>
+Delete keys.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#downloadKey(int, int, int, byte[], int, byte[], byte[])">downloadKey</A></B>(int&nbsp;KeyUsage,
+            int&nbsp;KeyNo,
+            int&nbsp;ParentKeyNo,
+            byte[]&nbsp;KeyData,
+            int&nbsp;KeyDataLen,
+            byte[]&nbsp;ResponseData,
+            byte[]&nbsp;ResLen)</CODE>
+
+<BR>
+Download Keys in security processor RAM.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#downloadKeyDukpt(int, byte[], int, byte[], int, byte[], int)">downloadKeyDukpt</A></B>(int&nbsp;keyType,
+                 byte[]&nbsp;Bdk,
+                 int&nbsp;BdkLen,
+                 byte[]&nbsp;Ksn,
+                 int&nbsp;KsnLen,
+                 byte[]&nbsp;bsIpek,
+                 int&nbsp;bsIpekLength)</CODE>
+
+<BR>
+Download Dukpt keys in security processor RAM. Keys length is 16 bytes. Bdk and Ipek, pick one of two.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#enableSuspend(int, byte[], byte[])">enableSuspend</A></B>(int&nbsp;enable,
+              byte[]&nbsp;ResponseData,
+              byte[]&nbsp;ResLen)</CODE>
+
+<BR>
+Enable the security processor timeout before automatic suspension.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#encryptData(int, int, int, byte[], int, int, byte[], int, byte[], byte[])">encryptData</A></B>(int&nbsp;KeyUsage,
+            int&nbsp;KeyNo,
+            int&nbsp;Algorithm,
+            byte[]&nbsp;StartValue,
+            int&nbsp;StartValueLen,
+            int&nbsp;PaddingChar,
+            byte[]&nbsp;EncryptData,
+            int&nbsp;EncryptDataLen,
+            byte[]&nbsp;ResponseData,
+            byte[]&nbsp;ResLen)</CODE>
+
+<BR>
+Encryption data.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#generateRandomData(byte[], byte[])">generateRandomData</A></B>(byte[]&nbsp;ResponseData,
+                   byte[]&nbsp;ResLen)</CODE>
+
+<BR>
+Generate a 8 bytes random number.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#getFirmwareVersion(byte[], byte[])">getFirmwareVersion</A></B>(byte[]&nbsp;ResponseData,
+                   byte[]&nbsp;ResLen)</CODE>
+
+<BR>
+Get security processor firmware version.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#getPinBlock(int, int, byte[], int, java.lang.String, long, android.device.SEManager.PedInputListener)">getPinBlock</A></B>(int&nbsp;KeyUsage,
+            int&nbsp;PINKeyNo,
+            byte[]&nbsp;CustomerData,
+            int&nbsp;CustomerDataLen,
+            java.lang.String&nbsp;message,
+            long&nbsp;timeOut,
+            <A HREF="../../android/device/SEManager.PedInputListener.html" title="interface in android.device">SEManager.PedInputListener</A>&nbsp;listener)</CODE>
+
+<BR>
+Get the pin block.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#getPinBlockEx(android.os.Bundle, android.device.SEManager.PedInputListener)">getPinBlockEx</A></B>(android.os.Bundle&nbsp;bundle,
+              <A HREF="../../android/device/SEManager.PedInputListener.html" title="interface in android.device">SEManager.PedInputListener</A>&nbsp;listener)</CODE>
+
+<BR>
+Get the pin block.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#getPinBlockEx(int, int, byte[], int, java.lang.String, long, java.lang.String, android.device.SEManager.PedInputListener)">getPinBlockEx</A></B>(int&nbsp;KeyUsage,
+              int&nbsp;PINKeyNo,
+              byte[]&nbsp;CustomerData,
+              int&nbsp;CustomerDataLen,
+              java.lang.String&nbsp;message,
+              long&nbsp;timeOut,
+              java.lang.String&nbsp;supportPinLen,
+              <A HREF="../../android/device/SEManager.PedInputListener.html" title="interface in android.device">SEManager.PedInputListener</A>&nbsp;listener)</CODE>
+
+<BR>
+Get the pin block.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#getStatus(byte[], byte[])">getStatus</A></B>(byte[]&nbsp;ResponseData,
+          byte[]&nbsp;ResLen)</CODE>
+
+<BR>
+Get security processor hardware status.<br/></TD>
+</TR>
+
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#setSuspendTimeout(int, byte[], byte[])">setSuspendTimeout</A></B>(int&nbsp;timeout,
+                  byte[]&nbsp;ResponseData,
+                  byte[]&nbsp;ResLen)</CODE>
+
+<BR>
+Allows to set the security processor timeout before automatic suspension.</TD>
+</TR>
+
+
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#calculateMACOfDUKPTExtend(int, byte[], int, byte[], int[], byte[], int[])">calculateMACOfDUKPTExtend</A></B>(int&nbsp;keySetNum,
+                  byte[]&nbsp;rawData,
+                  int&nbsp;rawDataLen,
+				  byte[]&nbsp;outData,
+                  int[]&nbsp;outDataLen,
+				  byte[]&nbsp;outKsn,
+                  int[]&nbsp;KsnLen)
+				  </CODE>
+
+<BR>
+Calculate MAC use dukpt. Only supports Android 8.1.</TD>
+</TR>
+
+
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.html#encryptWithPEK(int, int, byte[], int, byte[], int[], byte[], int[])">encryptWithPEK</A></B>(int&nbsp;keyType,
+                  int&nbsp;keyType,
+				  byte[]&nbsp;rawData,
+                  int&nbsp;rawDataLen,
+				  byte[]&nbsp;outData,
+                  int[]&nbsp;outDataLen,
+				  byte[]&nbsp;outKsn,
+                  int[]&nbsp;KsnLen)</CODE>
+
+<BR>
+Data encryption use dukpt. Only supports Android 8.1.</TD>
+</TR>
+</TABLE></div>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 160px; font-size: 16px;">
+<B>FIELD DETAIL</B></FONT></div></div>
+
+<A NAME="S_OK"><!-- --></A><H3>
+S_OK</H3>
+<PRE>
+public static final int <B>S_OK</B></PRE>
+<DL>
+<DD>command execute Success
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.S_OK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ENOTSUP_CMD"><!-- --></A><H3>
+ENOTSUP_CMD</H3>
+<PRE>
+public static final int <B>ENOTSUP_CMD</B></PRE>
+<DL>
+<DD>unsupported command
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.ENOTSUP_CMD">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ELENGTH_CMD"><!-- --></A><H3>
+ELENGTH_CMD</H3>
+<PRE>
+public static final int <B>ELENGTH_CMD</B></PRE>
+<DL>
+<DD>command length error
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.ELENGTH_CMD">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ESEPARATOR_CMD"><!-- --></A><H3>
+ESEPARATOR_CMD</H3>
+<PRE>
+public static final int <B>ESEPARATOR_CMD</B></PRE>
+<DL>
+<DD>command separator error
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.ESEPARATOR_CMD">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ESEPARATORLEN_CMD"><!-- --></A><H3>
+ESEPARATORLEN_CMD</H3>
+<PRE>
+public static final int <B>ESEPARATORLEN_CMD</B></PRE>
+<DL>
+<DD>command separator length error
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.ESEPARATORLEN_CMD">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EHEAD_CMD"><!-- --></A><H3>
+EHEAD_CMD</H3>
+<PRE>
+public static final int <B>EHEAD_CMD</B></PRE>
+<DL>
+<DD>command head (CB) error
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.EHEAD_CMD">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ECRC16_DATA"><!-- --></A><H3>
+ECRC16_DATA</H3>
+<PRE>
+public static final int <B>ECRC16_DATA</B></PRE>
+<DL>
+<DD>data crc16 error
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.ECRC16_DATA">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EMSG_MAC"><!-- --></A><H3>
+EMSG_MAC</H3>
+<PRE>
+public static final int <B>EMSG_MAC</B></PRE>
+<DL>
+<DD>message mac error
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.EMSG_MAC">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EMSG_FORMAT"><!-- --></A><H3>
+EMSG_FORMAT</H3>
+<PRE>
+public static final int <B>EMSG_FORMAT</B></PRE>
+<DL>
+<DD>message format error
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.EMSG_FORMAT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ENOTSUP_ALGORITHM"><!-- --></A><H3>
+ENOTSUP_ALGORITHM</H3>
+<PRE>
+public static final int <B>ENOTSUP_ALGORITHM</B></PRE>
+<DL>
+<DD>unsupported algorithm
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.ENOTSUP_ALGORITHM">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ENOTSUP_FORMAT"><!-- --></A><H3>
+ENOTSUP_FORMAT</H3>
+<PRE>
+public static final int <B>ENOTSUP_FORMAT</B></PRE>
+<DL>
+<DD>unsupported format
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.ENOTSUP_FORMAT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ENOTSUP_MODE"><!-- --></A><H3>
+ENOTSUP_MODE</H3>
+<PRE>
+public static final int <B>ENOTSUP_MODE</B></PRE>
+<DL>
+<DD>unsupported mode
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.ENOTSUP_MODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EKEYS_RDORINIT"><!-- --></A><H3>
+EKEYS_RDORINIT</H3>
+<PRE>
+public static final int <B>EKEYS_RDORINIT</B></PRE>
+<DL>
+<DD>keys not ready or init
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.EKEYS_RDORINIT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EKEYSNO_NOTFOUND"><!-- --></A><H3>
+EKEYSNO_NOTFOUND</H3>
+<PRE>
+public static final int <B>EKEYSNO_NOTFOUND</B></PRE>
+<DL>
+<DD>keys number not found
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.EKEYSNO_NOTFOUND">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EKEYSNO_OVERRANGE"><!-- --></A><H3>
+EKEYSNO_OVERRANGE</H3>
+<PRE>
+public static final int <B>EKEYSNO_OVERRANGE</B></PRE>
+<DL>
+<DD>keys number out of range
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.EKEYSNO_OVERRANGE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EKEYS_DOWNLOAD"><!-- --></A><H3>
+EKEYS_DOWNLOAD</H3>
+<PRE>
+public static final int <B>EKEYS_DOWNLOAD</B></PRE>
+<DL>
+<DD>keys download
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.EKEYS_DOWNLOAD">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EKEYS_NOTDOWNLOAD"><!-- --></A><H3>
+EKEYS_NOTDOWNLOAD</H3>
+<PRE>
+public static final int <B>EKEYS_NOTDOWNLOAD</B></PRE>
+<DL>
+<DD>keys not download
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.EKEYS_NOTDOWNLOAD">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EKEYS_OUTOFSPACE"><!-- --></A><H3>
+EKEYS_OUTOFSPACE</H3>
+<PRE>
+public static final int <B>EKEYS_OUTOFSPACE</B></PRE>
+<DL>
+<DD>keys out of space
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.EKEYS_OUTOFSPACE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EKEYS_EXISTS"><!-- --></A><H3>
+EKEYS_EXISTS</H3>
+<PRE>
+public static final int <B>EKEYS_EXISTS</B></PRE>
+<DL>
+<DD>keys exists or cant't be overwrite
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.EKEYS_EXISTS">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EENCRYPTKEYS_NOTDOWLOAD"><!-- --></A><H3>
+EENCRYPTKEYS_NOTDOWLOAD</H3>
+<PRE>
+public static final int <B>EENCRYPTKEYS_NOTDOWLOAD</B></PRE>
+<DL>
+<DD>The encryption key for the key is not downloaded.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.EENCRYPTKEYS_NOTDOWLOAD">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ENOTSUP_SEPUSE"><!-- --></A><H3>
+ENOTSUP_SEPUSE</H3>
+<PRE>
+public static final int <B>ENOTSUP_SEPUSE</B></PRE>
+<DL>
+<DD>keys unsupported specified use
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.ENOTSUP_SEPUSE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ENOTSUP_KEYSLENGTH"><!-- --></A><H3>
+ENOTSUP_KEYSLENGTH</H3>
+<PRE>
+public static final int <B>ENOTSUP_KEYSLENGTH</B></PRE>
+<DL>
+<DD>unsupported keys length
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.ENOTSUP_KEYSLENGTH">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ERESERVED_0X1D"><!-- --></A><H3>
+ERESERVED_0X1D</H3>
+<PRE>
+public static final int <B>ERESERVED_0X1D</B></PRE>
+<DL>
+<DD>Reserved
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.ERESERVED_0X1D">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="ENOTSUP_PINBLOCK_FORMAT"><!-- --></A><H3>
+ENOTSUP_PINBLOCK_FORMAT</H3>
+<PRE>
+public static final int <B>ENOTSUP_PINBLOCK_FORMAT</B></PRE>
+<DL>
+<DD>unsupported pinblock format
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.ENOTSUP_PINBLOCK_FORMAT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EUSERNAME_LENGTH"><!-- --></A><H3>
+EUSERNAME_LENGTH</H3>
+<PRE>
+public static final int <B>EUSERNAME_LENGTH</B></PRE>
+<DL>
+<DD>username length error
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.EUSERNAME_LENGTH">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EUSERNAME_VALUE"><!-- --></A><H3>
+EUSERNAME_VALUE</H3>
+<PRE>
+public static final int <B>EUSERNAME_VALUE</B></PRE>
+<DL>
+<DD>username value error
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.EUSERNAME_VALUE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EUSER_PINBLOCK_LENGTH"><!-- --></A><H3>
+EUSER_PINBLOCK_LENGTH</H3>
+<PRE>
+public static final int <B>EUSER_PINBLOCK_LENGTH</B></PRE>
+<DL>
+<DD>user pinblock length error
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.EUSER_PINBLOCK_LENGTH">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EUSER_PINBLOCK_VALUE"><!-- --></A><H3>
+EUSER_PINBLOCK_VALUE</H3>
+<PRE>
+public static final int <B>EUSER_PINBLOCK_VALUE</B></PRE>
+<DL>
+<DD>user pinblock value error
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.EUSER_PINBLOCK_VALUE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="EPINBLOCK_CHAR"><!-- --></A><H3>
+EPINBLOCK_CHAR</H3>
+<PRE>
+public static final int <B>EPINBLOCK_CHAR</B></PRE>
+<DL>
+<DD>pinblock char error
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.SEManager.EPINBLOCK_CHAR">Constant Field Values</A></DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 180px; font-size: 16px;"><B>Constructor Detail</B></div></div>
+
+
+<A NAME="SEManager()"><!-- --></A><H3>
+SEManager</H3>
+<PRE>
+public <B>SEManager</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 160px; font-size: 16px;"><B>Method Detail</B></FONT></div></div>
+
+
+<A NAME="open()"><!-- --></A><H3>
+open</H3>
+<PRE>
+public int <B>open</B>()</PRE>
+<DL>
+<DD>Open security processor. <br/>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed. <br/></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="close()"><!-- --></A><H3>
+close</H3>
+<PRE>
+public int <B>close</B>()</PRE>
+<DL>
+<DD>Close security processor. <br/>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.<br/></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFirmwareVersion(byte[], byte[])"><!-- --></A><H3>
+getFirmwareVersion</H3>
+<PRE>
+public int <B>getFirmwareVersion</B>(byte[]&nbsp;ResponseData,
+                              byte[]&nbsp;ResLen)</PRE>
+<DL>
+<DD>Get security processor firmware version.<br/>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>ResponseData</CODE> - Output data, processor response data.
+	<DD><CODE>ResLen</CODE> - Output data, processor response data length.
+<DT><B>Returns:</B><DD>Error Code. See <A HREF="../../constant-values.html#android.device.SEManager">Constant Field Values</A>.<br/></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getStatus(byte[], byte[])"><!-- --></A><H3>
+getStatus</H3>
+<PRE>
+public int <B>getStatus</B>(byte[]&nbsp;ResponseData,
+                     byte[]&nbsp;ResLen)</PRE>
+<DL>
+<DD>Get security processor hardware status. <br/>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>ResponseData</CODE> - Output data, 5 Bytes device status:
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Byte[0] : maxium storage num of keys we support(The sum of all keys)
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Byte[1] : used for mag strip info encryption(TDK)
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Byte[2] : used for counting PIN keys
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Byte[3] : num of MAC keys
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Byte[4] : num of Master keys
+	<DD><CODE>ResLen</CODE> - Output data, length of ResponseData, 5 Bytes. <br/>
+<DT><B>Returns:</B><DD>Error Code. See <A HREF="../../constant-values.html#android.device.SEManager">Constant Field Values</A>.<br/></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="downloadKey(int, int, int, byte[], int, byte[], byte[])"><!-- --></A><H3>
+downloadKey</H3>
+<PRE>
+public int <B>downloadKey</B>(int&nbsp;KeyUsage,
+                       int&nbsp;KeyNo,
+                       int&nbsp;ParentKeyNo,
+                       byte[]&nbsp;KeyData,
+                       int&nbsp;KeyDataLen,
+                       byte[]&nbsp;ResponseData,
+                       byte[]&nbsp;ResLen)</PRE>
+<DL>
+<DD>Download keys in security processor RAM. Keys length is 8 bytes (DES), 16 bytes or 24 Bytes(3DES). 
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>KeyUsage</CODE> - Input data, Key Usage:
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x01 : used for Mag strip info encryption(TDK)
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x02 : used for PIN encryption
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x03 : used for MAC calculation
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x04 : Parent(Master) key
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x05 : Reserved
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x06 : Reserved
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x07 : used for message transportation encryption
+	<DD><CODE>KeyNo</CODE> - Input data, Key number,value is 0 to 149.
+	<DD><CODE>ParentKeyNo</CODE> - Input data, parent Key Number. When DownloadKey is used to load parent key, this parameter can be ignore. Parent(Master) key have no parent key. 
+	<DD><CODE>KeyData</CODE> - Input data, key data, this parameter have 8 bytes(DES), 16 bytes or 24 bytes(3DES).
+	<DD><CODE>KeyDataLen</CODE> - Input data, Key Data length.
+	<DD><CODE>ResponseData</CODE> - Output data, security processor response data, output KCV (with clear key encryption 8 0x00 return value, get first 4 bytes).
+	<DD><CODE>ResLen</CODE> - Output data, security processor response data length.<br/>
+<DT><B>Returns:</B><DD>Error Code. See <A HREF="../../constant-values.html#android.device.SEManager">Constant Field Values</A>.
+<DT><B>Note:</B>Parent keys or encryption keys unsupported 8 bytes length, that must be 16 bytes. </B></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="downloadKeyDukpt(int, byte[], int, byte[], int, byte[], int)"><!-- --></A><H3>
+downloadKeyDukpt</H3>
+<PRE>
+public int <B>downloadKeyDukpt</B>(int&nbsp;keyType,
+                            byte[]&nbsp;Bdk,
+                            int&nbsp;BdkLen,
+                            byte[]&nbsp;Ksn,
+                            int&nbsp;KsnLen,
+                            byte[]&nbsp;bsIpek,
+                            int&nbsp;bsIpekLength)</PRE>
+<DL>
+<DD>Download Dukpt keys in security processor RAM. Keys length is 16 bytes. Bdk and Ipek, pick one of two.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>keyType</CODE> - Input data, key usage:
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x01 : MSR_KEY
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x03 : PIN_KEY
+	<DD><CODE>Bdk</CODE> - Input data, Bdk.
+	<DD><CODE>BdkLen</CODE> - The Bdk data length.
+	<DD><CODE>Ksn</CODE> - Input data, Ksn.
+	<DD><CODE>KsnLen</CODE> - The Ksn data length.
+	<DD><CODE>bsIpek</CODE> - Input data, Ipek.
+	<DD><CODE>bsIpekLength</CODE> - The bsIpek data length.
+<DT><B>Returns:</B><DD>Error Code. See <A HREF="../../constant-values.html#android.device.SEManager">Constant Field Values</A>.
+<DT><B>Note:</B>Parent keys or encryption keys unsupported 8 bytes length, that must be 16 bytes.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="deleteKey(int, int, byte[], byte[])"><!-- --></A><H3>
+deleteKey</H3>
+<PRE>
+public int <B>deleteKey</B>(int&nbsp;KeyUsage,
+                     int&nbsp;KeyNo,
+                     byte[]&nbsp;ResponseData,
+                     byte[]&nbsp;ResLen)</PRE>
+<DL>
+<DD>Delete keys. <br/>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>KeyUsage</CODE> - Input data, Key Usage;
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x01 : used for Mag strip info encryption(TDK)
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x02 : used for PIN encryption
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x03 : used for MAC calculation
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x04 : Parent(Master) key
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x05 : Reserved
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x06 : Reserved
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x07 : used for message transportation encryption
+	<DD><CODE>KeyNo</CODE> - Input data, Key index, value is 0 to 149.
+	<DD><CODE>ResponseData</CODE> - Output data, security processor response data, this function return data is NULL.
+	<DD><CODE>ResLen</CODE> - Output data, security processor response data length, this function return data length is 0.
+<DT><B>Returns:</B><DD>Error Code. See <A HREF="../../constant-values.html#android.device.SEManager">Constant Field Values</A>.<br/></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="encryptData(int, int, int, byte[], int, int, byte[], int, byte[], byte[])"><!-- --></A><H3>
+encryptData</H3>
+<PRE>
+public int <B>encryptData</B>(int&nbsp;KeyUsage,
+                       int&nbsp;KeyNo,
+                       int&nbsp;Algorithm,
+                       byte[]&nbsp;StartValue,
+                       int&nbsp;StartValueLen,
+                       int&nbsp;PaddingChar,
+                       byte[]&nbsp;EncryptData,
+                       int&nbsp;EncryptDataLen,
+                       byte[]&nbsp;ResponseData,
+                       byte[]&nbsp;ResLen)</PRE>
+<DL>
+<DD>Encryption data. 
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>KeyUsage</CODE> - Input data, Key Usage:
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x01 : used for Mag strip info encryption(TDK)
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x02 : used for PIN encryption
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x03 : used for MAC calculation
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x04 : Parent(Master) key
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x05 : Reserved
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x06 : Reserved
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x07 : used for message transportation encryption
+	<DD><CODE>KeyNo</CODE> - Input data, Key index, value is 0 to 149.
+	<DD><CODE>Algorithm</CODE> - Input data, algorithm define: 
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x01 : ECB 
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x02 : CBC
+	<DD><CODE>StartValue</CODE> - Input data, initialization vector, this value is NULL(Algorithm = 0x01) or 8 bytes (Algorithm = 0x02).
+	<DD><CODE>StartValueLen</CODE> - Input data, initialization vector length.
+	<DD><CODE>PaddingChar</CODE> - Input data, padding character, value is 0x0 to 0xF.
+	<DD><CODE>EncryptData</CODE> - Input data, encryption data, length is 0 to 128 bytes. 
+	<DD><CODE>EncryptDataLen</CODE> - Input data, encryption data length.
+	<DD><CODE>ResponseData</CODE> - Output data, encrypted data return form security processor. 
+	<DD><CODE>ResLen</CODE> - Output data, security processor response data length.
+<DT><B>Returns:</B><DD>Error Code. See <A HREF="../../constant-values.html#android.device.SEManager">Constant Field Values</A>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="decryptData(int, int, int, byte[], int, int, byte[], int, byte[], byte[])"><!-- --></A><H3>
+decryptData</H3>
+<PRE>
+public int <B>decryptData</B>(int&nbsp;KeyUsage,
+                       int&nbsp;KeyNo,
+                       int&nbsp;Algorithm,
+                       byte[]&nbsp;StartValue,
+                       int&nbsp;StartValueLen,
+                       int&nbsp;PaddingChar,
+                       byte[]&nbsp;DecryptData,
+                       int&nbsp;DecryptDataLen,
+                       byte[]&nbsp;ResponseData,
+                       byte[]&nbsp;ResLen)</PRE>
+<DL>
+<DD>Decryption data.<br/>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>KeyUsage</CODE> - Input data, key usage:
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x01 : used for Mag strip info encryption(TDK)
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x02 : used for PIN encryption
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x03 : used for MAC calculation
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x04 : Parent(Master) key
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x05 : Reserved
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x06 : Reserved
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x07 : used for message transportation encryption
+	<DD><CODE>KeyNo</CODE> - Input data, Key index is  0 to 149.
+	<DD><CODE>Algorithm</CODE> - Input data, Algorithm define:
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x01 : ECB
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x02 : CBC
+	<DD><CODE>StartValue</CODE> - Input data, initialization vector, this value is NULL(Algorithm = 0x01) or 8 bytes (Algorithm = 0x02).
+	<DD><CODE>StartValueLen</CODE> - Input data, initialization vector length.
+	<DD><CODE>PaddingChar</CODE> - Input data, padding character, value is 0x0 to 0xF.
+	<DD><CODE>DecryptData</CODE> - Input data, dencryption data, 0 to 128 Bytes.
+	<DD><CODE>DecryptDataLen</CODE> - Input data, dencryption data length.
+	<DD><CODE>ResponseData</CODE> - Output data, dencrypted data returned from security processor.
+	<DD><CODE>ResLen</CODE> - Output data, security processor response data length.
+<DT><B>Returns:</B><DD>Error Code. See <A HREF="../../constant-values.html#android.device.SEManager">Constant Field Values</A>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPinBlock(int, int, byte[], int, java.lang.String, long, android.device.SEManager.PedInputListener)"><!-- --></A><H3>
+getPinBlock</H3>
+<PRE>
+public int <B>getPinBlock</B>(int&nbsp;KeyUsage,
+                       int&nbsp;PINKeyNo,
+                       byte[]&nbsp;CustomerData,
+                       int&nbsp;CustomerDataLen,
+                       java.lang.String&nbsp;message,
+                       long&nbsp;timeOut,
+                       <A HREF="../../android/device/SEManager.PedInputListener.html" title="interface in android.device">SEManager.PedInputListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Get the pin block.<br/>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>KeyUsage</CODE> - Input data, key usage:
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x01 : used for Mag strip info encryption(TDK)
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x02 : used for PIN encryption
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x03 : used for MAC calculation
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x04 : Parent(Master) key
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x05 : Reserved
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x06 : Reserved
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x07 : used for message transportation encryption
+	<DD><CODE>PINKeyNo</CODE> - Input data, Key index is 0 to 149.
+	<DD><CODE>CustomerData</CODE> - Input data, ASCII format Customer account, 0 to 24 Bytes.
+	<DD><CODE>CustomerDataLen</CODE> - Input data, the length of CustomerData.
+	<DD><CODE>message</CODE> - Enter prompt information.
+	<DD><CODE>timeOut</CODE> - Set the input key timeout.
+	<DD><CODE>listener</CODE> - The <code>PedInputListener</code> that will be called when a input key event is fired.
+<DT><B>Returns:</B><DD>0 if successful, negative number if fail.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPinBlockEx(int, int, byte[], int, java.lang.String, long, java.lang.String, android.device.SEManager.PedInputListener)"><!-- --></A><H3>
+getPinBlockEx</H3>
+<PRE>
+public int <B>getPinBlockEx</B>(int&nbsp;KeyUsage,
+                         int&nbsp;PINKeyNo,
+                         byte[]&nbsp;CustomerData,
+                         int&nbsp;CustomerDataLen,
+                         java.lang.String&nbsp;message,
+                         long&nbsp;timeOut,
+                         java.lang.String&nbsp;supportPinLen,
+                         <A HREF="../../android/device/SEManager.PedInputListener.html" title="interface in android.device">SEManager.PedInputListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Get the pin block.<br/>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>KeyUsage</CODE> - Input data, key usage:
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x01 : used for Mag strip info encryption(TDK)
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x02 : used for PIN encryption
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x03 : used for MAC calculation
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x04 : Parent(Master) key
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x05 : Reserved
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x06 : Reserved
+                 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x07 : used for message transportation encryption
+	<DD><CODE>PINKeyNo</CODE> - Input data, Key index is 0 to 149.
+	<DD><CODE>CustomerData</CODE> - Input data, ASCII format Customer account, 0 to 24 Bytes.
+	<DD><CODE>CustomerDataLen</CODE> - Input data, the length of CustomerData.
+	<DD><CODE>message</CODE> - Enter prompt information.
+	<DD><CODE>timeOut</CODE> - Set the input key timeout.
+	<DD><CODE>supportPinLen</CODE> - Set the input key support length, default format: "0,4,6,8,10,12".
+	<DD><CODE>listener</CODE> - The <code>PedInputListener</code> that will be called when a input key event is fired.
+<DT><B>Returns:</B><DD>0 if successful, negative number if fail.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPinBlockEx(android.os.Bundle, android.device.SEManager.PedInputListener)"><!-- --></A><H3>
+getPinBlockEx</H3>
+<PRE>
+public int <B>getPinBlockEx</B>(android.os.Bundle&nbsp;bundle,
+                         <A HREF="../../android/device/SEManager.PedInputListener.html" title="interface in android.device">SEManager.PedInputListener</A>&nbsp;listener)</PRE>
+<DL>
+<DD>Get the pin block.<br/>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+    <DD><CODE>bundle</CODE> - Is a Bundle obejct. The bundle support parameters are as follows:<br/>
+   <table border=3>
+ <tr><td>Key</td><td>Type</td><td>Remark</td></tr>
+ <tr><td>cardNo</td><td>String</td><td>Card number.</td></tr>
+ <tr><td>sound</td><td>boolean</td><td>Play the key prompt tone.</td></tr>
+ <tr><td>timeOutMS</td><td>long</td><td>Timeout.</td></tr>
+ <tr><td>supportPinLen</td><td>String</td><td>Password length supported.</td></tr>
+ <tr><td>FullScreen</td><td>boolean</td><td>Full screen or half screen display.</td></tr>
+ <tr><td>ShowLine</td><td>boolean</td><td>Show lines.</td></tr>
+ <tr><td>numberText</td><td>StringArray</td><td>Display type of number.</td></tr>
+ <tr><td>cancelText</td><td>String</td><td>Cancel key display content.</td></tr>
+ <tr><td>deleteText</td><td>String</td><td>Delete key display.</td></tr>
+ <tr><td>okText</td><td>String</td><td>Confirm key display content.</td></tr>
+ <tr><td>title</td><td>String</td><td>Title display content.</td></tr>
+ <tr><td>message</td><td>String</td><td>Prompt display content.</td></tr>
+ <tr><td>textSize</td><td>ShortArray</td><td>Set text size, top, bottom, left and right margins, background color.</td></tr>
+ <tr><td>inputBySP</td><td>boolean</td><td>Touch screen input mode, true indicates TP control</td></tr>
+ <tr><td>inputType</td><td>int</td><td>Type of input online / offline / Admin.<br/>
+                                       0x00:onLine<br/>
+                                       0x01:admin_A<br/>
+                                       0x02:admin_B<br/>
+                                       0x03:offLine_plain<br/>
+                                       0x04:offLine_cipher</td></tr>
+ <tr><td>bypass</td><td>boolean</td><td>Bypass mode supports to exit directly by pressing the confirm key without input.</td></tr>
+ <tr><td>checkAdminMode</td><td>int</td><td>Use verification input type in admin mode.<br/>
+                                            0x01:verify password input<br/>
+                                            0x02:set password for the first time<br/>
+                                            0x03:set password to confirm input</td></tr>
+ <tr><td>KeyUsage</td><td>int</td><td>Use of secret key use of pinpad 0x02.<br/>
+                                      0x01:used for magnetic stripe information encryption (TDK)<br/>
+                                      0x02:for pin encryption<br/>
+                                      0x03:for Mac calculation<br/>
+                                      0x04:parent (Master) key<br/>
+                                      0x05:reserved<br/>
+                                      0x06:reserved<br/>
+                                      0x07:used for message transmission encryption</td></tr>
+ <tr><td>PINKeyNo</td><td>int</td><td>Key index, values 0 to 149.</td></tr>
+ <tr><td>pinAlgMode</td><td>int</td><td>Define using encryption algorithms.<br/>
+                                        0x00:mk/sk<br/>
+                                        0x01:fixed key<br/>
+                                        0x02:format4 key<br/>
+                                        0x03/0x04:des or sm4<br/>
+                                        0x10:dukpt</td></tr>
+ 
+ </table> 
+    <DD><CODE>listener</CODE> - The <code>PedInputListener</code> that will be called when a input key event is fired. It can also be used IInputActionListener, but need import android.os.IInputActionListener.<br/>
+<DT><B>Returns:</B><DD>0 if successful, negative number if fail.
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="generateRandomData(byte[], byte[])"><!-- --></A><H3>
+generateRandomData</H3>
+<PRE>
+public int <B>generateRandomData</B>(byte[]&nbsp;ResponseData,
+                              byte[]&nbsp;ResLen)</PRE>
+<DL>
+<DD>Generate a 8 bytes random number.<br/>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>ResponseData</CODE> - Output data, to store the generated 8 bytes random number.
+	<DD><CODE>ResLen</CODE> - Bytes indicating the length of response data.
+<DT><B>Returns:</B><DD>0 if successful, negative number if fail.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="enableSuspend(int, byte[], byte[])"><!-- --></A><H3>
+enableSuspend</H3>
+<PRE>
+public int <B>enableSuspend</B>(int&nbsp;enable,
+                         byte[]&nbsp;ResponseData,
+                         byte[]&nbsp;ResLen)</PRE>
+<DL>
+<DD>Enable the security processor timeout before automatic suspension.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>enable</CODE> - Indicates to enable or to disable the security processor suspend.
+	<DD><CODE>ResponseData</CODE> - Output data, security processor response data.
+	<DD><CODE>ResLen</CODE> - Output data, security processor response data length.
+<DT><B>Returns:</B><DD>0 if successful, negative number if fail.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setSuspendTimeout(int, byte[], byte[])"><!-- --></A><H3>
+setSuspendTimeout</H3>
+<PRE>
+public int <B>setSuspendTimeout</B>(int&nbsp;timeout,
+                             byte[]&nbsp;ResponseData,
+                             byte[]&nbsp;ResLen)</PRE>
+<DL>
+<DD>Allow to set the security processor timeout before automatic suspension.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>timeout</CODE> - The value of the timeout (in seconds) or 0 for infinite.
+	<DD><CODE>ResponseData</CODE> - Output data, security processor response data.
+	<DD><CODE>ResLen</CODE> - Output data, security processor response data length.
+<DT><B>Returns:</B><DD>0 if successful, negative number if fail.</DL>
+</DD>
+</DL>
+<HR>
+
+
+<A NAME="calculateMACOfDUKPTExtend(int, byte[], int, byte[], int[], byte[], int[])"><!-- --></A><H3>
+calculateMACOfDUKPTExtend</H3>
+<PRE>
+public int <B>calculateMACOfDUKPTExtend</B>(int&nbsp;keySetNum, 
+				     byte[]&nbsp;rawData, 
+				     int&nbsp;rawDataLen, 
+				     byte[]&nbsp;outData, 
+				     int[]&nbsp;outDataLen, 
+				     byte[]&nbsp;outKsn, 
+				     int[]&nbsp;KsnLen)</PRE>
+<DL>
+<DD>Calculate MAC use dukpt. Only supports Android 8.1.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>keySetNum</CODE> - Key index of dukpt, range from 0x01 to 0x04.
+	<DD><CODE>rawData</CODE> - Input data, plain data.
+	<DD><CODE>rawDataLen</CODE> - Input data length.
+	<DD><CODE>outData</CODE> - Output data, MAC data.
+	<DD><CODE>outDataLen</CODE> - Output data, MAC data length.
+	<DD><CODE>outKsn</CODE> - Output data, Ksn.
+	<DD><CODE>KsnLen</CODE> - Output data, Ksn length.
+<DT><B>Returns:</B><DD>0 if successful, negative number if fail.</DL>
+</DD>
+</DL>
+<HR>
+
+
+
+<A NAME="encryptWithPEK(int, int, byte[], int, byte[], int[], byte[], int[])"><!-- --></A><H3>
+encryptWithPEK</H3>
+<PRE>
+public int <B>encryptWithPEK</B>(int&nbsp;keyType, 
+			  int&nbsp;keySetNum, 
+			  byte[]&nbsp;rawData, 
+			  int&nbsp;rawDataLen, 
+			  byte[]&nbsp;outData, 
+			  int[]&nbsp;outDataLen, 
+			  byte[]&nbsp;outKsn, 
+			  int[]&nbsp;KsnLen)</PRE>
+<DL>
+<DD>Data encryption use dukpt. Only supports Android 8.1.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>keyType</CODE> - Dukpt key type, set 0x03 for data encryption.
+	<DD><CODE>keySetNum</CODE> - Key index of dukpt, range from 0x01 to 0x04.
+	<DD><CODE>rawData</CODE> - Input data, plain data.
+	<DD><CODE>rawDataLen</CODE> - Input data length.
+	<DD><CODE>outData</CODE> - Output data, encrypted data.
+	<DD><CODE>outDataLen</CODE> - Output data, encrypted data length.
+	<DD><CODE>outKsn</CODE> - Output data, Ksn.
+	<DD><CODE>KsnLen</CODE> - Output data, Ksn length.
+<DT><B>Returns:</B><DD>0 if successful, negative number if fail.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+
+<HR>
+
+</div> </div></div> </body>
+</HTML>

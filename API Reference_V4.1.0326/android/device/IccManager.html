@@ -1,0 +1,1126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<!-- UBX SDK API for Android V3.1.1 -->
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>
+IccManager
+</TITLE>
+
+<META NAME="date" CONTENT="2019-05-09">
+
+<script src="../../assets/jquery-1.6.2.min.js"></script>		<script src="../../assets/bootstrap.min.js"></script>		<link href="../../assets/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">		<link rel="stylesheet" type="text/css" href="../../assets/menu.css">		<script type="text/javascript" src="../../assets/menu.js"></script>		<link href="../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />		<link href="../../assets/customizations.css" rel="stylesheet" type="text/css" />		<script src="../../assets/search_autocomplete.js" type="text/javascript"></script>		<script src="../../assets/jquery-resizable.min.js" type="text/javascript"></script>		<script src="../../assets/doclava-developer-docs.js" type="text/javascript"></script>		<script src="../../assets/prettify.js" type="text/javascript"></script>		<script src="../../assets/customizations.js" type="text/javascript"></script><LINK REL ="stylesheet" TYPE="text/css" HREF="../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="IccManager";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+	<div id="topdiv" class="clearfx">
+		<div id="menu">
+			<ul> <span class="style-summart">Summary:</span>
+			
+				<li class="cur">
+					<a href="#constructor_summary">CONSTR</a>
+				</li>
+				<li>
+					<a href="#methods_inherited_from_class_java.lang.Object">METHOD</a>
+				</li>
+			</ul>
+			<ul> <span class="style-summart">DETAIL:</span>
+				
+				<li class="cur">
+					<a href="#constructor_detail">CONSTR</a>
+				</li>
+				<li>
+					<A HREF="#method_detail">METHOD</A>
+				</li>
+			</ul>
+			<a class="totop" href="#topdiv"> </a>
+		</div>
+		<div class="bodyright">
+<!-- ======== START OF CLASS DATA ======== -->
+<H2><div class="class-div">
+<FONT SIZE="-1">
+android.device</FONT>
+<BR>
+Class IccManager</div></H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../resources/inherit.gif" ALT="extended by "><B>android.device.IccManager</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>IccManager</B><DT>extends java.lang.Object</DL>
+</PRE>
+
+<P>
+The IccManager class is used to initialize and control the smart card reader, 
+ to sends a command Application Protocol Data Unit(APDU) to a card
+ and retrieve the response APDU.
+
+ <p>To control the smart card reader with this class, according to the following steps,</p>
+
+ <ol>
+ <li>You can obtain an instance of this class by calling <A HREF="../../android/device/IccManager.html#IccManager()"><CODE>IccManager</CODE></A>. 
+ <P>IccManager manager = new IccManager();</P>
+
+ <li>Initialize a slot for the smart card reader with <A HREF="../../android/device/IccManager.html#open(byte, byte, byte)"><CODE>open</CODE></A>. 
+ 
+ <li>Query whether the smart card is existent with <A HREF="../../android/device/IccManager.html#detect()"><CODE>detect</CODE></A>. 
+ 
+ <li>Power on to activate and reset the smart card reader with <A HREF="../../android/device/IccManager.html#activate(byte[])"><CODE>activate</CODE></A>. 
+ 
+ <li>Sends a command Application Protocol Data Unit(APDU) to a card
+ and retrieve the response APDU with <A HREF="../../android/device/IccManager.html#apduTransmit(byte[], int, byte[], byte[])"><CODE>apduTransmit</CODE></A>. 
+ 
+ <li>Power off the smart card reader with <A HREF="../../android/device/IccManager.html#deactivate()"><CODE>deactivate</CODE></A>. 
+
+ <li>Call <A HREF="../../android/device/IccManager.html#close()"><CODE>close</CODE></A> to close the slot for smart card reader.
+ </ol>
+ <p>For more information about the smart card reader, read IccManager sample.</p>
+<P>
+
+<P>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#IccManager()">IccManager</A></B>()</CODE>
+
+<BR>
+The IccManager class is used to initialize and control the smart card reader.</TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#open(byte, byte, byte)">open</A></B>(byte&nbsp;slot,
+     byte&nbsp;CardType,
+     byte&nbsp;Volt)</CODE>
+
+<BR>
+Open the IC card for operation.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#close()">close</A></B>()</CODE>
+
+<BR>
+Close the slot.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#detect()">detect</A></B>()</CODE>
+
+<BR>
+Check if IC card is inserted.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#activate(byte[])">activate</A></B>(byte[]&nbsp;pAtr)</CODE>
+
+<BR>
+Activate and reset the card.</TD>
+</TR>
+
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#apduTransmit(byte[], int, byte[], byte[])">apduTransmit</A></B>(byte[]&nbsp;apdu,
+             int&nbsp;apduLen,
+             byte[]&nbsp;rsp,
+             byte[]&nbsp;sw)</CODE>
+
+<BR>
+Transmit APDU to the IC card.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#deactivate()">deactivate</A></B>()</CODE>
+
+<BR>
+Deactivate the card.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#request_Type(byte[])">request_Type</A></B>(byte[]&nbsp;type)</CODE>
+
+<BR>
+Request IC Card type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#getResponseEnable(byte)">getResponseEnable</A></B>(byte&nbsp;autoFlag)</CODE>
+
+<BR>
+Set the drive layer to the 61xx, 6Cxx and other commands for automatic data acquisition. The default for automatic acquisition.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#setETU(int)">setETU</A></B>(int&nbsp;etuTime)</CODE>
+
+<BR>
+Set the ETU.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4442_reset(byte[])">sle4442_reset</A></B>(byte[]&nbsp;pAtr)</CODE>
+
+<BR>
+reset the SLE4442.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4442_readMainMemory(int, int)">sle4442_readMainMemory</A></B>(int&nbsp;addr,
+                       int&nbsp;length)</CODE>
+
+<BR>
+Read the data stored in main memory for SLE4442.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4442_writeMainMemory(int, byte[], int)">sle4442_writeMainMemory</A></B>(int&nbsp;addr,
+                        byte[]&nbsp;data,
+                        int&nbsp;dataLen)</CODE>
+
+<BR>
+Write data to the main storage area SLE4442.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4442_readProtectionMemory(int, int)">sle4442_readProtectionMemory</A></B>(int&nbsp;address,
+                             int&nbsp;len)</CODE>
+
+<BR>
+Read SLE4442 card protection bit storage data (4 BYTE). 4 bytes of data read is to save the SLE4442 bits data in storage area.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4442_writeProtectionMemory(int, byte[], int)">sle4442_writeProtectionMemory</A></B>(int&nbsp;addr,
+                              byte[]&nbsp;data,
+                              int&nbsp;dataLen)</CODE>
+
+<BR>
+The write protection bit storage area.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4442_verifyPassword(byte[])">sle4442_verifyPassword</A></B>(byte[]&nbsp;passwd)</CODE>
+
+<BR>
+Comparison SLE4442 cards, each card compared to the card password, if all the card data become to read-only, you will not be able to do any write operation.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4442_changePassword(byte[])">sle4442_changePassword</A></B>(byte[]&nbsp;passwd)</CODE>
+
+<BR>
+Change password.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4442_readErrorCounter(byte[])">sle4442_readErrorCounter</A></B>(byte[]&nbsp;errorCount)</CODE>
+
+<BR>
+Read error code value.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4436_reset(byte[])">sle4436_reset</A></B>(byte[]&nbsp;pAtr)</CODE>
+
+<BR>
+Reset the SLE4436.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4436_readMemory(int, int)">sle4436_readMemory</A></B>(int&nbsp;addr,
+                   int&nbsp;length)</CODE>
+
+<BR>
+Read the data stored in main memory for SLE4436.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4436_writeMemory(int, byte[], int)">sle4436_writeMemory</A></B>(int&nbsp;addr,
+                    byte[]&nbsp;data,
+                    int&nbsp;dataLen)</CODE>
+
+<BR>
+Write data to the main storage area SLE4436.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4436_verifyPassword(byte[])">sle4436_verifyPassword</A></B>(byte[]&nbsp;passwd)</CODE>
+
+<BR>
+Submit the transfer data, enter the personalization mode.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4436_regIncrease(int)">sle4436_regIncrease</A></B>(int&nbsp;shiftBits)</CODE>
+
+<BR>
+Move the register.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4436_readBit(byte[])">sle4436_readBit</A></B>(byte[]&nbsp;pData)</CODE>
+
+<BR>
+Read values from the card bit.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4436_writeBit()">sle4436_writeBit</A></B>()</CODE>
+
+<BR>
+Write a bit for card.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4436_reloadByte()">sle4436_reloadByte</A></B>()</CODE>
+
+<BR>
+Reload Byte.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4436_decValue(int)">sle4436_decValue</A></B>(int&nbsp;pValue)</CODE>
+
+<BR>
+Reduction balance.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4428_reset(byte[])">sle4428_reset</A></B>(byte[]&nbsp;pAtr)</CODE>
+
+<BR>
+Reset the SLE4428.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4428_readMemory(int, int)">sle4428_readMemory</A></B>(int&nbsp;addr,
+                   int&nbsp;length)</CODE>
+
+<BR>
+Read the data stored in main memory for SLE4428.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4428_writeMemory(int, byte[], int)">sle4428_writeMemory</A></B>(int&nbsp;addr,
+                    byte[]&nbsp;data,
+                    int&nbsp;dataLen)</CODE>
+
+<BR>
+Write data to the main storage area SLE4428.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#sle4428_password(int, byte[])">sle4428_password</A></B>(int&nbsp;mode,
+                 byte[]&nbsp;data)</CODE>
+
+<BR>
+Submit the transfer data, enter the personalization mode.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#at88sc102_read(int, int)">at88sc102_read</A></B>(int&nbsp;addr,
+               int&nbsp;length)</CODE>
+
+<BR>
+Read the data stored in main memory for At88sc102.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#at88sc102_write(int, byte[], int)">at88sc102_write</A></B>(int&nbsp;addr,
+                byte[]&nbsp;data,
+                int&nbsp;dataLen)</CODE>
+
+<BR>
+Write data to the main storage area At88sc102.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/IccManager.html#at88sc102_VerifyPassword(int, byte[], int)">at88sc102_VerifyPassword</A></B>(int&nbsp;type,
+                         byte[]&nbsp;data,
+                         int&nbsp;length)</CODE>
+
+<BR>
+Check & Verify password for At88sc102.</TD>
+</TR>
+
+
+</TABLE></div>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 180px; font-size: 16px;">
+<B>Constructor Detail</B></div></div>
+
+<A NAME="IccManager()"><!-- --></A><H3>
+IccManager</H3>
+<PRE>
+public <B>IccManager</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 160px; font-size: 16px;">
+<B>Method Detail</B></FONT></div></div>
+
+<A NAME="open(byte, byte, byte)"><!-- --></A><H3>
+open</H3>
+<PRE>
+public int <B>open</B>(byte&nbsp;slot,
+                byte&nbsp;CardType,
+                byte&nbsp;Volt)</PRE>
+<DL>
+<DD>Open the IC card for operation.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>slot</CODE> - Card slot type:
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 : IC slot
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 : PSAM1 slot
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 : PSAM2 slot
+	<DD><CODE>CardType</CODE> - Card type:  
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x01 : IC card
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x02 : SLE4442
+	<DD><CODE>Volt</CODE> - valtage to supply:
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x01 : 3V
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x02 : 5V
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x03 : 1.8V
+<DT><B>Returns:</B><DD>0 if successful, negative number if not successful.
+<DT><B>Example:</B><DD>If you initialize the IC card with 3 voltage, you can:
+	<br>
+	<CODE>IccManager mIccReader = new IccManager();
+		<br>
+		public static final byte SLOT_IC = 0x00;
+		<br>
+		public static final byte TYPE_IC = 0x01;
+		<br>
+		public static final byte VOLT_3 = 0x01;
+		<br>
+		int ret = mIccReader.open(SLOT_IC, TYPE_IC, VOLT_3);
+		<br>
+		if(ret &lt; 0) {
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;//open failed
+		<br>
+		}
+	</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="close()"><!-- --></A><H3>
+close</H3>
+<PRE>
+public int <B>close</B>()</PRE>
+<DL>
+<DD>Close the slot.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>0 if successful, negative number if not successful.
+<DT><B>Example:</B><DD><CODE>int ret = mIccReader.open(SLOT_IC, TYPE_IC, VOLT_3);
+		<br>
+		if(ret == 0) {
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;mIccReader.close();
+		<br>
+		}
+	</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="detect()"><!-- --></A><H3>
+detect</H3>
+<PRE>
+public int <B>detect</B>()</PRE>
+<DL>
+<DD>Check if IC card is inserted.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>0 card is detected, negative number if  card is not detected.
+<DT><B>Example:</B><DD><CODE>mIccReader.open(SLOT_IC, TYPE_IC, VOLT_3);
+	<br>
+		int ret = mIccReader.detect();
+		<br>
+		if(ret == 0)
+		<br>
+		&nbsp;&nbsp;&nbsp;//card is detected
+		<br>
+		else
+		<br>
+		&nbsp;&nbsp;&nbsp;//card is not detected
+	</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="activate(byte[])"><!-- --></A><H3>
+activate</H3>
+<PRE>
+public int <B>activate</B>(byte[]&nbsp;pAtr)</PRE>
+<DL>
+<DD>Activate and reset the card.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pAtr</CODE> - To store the returned ATR from the card.
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.
+<DT><B>Example:</B><DD><CODE>int ret = mIccReader.detect();
+	<br>if(ret == 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;byte[] atr = new byte[64];
+	<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;int re = mIccReader.activate(atr);
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;if(re == 0)
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//activate success
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;else
+		<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//activate failed
+	<br>}
+	</CODE>
+	</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="apduTransmit(byte[], int, byte[], byte[])"><!-- --></A><H3>
+apduTransmit</H3>
+<PRE>
+public int <B>apduTransmit</B>(byte[]&nbsp;apdu,
+                        int&nbsp;apduLen,
+                        byte[]&nbsp;rsp,
+                        byte[]&nbsp;sw)</PRE>
+<DL>
+<DD>Transmit APDU to the IC card.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>apdu</CODE> - APDU to be sent to the card.
+	<DD><CODE>apduLen</CODE> - Length of APDU.
+	<DD><CODE>rsp</CODE> - To store the response from the card.
+	<DD><CODE>sw</CODE> - To store the returned status bytes.
+<DT><B>Returns:</B><DD>Length of rsp if successful, negative number if function failed.
+<DT><B>Example:</B><DD><CODE>int ret = mIccReader.activate(atr);
+	<br>if(ret &lt; 0)
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;return;&nbsp;&nbsp;&nbsp;//activate failed
+	<br>
+	byte[] apduBuff = {0x00, 0xA4, 0x04, 0x00, 0x0E, 0x31, 0x50, 0x41, 0x59, 0x2E, 0x53,
+	<br>
+     &nbsp;&nbsp;&nbsp;0x59, 0x53, 0x2E, 0x44, 0x44, 0x46, 0x30, 0x31, 0x00};
+	<br>
+	int apduCount = apduBuff.length;
+	<br>
+	byte[] rspBuf = new byte[256];
+	<br>
+	byte[] rspStatus = new byte[1];
+	<br>
+		int len = mIccReader.ApduTransmit(apduBuff, (char) apduCount, rspBuf, rspStatus);
+		<br>if(len &lt; 0)
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;//ApduTransmit failed
+	</CODE>
+	</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="deactivate()"><!-- --></A><H3>
+deactivate</H3>
+<PRE>
+public int <B>deactivate</B>()</PRE>
+<DL>
+<DD>Deactivate the card.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.
+<DT><B>Example:</B><DD><CODE>int ret = mIccReader.activate(atr);
+	<br>
+	if(ret == 0) {
+	<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;mIccReader.deactivate();
+		<br>
+		}
+	</CODE>
+	</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="request_Type(byte[])"><!-- --></A><H3>
+request_Type</H3>
+<PRE>
+public int <B>request_Type</B>(byte[]&nbsp;type)</PRE>
+<DL>
+<DD>Request IC card type.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>type</CODE> - To store the type of card:
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 : IC card
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 : SLE4442 card
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 : at88sc_102 card
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 : at24xx card
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 : at88sc_1608 card
+<DT><B>Returns:</B><DD>0 if successful, others if failed.
+<DT><B>Example:</B><DD><CODE>mIccReader.activate(atr);
+	<br>
+		public static final byte[] TYPE =  1;
+	<br>
+		int ret = mIccReader.request_Type(TYPE);
+		<br>if(ret == 0)
+		<br>&nbsp;&nbsp;&nbsp;//request_Type success
+		<br>else
+		<br>&nbsp;&nbsp;&nbsp;//request_Type failed
+	</CODE>
+	</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getResponseEnable(byte)"><!-- --></A><H3>
+getResponseEnable</H3>
+<PRE>
+public int <B>getResponseEnable</B>(byte&nbsp;autoFlag)</PRE>
+<DL>
+<DD>Set the drive layer to the 61xx, 6Cxx and other commands for automatic data acquisition. The default is automatic acquisition.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>autoFlag</CODE> - Value:
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 : by the application layer to get.
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 : by the drive layer is automatically acquired.
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.
+<DT><B>Example:</B><DD><CODE>mIccReader.activate(atr);
+	<br>
+		public static final byte AUTO_FLAG =  1;
+	<br>
+		int ret = mIccReader.getResponseEnable(AUTO_FLAG);
+		<br>if(ret == 0)
+		<br>&nbsp;&nbsp;&nbsp;//getResponseEnable success
+		<br>else
+		<br>&nbsp;&nbsp;&nbsp;//getResponseEnable failed
+	</CODE>
+	</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setETU(int)"><!-- --></A><H3>
+setETU</H3>
+<PRE>
+public int <B>setETU</B>(int&nbsp;etuTime)</PRE>
+<DL>
+<DD>Set the ETU.  Default is 372.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>etuTime</CODE> - ETU.
+<DT><B>Returns:</B><DD>0 if successful, negative number if not successful.
+<DT><B>Example:</B><DD><CODE>mIccReader.activate(atr);
+	<br>
+	int etuTime = 373;
+	<br>
+		int ret = mIccReader.setETU(etuTime);
+		<br>
+		if(ret == 0)
+		<br>
+		&nbsp;&nbsp;&nbsp;//setETU success
+		<br>
+		else
+		<br>
+		&nbsp;&nbsp;&nbsp;//setETU fail
+	</CODE>
+	</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4442_reset(byte[])"><!-- --></A><H3>
+sle4442_reset</H3>
+<PRE>
+public int <B>sle4442_reset</B>(byte[]&nbsp;pAtr)</PRE>
+<DL>
+<DD>Reset the SLE4442.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pAtr</CODE> - To store the return ATR.
+<DT><B>Returns:</B><DD>Length of ATR, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4442_readMainMemory(int, int)"><!-- --></A><H3>
+sle4442_readMainMemory</H3>
+<PRE>
+public byte[] <B>sle4442_readMainMemory</B>(int&nbsp;addr,
+                                     int&nbsp;length)</PRE>
+<DL>
+<DD>Read the data stored in main memory for SLE4442.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>addr</CODE> - The starting address of operation data, the range of the parameters of the SLE4442 card is 0 to 255.
+	<DD><CODE>length</CODE> - To read the data length, the range of the parameters of the SLE4442 card is 1 to 256. 
+ ByteAddr and Length cannot be greater than the actual capacity of the card, 
+ otherwise the reader will refuse to execute the command and returns an error.
+<DT><B>Returns:</B><DD>Byte array indicating the store data if successful, null if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4442_writeMainMemory(int, byte[], int)"><!-- --></A><H3>
+sle4442_writeMainMemory</H3>
+<PRE>
+public int <B>sle4442_writeMainMemory</B>(int&nbsp;addr,
+                                   byte[]&nbsp;data,
+                                   int&nbsp;dataLen)</PRE>
+<DL>
+<DD>Write data to the main storage area SLE4442.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>addr</CODE> - The starting address of operation data, the range of the parameters of the SLE4442 card is 0 to 255.
+	<DD><CODE>data</CODE> - The data to be written.
+	<DD><CODE>dataLen</CODE> - Length of data.
+<DT><B>Returns:</B><DD>0 if successful, -1 if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4442_readProtectionMemory(int, int)"><!-- --></A><H3>
+sle4442_readProtectionMemory</H3>
+<PRE>
+public byte[] <B>sle4442_readProtectionMemory</B>(int&nbsp;address,
+                                           int&nbsp;len)</PRE>
+<DL>
+<DD>Read SLE4442 card protection bit storage data (4 BYTE).
+ 4 bytes of data read is to save the SLE4442 bits data in storage area. 
+ Byte sequence bit: low in front, high in the post. 
+ Such as: read data: 30 FF 1F F8 from the first byte of 30H 
+ can be analyzed as follows: the binary 30H 
+ corresponding to the lower four bits: 00110000 to 0 represent the four byte SLE4442 of the card (answer to reset) cannot be changed.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>address</CODE> - The parameter range is 0x00 to 0xff.
+	<DD><CODE>Len</CODE> - Length to read, 4 Bytes:
+                          bit31 - read out 32Bytes;
+                          bit0  - read out 1Byte;
+                          bit*  - etc.
+<DT><B>Returns:</B><DD>Byte array indicating protected storage data if successful, null if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4442_writeProtectionMemory(int, byte[], int)"><!-- --></A><H3>
+sle4442_writeProtectionMemory</H3>
+<PRE>
+public int <B>sle4442_writeProtectionMemory</B>(int&nbsp;addr,
+                                         byte[]&nbsp;data,
+                                         int&nbsp;dataLen)</PRE>
+<DL>
+<DD>The write protection bit storage area. 
+ Write protection on the 4442 card data (disposable, write protection is not able to restore). 
+ Behind the 32BYTE data only for SLE4442 write protect (corresponding to protect a storage area of 32 BIT). 
+ This function can be one of a plurality of consecutive bytes protection (up to 32 bytes). 
+ According to the write protection properties of SLE4442 card, 
+ a byte write protection must provide the bytes of data and sends the write protection command, 
+ at the same time, consistent data provides the data and the actual store only when the specified storage area is write protected.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>addr</CODE> - The starting address of operation data, the range of the parameters of the SLE4442 card is 0 to 31.
+	<DD><CODE>data</CODE> - Write protect bit data.
+	<DD><CODE>dataLen</CODE> - Length of data.
+<DT><B>Returns:</B><DD>0 if successful, -1 if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4442_verifyPassword(byte[])"><!-- --></A><H3>
+sle4442_verifyPassword</H3>
+<PRE>
+public int <B>sle4442_verifyPassword</B>(byte[]&nbsp;passwd)</PRE>
+<DL>
+<DD>Comparison SLE4442 cards, each card compared to the card password, 
+ if all the card data become to read-only, you will not be able to do any write operation. 
+ Secure storage area (except the error counter outside) will not be able to read and write.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>passwd</CODE> - The data buffer pointer password, password here to store data migration and card in the password.
+<DT><B>Returns:</B><DD>0 if successful, -1 if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4442_changePassword(byte[])"><!-- --></A><H3>
+sle4442_changePassword</H3>
+<PRE>
+public int <B>sle4442_changePassword</B>(byte[]&nbsp;passwd)</PRE>
+<DL>
+<DD>Change password.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>passwd</CODE> - The data buffer point to the new password.
+<DT><B>Returns:</B><DD>0 if successful, -1 if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4442_readErrorCounter(byte[])"><!-- --></A><H3>
+sle4442_readErrorCounter</H3>
+<PRE>
+public int <B>sle4442_readErrorCounter</B>(byte[]&nbsp;errorCount)</PRE>
+<DL>
+<DD>Read error code value.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>errorCount</CODE> - The data buffer point to error count, 1Byte.
+<DT><B>Returns:</B><DD>0 if successful, -1 if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4436_reset(byte[])"><!-- --></A><H3>
+sle4436_reset</H3>
+<PRE>
+public int <B>sle4436_reset</B>(byte[]&nbsp;pAtr)</PRE>
+<DL>
+<DD>Reset the SLE4436.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pAtr</CODE> - To store the return ATR.
+<DT><B>Returns:</B><DD>Length of ATR, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4436_readMemory(int, int)"><!-- --></A><H3>
+sle4436_readMemory</H3>
+<PRE>
+public byte[] <B>sle4436_readMemory</B>(int&nbsp;addr,
+                                 int&nbsp;length)</PRE>
+<DL>
+<DD>Read the data stored in main memory for SLE4436.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>addr</CODE> - The starting address of operation data, the range of the parameters of the SLE4436 card is 0 to 112.
+	<DD><CODE>length</CODE> - To read the data length, the range of the parameters of the SLE4436 card is 1 to 112. 
+ ByteAddr and Length cannot be greater than the actual capacity of the card, 
+ otherwise the reader will refuse to execute the command and returns an error.
+<DT><B>Returns:</B><DD>Byte array indicating the store data if successful, null if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4436_writeMemory(int, byte[], int)"><!-- --></A><H3>
+sle4436_writeMemory</H3>
+<PRE>
+public int <B>sle4436_writeMemory</B>(int&nbsp;addr,
+                               byte[]&nbsp;data,
+                               int&nbsp;dataLen)</PRE>
+<DL>
+<DD>Write data to the main storage area SLE4436.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>addr</CODE> - The starting address of operation data, the range of the parameters of the SLE4436 card is 0 to 112.
+<DD><CODE>data</CODE> - The data to be written.
+<DD><CODE>dataLen</CODE> - The data length.
+<DT><B>Returns:</B><DD>0 if successful, -1 if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4436_verifyPassword(byte[])"><!-- --></A><H3>
+sle4436_verifyPassword</H3>
+<PRE>
+public int <B>sle4436_verifyPassword</B>(byte[]&nbsp;passwd)</PRE>
+<DL>
+<DD>Submit the transfer data, enter the personalization mode.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>passwd</CODE> - The data buffer pointer password, password here to store data migration and card in the password. 
+<DT><B>Returns:</B><DD>0 if successful, -1 if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4436_regIncrease(int)"><!-- --></A><H3>
+sle4436_regIncrease</H3>
+<PRE>
+public int <B>sle4436_regIncrease</B>(int&nbsp;shiftBits)</PRE>
+<DL>
+<DD>Move the register.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>shiftBits</CODE> - Move Bits.
+<DT><B>Returns:</B><DD>0 if successful, -1 if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4436_readBit(byte[])"><!-- --></A><H3>
+sle4436_readBit</H3>
+<PRE>
+public int <B>sle4436_readBit</B>(byte[]&nbsp;pData)</PRE>
+<DL>
+<DD>Read values from the Card bit.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pData</CODE> - Store the value read from the card.
+<DT><B>Returns:</B><DD>0 if successful, -1 if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4436_writeBit()"><!-- --></A><H3>
+sle4436_writeBit</H3>
+<PRE>
+public int <B>sle4436_writeBit</B>()</PRE>
+<DL>
+<DD>Write a bit for Card.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>0 if successful, -1 if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4436_reloadByte()"><!-- --></A><H3>
+sle4436_reloadByte</H3>
+<PRE>
+public int <B>sle4436_reloadByte</B>()</PRE>
+<DL>
+<DD>Reload Byte.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>0 if successful, -1 if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4436_decValue(int)"><!-- --></A><H3>
+sle4436_decValue</H3>
+<PRE>
+public int <B>sle4436_decValue</B>(int&nbsp;pValue)</PRE>
+<DL>
+<DD>Reduction balance.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pValue</CODE> - The amount of money to be eduction.
+<DT><B>Returns:</B><DD>The card balance if successful, -1 if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4428_reset(byte[])"><!-- --></A><H3>
+sle4428_reset</H3>
+<PRE>
+public int <B>sle4428_reset</B>(byte[]&nbsp;pAtr)</PRE>
+<DL>
+<DD>reset the SLE4428.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>pAtr</CODE> - To store the return ATR.
+<DT><B>Returns:</B><DD>Length of ATR, negative number if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4428_readMemory(int, int)"><!-- --></A><H3>
+sle4428_readMemory</H3>
+<PRE>
+public byte[] <B>sle4428_readMemory</B>(int&nbsp;addr,
+                                 int&nbsp;length)</PRE>
+<DL>
+<DD>Read the data stored in main memory for SLE4428.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>addr</CODE> - The starting address of operation data, the range of the parameters of the SLE4428 card is 0 to 0x3FF.
+`<DD><CODE>length</CODE> - To read the data length, the range of the parameters of the SLE4428 card is 1 to 0x400. 
+ ByteAddr and Length cannot be greater than the actual capacity of the card, 
+ otherwise the reader will refuse to execute the command and returns an error.
+<DT><B>Returns:</B><DD>Byte array indicating the store data if successful, null if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4428_writeMemory(int, byte[], int)"><!-- --></A><H3>
+sle4428_writeMemory</H3>
+<PRE>
+public int <B>sle4428_writeMemory</B>(int&nbsp;addr,
+                               byte[]&nbsp;data,
+                               int&nbsp;dataLen)</PRE>
+<DL>
+<DD>Write data to the main storage area SLE4428.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>addr</CODE> - The starting address of operation data, the range of the parameters of the SLE4428 card is 0 to 0x3FF.
+	<DD><CODE>data</CODE> - The data to be written.
+	<DD><CODE>dataLen</CODE> - The data length, max 0x400.
+<DT><B>Returns:</B><DD>0 if successful, -1 if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sle4428_password(int, byte[])"><!-- --></A><H3>
+sle4428_password</H3>
+<PRE>
+public int <B>sle4428_password</B>(int&nbsp;mode,
+                            byte[]&nbsp;data)</PRE>
+<DL>
+<DD>Submit the transfer data, enter the personalization mode.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>mode</CODE> - 0 verify password  or 1 changed password.
+	<DD><CODE>data</CODE> - The data buffer pointer password, password here to store data migration and card in the password. 
+<DT><B>Returns:</B><DD>0 if successful, -1 if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="at88sc102_read(int, int)"><!-- --></A><H3>
+at88sc102_read</H3>
+<PRE>
+public byte[] <B>at88sc102_read</B>(int&nbsp;addr,
+                             int&nbsp;length)</PRE>
+<DL>
+<DD>Read the data stored in main memory for At88sc102.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>addr</CODE> - The starting address of operation data, the range of the parameters of the At88sc102 card is 0 to 0xFF.
+	<DD><CODE>length</CODE> - To read the data length, the range of the parameters of the At88sc102 card is 1 to 0x100. 
+ ByteAddr and Length cannot be greater than the actual capacity of the card, 
+ otherwise the reader will refuse to execute the command and returns an error.
+<DT><B>Returns:</B><DD>Byte array indicating the store data if successful, null if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="at88sc102_write(int, byte[], int)"><!-- --></A><H3>
+at88sc102_write</H3>
+<PRE>
+public int <B>at88sc102_write</B>(int&nbsp;addr,
+                           byte[]&nbsp;data,
+                           int&nbsp;dataLen)</PRE>
+<DL>
+<DD>Write data to the main storage area At88sc102.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>addr</CODE> - The starting address of operation data, the range of the parameters of the At88sc102 card is 0 to 0xFF.
+	<DD><CODE>data</CODE> - The data to be written.
+	<DD><CODE>dataLen</CODE> - The data length, 0x100.
+<DT><B>Returns:</B><DD>0 if successful, -1 if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="at88sc102_VerifyPassword(int, byte[], int)"><!-- --></A><H3>
+at88sc102_VerifyPassword</H3>
+<PRE>
+public int <B>at88sc102_VerifyPassword</B>(int&nbsp;type,
+                                    byte[]&nbsp;data,
+                                    int&nbsp;length)</PRE>
+<DL>
+<DD>Check & Verify password for At88sc102.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>type</CODE> - type of password. Value:
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0: SC
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1: erase EZ1 password
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2: erase EZ2 password
+	<DD><CODE>data</CODE> - Password to verify. If type is SC, the len should be 2Bytes. EZ1, the len should be 6Bytes. EZ2, the len should be 4Bytes.
+	<DD><CODE>length</CODE> - The data length.
+<DT><B>Returns:</B><DD>0 if successful, -1 if failed.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+
+<HR>
+
+</div> </div></div> </body>
+</HTML>

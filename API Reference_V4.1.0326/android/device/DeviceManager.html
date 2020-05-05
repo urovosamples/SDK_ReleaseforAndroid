@@ -1,0 +1,461 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<!-- UBX SDK API for Android V3.1.1 -->
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>
+DeviceManager
+</TITLE>
+
+<META NAME="date" CONTENT="2019-05-09">
+
+<script src="../../assets/jquery-1.6.2.min.js"></script>		<script src="../../assets/bootstrap.min.js"></script>		<link href="../../assets/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">		<link rel="stylesheet" type="text/css" href="../../assets/menu.css">		<script type="text/javascript" src="../../assets/menu.js"></script>		<link href="../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />		<link href="../../assets/customizations.css" rel="stylesheet" type="text/css" />		<script src="../../assets/search_autocomplete.js" type="text/javascript"></script>		<script src="../../assets/jquery-resizable.min.js" type="text/javascript"></script>		<script src="../../assets/doclava-developer-docs.js" type="text/javascript"></script>		<script src="../../assets/prettify.js" type="text/javascript"></script>		<script src="../../assets/customizations.js" type="text/javascript"></script><LINK REL ="stylesheet" TYPE="text/css" HREF="../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="DeviceManager";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+	<div id="topdiv" class="clearfx">
+		<div id="menu">
+			<ul> <span class="style-summart">Summary:</span>
+				<li  class="cur">
+					<a href="#constructor_summary">CONSTR</a>
+				</li>
+				<li>
+					<a href="#methods_inherited_from_class_java.lang.Object">METHOD</a>
+				</li>
+			</ul>
+			<ul> <span class="style-summart">DETAIL:</span>
+			
+				<li class="cur">
+					<a href="#constructor_detail">CONSTR</a>
+				</li>
+				<li>
+					<A HREF="#method_detail">METHOD</A>
+				</li>
+			</ul>
+			<a class="totop" href="#topdiv"> </a>
+		</div>
+		<div class="bodyright">
+<!-- ======== START OF CLASS DATA ======== -->
+<H2><div class="class-div">
+<FONT SIZE="-1">
+android.device</FONT>
+<BR>
+Class DeviceManager</div></H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../resources/inherit.gif" ALT="extended by "><B>android.device.DeviceManager</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>DeviceManager</B><DT>extends java.lang.Object</DL>
+</PRE>
+
+<P>
+The DeviceManager class provides support to get and set the device configurations.
+<p>Use this class to control the basic functions of the equipment system, according to the following steps,</p>
+<ol>
+<li>You should import the class first.
+ <p>import android.device.DeviceManager;</p>
+<li>You can obtain an instance of this class.
+ <p>DeviceManager manager = new DeviceManager();</p>
+<li>Use the interface in the class, for example, get SN number.
+<p>String sn = manager.getTIDSN();</p>
+<p>For more information about the device configurations, read DeviceManager sample.</p>
+</ol>
+<P>
+
+<P>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../android/device/DeviceManager.html#DeviceManager()">DeviceManager</A></B>()</CODE>
+
+<BR>
+The DeviceManager class provides support to get and set the device configurations.</TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/DeviceManager.html#getDeviceId()">getDeviceId</A></B>()</CODE>
+
+<BR>
+Get the device SN.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/DeviceManager.html#getTIDSN()">getTIDSN</A></B>()</CODE>
+
+<BR>
+Get the TUSN number of the device.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/DeviceManager.html#setCurrentTime(long)">setCurrentTime</A></B>(long&nbsp;when)</CODE>
+
+<BR>
+Set the current wall time, in milliseconds.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/DeviceManager.html#enableHomeKey(boolean)">enableHomeKey</A></B>(boolean&nbsp;enable)</CODE>
+
+<BR>
+Enable/Disable device Home key.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/DeviceManager.html#enableStatusBar(boolean)">enableStatusBar</A></B>(boolean&nbsp;enable)</CODE>
+
+<BR>
+Enable/Disable the device status bar.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/DeviceManager.html#setAPN(java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, int, java.lang.String, boolean)">setAPN</A></B>(java.lang.String&nbsp;name,
+       java.lang.String&nbsp;apn,
+       java.lang.String&nbsp;proxy,
+       int&nbsp;port,
+       java.lang.String&nbsp;user,
+       java.lang.String&nbsp;server,
+       java.lang.String&nbsp;password,
+       java.lang.String&nbsp;mmsc,
+       java.lang.String&nbsp;mcc,
+       java.lang.String&nbsp;mnc,
+       java.lang.String&nbsp;mmsproxy,
+       int&nbsp;mmsport,
+       int&nbsp;authType,
+       java.lang.String&nbsp;type,
+       java.lang.String&nbsp;protocol,
+       int&nbsp;bearer,
+       java.lang.String&nbsp;roamingProtocol,
+       boolean&nbsp;current)</CODE>
+
+<BR>
+Set the access point name(APN) configurations for mobile data network.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/DeviceManager.html#installApplication(java.lang.String)">installApplication</A></B>(java.lang.String&nbsp;apkFilePath)</CODE>
+
+<BR>
+Install a android package.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/DeviceManager.html#uninstallApplication(java.lang.String)">uninstallApplication</A></B>(java.lang.String&nbsp;packageName)</CODE>
+
+<BR>
+Attempt to remove an android package.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">	
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/DeviceManager.html#getDockerState()">getDockerState</A></B>()</CODE>
+
+<BR>
+Only supports i9000S(Android 4.3/Android5.1). The function is to test the docking station connection status of the current device.</TD>
+</TR>
+</TABLE></div>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 180px; font-size: 16px;">
+<B>Constructor Detail</B></div></div>
+
+<A NAME="DeviceManager()"><!-- --></A><H3>
+DeviceManager</H3>
+<PRE>
+public <B>DeviceManager</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 160px; font-size: 16px;">
+<B>Method Detail</B></FONT></div></div>
+
+<A NAME="getDeviceId()"><!-- --></A><H3>
+getDeviceId</H3>
+<PRE>
+public java.lang.String <B>getDeviceId</B>()</PRE>
+<DL>
+<DD>Get the device SN.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>In the form of 14 alphanumeric characters, all alphanumeric numbers represent ID numbers.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTIDSN()"><!-- --></A><H3>
+getTIDSN</H3>
+<PRE>
+public java.lang.String <B>getTIDSN</B>()</PRE>
+<DL>
+<DD>Get the TUSN number of the device.
+<p>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>In the form of 8 alphanumeric characters, all representing TUSN number.
+<DT><B>Note:</B> Interface unique to POS project.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setCurrentTime(long)"><!-- --></A><H3>
+setCurrentTime</H3>
+<PRE>
+public boolean <B>setCurrentTime</B>(long&nbsp;when)</PRE>
+<DL>
+<DD>Set the current wall time, in milliseconds.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>when</CODE> - in milliseconds. The expression of time is the number of milliseconds between the current time and GMT (Greenwich mean time) at 0:00:00 on January 1, 1970.
+<DT><B>Returns:</B><DD>True if successful, false if failed.
+<DT><B>Example:</B><DD>
+	<CODE>DeviceManager deviceManager = new DeviceManager();
+	<br>
+	deviceManager.setCurrentTime(1562226000);
+</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="enableHomeKey(boolean)"><!-- --></A><H3>
+enableHomeKey</H3>
+<PRE>
+public void <B>enableHomeKey</B>(boolean&nbsp;enable)</PRE>
+<DL>
+<DD>Enable/Disable device Home key.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>enable</CODE> - Set to false to disable the Home key function and set to true to enable the Home key function. 
+<DT><B>Returns:</B><DD>none.
+<DT><B>Note:</B>This status is not persistent. The Home key will be back to normal after reboot.  
+<DT><B>Example:</B><DD>//Call enableHomeKey to disable the Home key
+<br>
+             <code>protected void onCreate(Bundle savedInstanceState) {</code>
+ <br>
+             <code> &nbsp;&nbsp;&nbsp;&nbsp;super.onCreate(savedInstanceState);</code>
+ <br>
+             <code> &nbsp;&nbsp;&nbsp;&nbsp;new DeviceManager().enableHomeKey(false);</code>
+ <br>
+             <code>}</code>
+ <br>
+ <br>
+             //Enable the Home key when exit your application
+ <br>
+             <code> protected void onDestroy() {</code>
+ <br>
+             <code> &nbsp;&nbsp;&nbsp;&nbsp;new DeviceManager().enableHomeKey(true);</code>
+ <br>
+             <code>}</code><br></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="enableStatusBar(boolean)"><!-- --></A><H3>
+enableStatusBar</H3>
+<PRE>
+public void <B>enableStatusBar</B>(boolean&nbsp;enable)</PRE>
+<DL>
+<DD>Enable/Disable the device status bar.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>enable</CODE> - Set to true to enable the status bar.  Set to false to disable the status bar expand.
+<DT><B>Returns:</B><DD>none.
+<DT><B>Note:</B>This status is not persistent. The status bar will be back to normal after reboot.
+<DT><B>Example:</B><DD><CODE>DeviceManager deviceManager = new DeviceManager();
+	<br>deviceManager.enableStatusBar(false);
+    </CODE>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setAPN(java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, int, java.lang.String, boolean)"><!-- --></A><H3>
+setAPN</H3>
+<PRE>
+public boolean <B>setAPN</B>(java.lang.String&nbsp;name,
+                      java.lang.String&nbsp;apn,
+                      java.lang.String&nbsp;proxy,
+                      int&nbsp;port,
+                      java.lang.String&nbsp;user,
+                      java.lang.String&nbsp;server,
+                      java.lang.String&nbsp;password,
+                      java.lang.String&nbsp;mmsc,
+                      java.lang.String&nbsp;mcc,
+                      java.lang.String&nbsp;mnc,
+                      java.lang.String&nbsp;mmsproxy,
+                      int&nbsp;mmsport,
+                      int&nbsp;authType,
+                      java.lang.String&nbsp;type,
+                      java.lang.String&nbsp;protocol,
+                      int&nbsp;bearer,
+                      java.lang.String&nbsp;roamingProtocol,
+                      boolean&nbsp;current)</PRE>
+<DL>
+<DD>Set the access point name(APN) configurations for mobile data network.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>name</CODE> - Entry name.  Cannot be null.
+	<DD><CODE>apn</CODE> - APN name.  Cannot be null.
+	<DD><CODE>proxy</CODE> - Proxy address.
+	<DD><CODE>port</CODE> - Proxy port.
+	<DD><CODE>user</CODE> - APN username.
+	<DD><CODE>server</CODE> - Server address.
+	<DD><CODE>password</CODE> - APN password.
+	<DD><CODE>mmsc</CODE> - MMSC URL.
+	<DD><CODE>mcc</CODE> - Mobile Country Code (MCC).
+	<DD><CODE>mnc</CODE> - MNC Mobile Network Code (MNC).  Cannot be null.
+	<DD><CODE>mmsproxy</CODE> - MMS proxy address.
+	<DD><CODE>mmsport</CODE> - MMS proxy port.
+	<DD><CODE>authType</CODE> - Authentication type. Value:
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 : none 
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 : PAP
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 : CHAP
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 : PAP or CHAP
+	<DD><CODE>type</CODE> - Comma-delimited list of APN types.
+	<DD><CODE>protocol</CODE> - The protocol to use to connect to this APN.  Value: IPv6 or IPv4.
+	<DD><CODE>bearer</CODE> - BEARER  Radio Access Technology info. Value: 
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 : none 
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13 : eHRPD 
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14 :LTE
+	<DD><CODE>roamingProtocol</CODE> - The protocol to use to connect to this APN when roaming.
+	<DD><CODE>current</CODE> - Enable current APN.
+<DT><B>Returns:</B><DD>True if successful, false if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="installApplication(java.lang.String)"><!-- --></A><H3>
+installApplication</H3>
+<PRE>
+public boolean <B>installApplication</B>(java.lang.String&nbsp;apkFilePath)</PRE>
+<DL>
+<DD>Install a android package. Since this may take a little while, the result
+       will be posted back to the given observer. An installation will
+       fail if the package named in the package file's manifest is already
+       installed INSTALL_REPLACE_EXISTING, or if there's no space available on the device.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>apkFilePath</CODE> - The location of the package file to install. This can
+            be a 'file:' or a 'content:' URI.
+<DT><B>Returns:</B><DD>True if successful, false if failed.
+<DT><B>Example:</B><DD><CODE>DeviceManager deviceManager = new DeviceManager();
+	<br>boolean ret = deviceManager.installApplication("/sdcard/test.apk");
+<br>
+	if(ret)
+<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;//install success
+<br>
+	else
+<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;//install failed
+</CODE>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="uninstallApplication(java.lang.String)"><!-- --></A><H3>
+uninstallApplication</H3>
+<PRE>
+public boolean <B>uninstallApplication</B>(java.lang.String&nbsp;packageName)</PRE>
+<DL>
+<DD>Attempt to remove an android package.   A deletion will fail  if the
+ named package cannot be found, or if the named package is a "system package".
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>packageName</CODE> - The name of the package to delete.
+<DT><B>Returns:</B><DD>True if successful, false if failed.
+<DT><B>Example:</B><DD><CODE>DeviceManager deviceManager = new DeviceManager();
+	<br>boolean ret = deviceManager.uninstallApplication("com.device.uhome");
+<br>
+	if(ret)
+<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;//uninstall success
+<br>
+	else
+<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;//uninstall failed
+</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDockerState()"><!-- --></A><H3>
+getDockerState</H3>
+<PRE>
+public boolean <B>getDockerState</B>()</PRE>
+<DL>
+<DD>Only supports i9000S(Android 4.3/Android5.1). The function is to test the docking station connection status of the current device.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none.
+<DT><B>Returns:</B><DD>True if the device is in Ethernet mode or USB host mode, or false if the device is in normal mode.
+<DT><B>Note:</B> only equipment with base can be used!
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+
+</div> </div></div> </body>
+</HTML>

@@ -2,17 +2,17 @@ Device hardware API:
 
 API Reference folder: API Docs
 
-libs folder: API jar file
+SDK_release folder: API jar file
 
-SDK_release folder: API demo
+Samples folder: API demo
 
 BarcodeScan  DeviceManager pmInstall to Run ALL Devices
 
-ICCManager  MagManager  PICCManager PinPad SLE4442 Printer to Run I9000S and I9000A devices;Android4.3
+ICCManager  MagManager  PICCManager PinPad SLE4442 Printer to Run I9000S, I9100 and I9000A devices;Android4.3/Android5.1/Android6.0/Android8.0
  
-PASMDemo to Run I9000S and I9000A, i6200, i6200s;Android4.3
+PASMDemo to Run I9000S and I9000A, I9100, i6200, i6200s;Android4.3/Android5.1/Android6.0/Android8.0
 
-NFCDemo to Run I6100s i6200s
+ 
 
 
 Version log:

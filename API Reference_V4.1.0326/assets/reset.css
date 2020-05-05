@@ -1,0 +1,16 @@
+*[hidefocus]{outline:none;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{padding:0;margin:0;}
+fieldset,img,html,body,iframe{border:0;}
+table{border-collapse:collapse;border-spacing:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-weight:bold;font-size:100%;}
+caption,th{font-weight:normal;font-style:normal;text-align:left;}
+em,strong{font-weight:bold;font-style:normal;}
+
+body,textarea,select,input{font-family:helvetica,arial,simsun,sans-serif;font-size:14px;color:#000;}
+body{background-color:#fff;}
+a,button{cursor:pointer;}
+a{text-decoration:none;color:#000; outline: none;}
+a:hover{text-decoration:none;}
+html,body{width:100%;height:100%;}
+html{overflow:auto;overflow-y:scroll;}

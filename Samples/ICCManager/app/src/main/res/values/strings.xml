@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IccSample</string>
+    <string name="icc">ICC</string>
+    <string name="psam">PSAM</string>
+    <string name="sle4442">SLE4442</string>
+    <string name="action_settings">Version</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="btn_send">Send APDU</string>
+    <string name="btn_send_hint">HEX, 16 byte (e.g. 0A4F&#8230;)</string>
+    <string name="btn_reset">Reset</string>
+    <string name="btn_def_apdu">DEF APDU</string>
+    <string name="btn_detect">Detect</string>
+    <string name="btn_init_ic">Init</string>
+    <string name="btn_init_sle4442">Init 4442</string>
+    <string name="btn_icc">ICC</string>
+    <string name="btn_psam">PSAM</string>
+    <string name="btn_sle4442">SLE442</string>
+    <string name="et_password">Password</string>
+    <string name="et_memAddr">Address</string>
+    <string name="et_memLen">Length</string>
+    <string name="et_dataToWrite">HEX data to write</string>
+    <string name="btn_readErrCount">Read Err Count</string>
+    <string name="btn_verifyPassword">Verify Password</string>
+    <string name="btn_changePassword">Change Password</string>
+    <string name="btn_readMainMem">Read Main Memory</string>
+    <string name="btn_readProctectionMem">Read Prot Memory</string>
+    <string name="btn_writeMainMem">Write Main Memory</string>  
+    <string name="btn_writeProcMem">Write Prot Memory</string>
+
+</resources>

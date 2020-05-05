@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, PrinterManagerActivity!</string>
+    <string name="app_name">PrinterSample</string>
+    <string name="action_settings">Version</string>
+    
+    <string name="printer_temp_title">Current Temp: </string>
+    <string name="printer_temp">0</string>
+    
+    <string name="printer_temp_threshold_title">Threshold Temp: </string>
+    <string name="printer_temp_threshold">0</string>
+    <string name="printer_temp_threshold_def">Def: 50</string>
+    
+    <string name="bt_set_temp_threshold">Set Threshold</string>
+    
+    <string name="printer_temp_overheating">Overheating protection</string>
+    
+    <string name="printer_barcode_title">Barcode Type</string>
+    
+    <string name="tv_factoryTest">Factory Test</string>
+    <string name="cb_factoryTest">Factory Test</string>
+
+    <string name="cb_print_barcode">Print Barcode</string>
+
+    <string name="btn_BACK">Roll Back</string>
+    <string name="btn_FORWARD">Forward</string>
+    
+    <string name="btn_barcode">Print Barcode</string>
+    <string name="btn_prnBill">Print Text</string>
+    <string name="btn_prnPicture">Print Picture</string>
+    
+    <string name="et_printer_def_hue">Def Hue: 0(0~4)</string>
+    <string name="bt_printer_set_hue">Set Hue</string>
+    <string name="et_printer_def_speed">Def speed: 9(0~9)</string>
+    <string name="bt_printer_set_speed">Set speed</string>
+    
+    <string name="mci_select_title">Product Testing</string>
+    <string name="mci_select_content">Product Testing</string>
+    <string name="mci_select_ok">OK</string>
+    <string name="mci_select_cancel">Cancel</string>
+    
+    <string name="tst_info_paper">Out of Paper!!!</string>
+    <string name="tst_info_temperature">Thermal Protection!!!</string>
+    <string name="tst_info_voltage">Low Power!!!</string>
+    <string name="tst_info_busy">Printer Busy!!!</string>
+    <string name="tst_info_error">Printer Error!!!</string>
+    <string name="tst_info_driver_error">Printer Driver Error!!!</string>
+    <string name="tst_info_select_picture">Print default picture?</string>
+    <string name="tst_info_select_picture_msg">Press OK to print default picture, otherwise print a picture from Gallery!!!</string>
+        
+    <string name="tst_hint_content">Please input right content!!!</string>
+    
+    <string-array name="barcode_type">
+	    <item>C25INTER</item>
+	    <item>CODE128</item>
+	    <item>CODE93</item>
+	    <item>RSS14</item>
+	    <item>UPCA</item>
+	    <item>PDF417</item>
+	    <item>QRCODE</item>
+	    <item>DATAMATRIX</item>
+	    <item>MICROPDF</item>
+	    <item>AZTEC</item>
+	</string-array>
+
+    <string-array name="font_size">
+        <item>8</item>
+        <item>10</item>
+        <item>12</item>
+        <item>16</item>
+        <item>24</item>
+        <item>36</item>
+        <item>48</item>
+        <item>50</item>
+    </string-array>
+
+    <string-array name="font_name">
+        <item>simsun</item>
+        <item>arial</item>
+    </string-array>
+</resources>

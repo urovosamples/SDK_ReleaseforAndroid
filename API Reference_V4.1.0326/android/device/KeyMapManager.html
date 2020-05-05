@@ -1,0 +1,485 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<!-- UBX SDK API for Android V3.1.1 -->
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>
+KeyMapManager
+</TITLE>
+
+<META NAME="date" CONTENT="2019-05-09">
+
+<script src="../../assets/jquery-1.6.2.min.js"></script>		<script src="../../assets/bootstrap.min.js"></script>		<link href="../../assets/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">		<link rel="stylesheet" type="text/css" href="../../assets/menu.css">		<script type="text/javascript" src="../../assets/menu.js"></script>		<link href="../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />		<link href="../../assets/customizations.css" rel="stylesheet" type="text/css" />		<script src="../../assets/search_autocomplete.js" type="text/javascript"></script>		<script src="../../assets/jquery-resizable.min.js" type="text/javascript"></script>		<script src="../../assets/doclava-developer-docs.js" type="text/javascript"></script>		<script src="../../assets/prettify.js" type="text/javascript"></script>		<script src="../../assets/customizations.js" type="text/javascript"></script><LINK REL ="stylesheet" TYPE="text/css" HREF="../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="KeyMapManager";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+	<div id="topdiv" class="clearfx">
+		<div id="menu">
+			<ul> <span class="style-summart">Summary:</span>
+				<li class="cur">
+					<a href="#nested_class_summary">NESTED</a>
+				</li>
+				<li>
+					<A HREF="#field_summary">FIELD</A>
+				</li>
+				<li>
+					<a href="#constructor_summary">CONSTR</a>
+				</li>
+				<li>
+					<a href="#methods_inherited_from_class_java.lang.Object">METHOD</a>
+				</li>
+			</ul>
+			<ul> <span class="style-summart">DETAIL:</span>
+				<li class="cur">
+					<A HREF="#field_detail">FIELD</A>
+				</li>
+				<li>
+					<a href="#constructor_detail">CONSTR</a>
+				</li>
+				<li>
+					<A HREF="#method_detail">METHOD</A>
+				</li>
+			</ul>
+			<a class="totop" href="#topdiv"> </a>
+		</div>
+		<div class="bodyright">
+<!-- ======== START OF CLASS DATA ======== -->
+<H2><div class="class-div">
+<FONT SIZE="-1">
+android.device</FONT>
+<BR>
+Class KeyMapManager</div></H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../resources/inherit.gif" ALT="extended by "><B>android.device.KeyMapManager</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>KeyMapManager</B><DT>extends java.lang.Object</DL>
+</PRE>
+
+<P>
+KeyMapManager class used to remap key and button events. The mapped keys can start the application, send the broadcast and other key functions. Mapping is still valid after reboot. 
+ Note that this class only works on Android 5.1 and Android 4.3 and later.
+<P>
+Use this class to control the basic functions of the equipment system, according to the following steps,
+<ol>
+<li>You should define a class parameter at first.
+	<p>import android.device.KeyMapManager;</p>
+<li>Then, you can obtain an instance of this class by calling <A HREF="../../android/device/KeyMapManager.html#KeyMapManager">KeyMapManager</A>.
+	<p>KeyMapManager mKeyMap = new KeyMapManager(Android.content.Context context);</p>
+<li>Before starting the call, you can judge whether the system enables mapping through <CODE><A HREF="../../android/device/KeyMapManager.html#isInterception()">isInterception</A></CODE> and 
+	 enable mapping through <CODE><A HREF="../../android/device/KeyMapManager.html#disableInterception(boolean)">disableInterception</A></CODE>.
+<p>For more information about remap key, read KeyMapManager sample.</p>
+</ol>
+<P>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/KeyMapManager.KeyEntry.html" title="class in android.device">KeyMapManager.KeyEntry</A></B></CODE>
+
+<BR>
+Describes the keys provided by button event and their associated labels.</TD>
+</TR>
+</TABLE></div>
+&nbsp;<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/KeyMapManager.html#KEY_TYPE_KEYCODE">KEY_TYPE_KEYCODE</A></B></CODE>
+
+<BR>
+This mask is used to remap new keycode FUNCTION.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/KeyMapManager.html#KEY_TYPE_STARTAC">KEY_TYPE_STARTAC</A></B></CODE>
+
+<BR>
+This mask is used to remap special actions to start APPS FUNCTION.</TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../android/device/KeyMapManager.html#KeyMapManager(Context)">KeyMapManager</A></B>(Android.content.Context&nbsp;context)</CODE>
+
+<BR>
+The KeyMapManager class used to remap key and button events.</TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/KeyMapManager.html#delKeyEntry(int)">delKeyEntry</A></B>(int&nbsp;scancode)</CODE>
+
+<BR>
+Delete the Button key remap.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/KeyMapManager.html#disableInterception(boolean)">disableInterception</A></B>(boolean&nbsp;interception)</CODE>
+
+<BR>
+Disable or enable system remap Button key event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/KeyMapManager.html#getKeyAction(int)">getKeyAction</A></B>(int&nbsp;scancode)</CODE>
+
+<BR>
+Get special actions if this scan code is a KeyEvent keycode. Only supports Android 7.1.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/KeyMapManager.html#getKeyCode(int)">getKeyCode</A></B>(int&nbsp;scancode)</CODE>
+
+<BR>
+Get new keycode if this scan code is a KeyEvent keycode.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List&lt;<A HREF="../../android/device/KeyMapManager.KeyEntry.html" title="class in android.device">KeyMapManager.KeyEntry</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/KeyMapManager.html#getKeyList()">getKeyList</A></B>()</CODE>
+
+<BR>
+Get all remap keys describes.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/KeyMapManager.html#getKeyMeta(int)">getKeyMeta</A></B>(int&nbsp;scancode)</CODE>
+
+<BR>
+Get new keycode after remap if this scan code is a KeyEvent keycode.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/KeyMapManager.html#getKeyType(int)">getKeyType</A></B>(int&nbsp;scancode)</CODE>
+
+<BR>
+Get ramap type if this scan code is a KeyEvent keycode.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/KeyMapManager.html#hasKeyEntry(int)">hasKeyEntry</A></B>(int&nbsp;scancode)</CODE>
+
+<BR>
+Judge the Button key remap state.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/KeyMapManager.html#isInterception()">isInterception</A></B>()</CODE>
+
+<BR>
+True if enable system remap Button key event.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/KeyMapManager.html#mapKeyEntry(KeyEvent, int, java.lang.String)">mapKeyEntry</A></B>(KeyEvent&nbsp;event,
+            int&nbsp;keyType,
+            java.lang.String&nbsp;meta)</CODE>
+
+<BR>
+Create a new key event remap that is the same as the given one, but whose keycode is replaced with the given value.</TD>
+</TR>
+</TABLE></div>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 160px; font-size: 16px;"><B>FIELD DETAIL</B></FONT></div></div>
+
+
+<A NAME="KEY_TYPE_KEYCODE"><!-- --></A><H3>
+KEY_TYPE_KEYCODE</H3>
+<PRE>
+public static final int <B>KEY_TYPE_KEYCODE</B></PRE>
+<DL>
+<DD><p>This mask is used to remap new keycode FUNCTION.</p>
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.KeyMapManager.KEY_TYPE_KEYCODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="KEY_TYPE_STARTAC"><!-- --></A><H3>
+KEY_TYPE_STARTAC</H3>
+<PRE>
+public static final int <B>KEY_TYPE_STARTAC</B></PRE>
+<DL>
+<DD><p>This mask is used to remap special actions to start APPS FUNCTION.</p>
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.KeyMapManager.KEY_TYPE_STARTAC">Constant Field Values</A></DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 180px; font-size: 16px;"><B>Constructor Detail</B></div></div>
+
+
+<A NAME="KeyMapManager(Context)"><!-- --></A><H3>
+KeyMapManager</H3>
+<PRE>
+public <B>KeyMapManager</B>(Android.content.Context&nbsp;context)</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 160px; font-size: 16px;"><B>Method Detail</B></FONT></div></div>
+
+
+<A NAME="hasKeyEntry(int)"><!-- --></A><H3>
+hasKeyEntry</H3>
+<PRE>
+public boolean <B>hasKeyEntry</B>(int&nbsp;scancode)</PRE>
+<DL>
+<DD><p>Judge the Button key remap state.</p>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>scancode</CODE> - <CODE>android.view.KeyEvent#getScanCode()</CODE>
+<DT><B>Returns:</B><DD>true if the Button key is remap, false otherwise.
+<DT><B>Example:</B><DD>
+	<CODE>KeyMapManager mKeyMap = new KeyMapManager();
+		<br>
+		if (mKeyMap.hasKeyEntry(event.getScanCode())) {
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;//Button key is remap
+		<br>
+		}
+	</CODE>
+	</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="delKeyEntry(int)"><!-- --></A><H3>
+delKeyEntry</H3>
+<PRE>
+public void <B>delKeyEntry</B>(int&nbsp;scancode)</PRE>
+<DL>
+<DD><p>Delete the Button key remap.</p>
+<P>
+<DD><DL>
+
+<DT><B>Parameters:</B><DD><CODE>scancode</CODE> - <CODE>android.view.KeyEvent#getScanCode()</CODE>
+<DT><B>Returns:</B><DD>none
+<DT><B>Example:</B><DD>
+	<CODE>KeyMapManager mKeyMap = new KeyMapManager();
+		<br>
+		mKeyMap.delKeyEntry(event.getScanCode());
+	</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mapKeyEntry(KeyEvent, int, java.lang.String)"><!-- --></A><H3>
+mapKeyEntry</H3>
+<PRE>
+public void <B>mapKeyEntry</B>(KeyEvent&nbsp;event,
+                        int&nbsp;keyType,
+                        java.lang.String&nbsp;meta)</PRE>
+<DL>
+<DD>Create a new key event remap that is the same as the given one, but whose
+ keycode is replaced with the given value.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>event</CODE> - The button key event <CODE>android.view.KeyEvent</CODE>.
+	<DD><CODE>keyType</CODE> - The key type. See <A HREF="../../android/device/KeyMapManager.html#KEY_TYPE_KEYCODE"><CODE>KEY_TYPE_KEYCODE</CODE></A> or <A HREF="../../android/device/KeyMapManager.html#KEY_TYPE_STARTAC"><CODE>KEY_TYPE_STARTAC</CODE></A>.
+	<DD><CODE>meta</CODE> - New keycode or special actions to start APPS <CODE>android.content.Intent</CODE>.
+<DT><B>Returns:</B><DD>none
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isInterception()"><!-- --></A><H3>
+isInterception</H3>
+<PRE>
+public boolean <B>isInterception</B>()</PRE>
+<DL>
+<DD>True if enable system remap Button key event.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>True if the remap function is enable, false otherwise.
+<DT><B>Example:</B><DD>
+	<CODE>KeyMapManager mKeyMap = new KeyMapManager();
+		<br>
+		if (mKeyMap.isInterception()) {
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;//remap function
+		<br>
+		}
+	</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="disableInterception(boolean)"><!-- --></A><H3>
+disableInterception</H3>
+<PRE>
+public void <B>disableInterception</B>(boolean&nbsp;interception)</PRE>
+<DL>
+<DD>Disable or enable system remap button key event.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>interception</CODE> - True disable remap KeyEvent, false otherwise.
+<DT><B>Returns:</B><DD>none
+<DT><B>Example:</B><DD><CODE>KeyMapManager mKeyMap = new KeyMapManager();</CODE>
+	<br>//enable system remap button key events
+	<br>
+	<CODE>mKeyMap.disableInterception(false);</CODE>
+	<br>
+	//disable system remap button key events
+	<br>
+	<CODE>mKeyMap.disableInterception(true);</CODE>
+	</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getKeyCode(int)"><!-- --></A><H3>
+getKeyCode</H3>
+<PRE>
+public int <B>getKeyCode</B>(int&nbsp;scancode)</PRE>
+<DL>
+<DD>Get new keycode if this scan code is a KeyEvent keycode.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>scancode</CODE> - <CODE>android.view.KeyEvent#getScanCode()</CODE>
+<DT><B>Returns:</B><DD>the keycode or -1 if not found.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getKeyMeta(int)"><!-- --></A><H3>
+getKeyMeta</H3>
+<PRE>
+public int <B>getKeyMeta</B>(int&nbsp;scancode)</PRE>
+<DL>
+<DD>Get new keycode after remap if this scan code is a KeyEvent keycode.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>scancode</CODE> - <CODE>android.view.KeyEvent#getScanCode()</CODE>
+<DT><B>Returns:</B><DD>the keycode or -1 if not found.
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getKeyAction(int)"><!-- --></A><H3>
+getKeyAction</H3>
+<PRE>
+public java.lang.String <B>getKeyAction</B>(int&nbsp;scancode)</PRE>
+<DL>
+<DD>Get special actions if this scan code is a KeyEvent keycode. Only supports Android 7.1.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>scancode</CODE> - <CODE>android.view.KeyEvent#getScanCode()</CODE>
+<DT><B>Returns:</B><DD>Special actions to start APPS <CODE>android.content.Intent</CODE>, null otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getKeyType(int)"><!-- --></A><H3>
+getKeyType</H3>
+<PRE>
+public int <B>getKeyType</B>(int&nbsp;scancode)</PRE>
+<DL>
+<DD>Get ramap type if this scan code is a KeyEvent keycode.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>scancode</CODE> - <CODE>android.view.KeyEvent#getScanCode()</CODE>
+<DT><B>Returns:</B><DD>The Key type. See <A HREF="../../android/device/KeyMapManager.html#KEY_TYPE_KEYCODE"><CODE>KEY_TYPE_KEYCODE</CODE></A> or <A HREF="../../android/device/KeyMapManager.html#KEY_TYPE_STARTAC"><CODE>KEY_TYPE_STARTAC</CODE></A>, -1 otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getKeyList()"><!-- --></A><H3>
+getKeyList</H3>
+<PRE>
+public java.util.List&lt;<A HREF="../../android/device/KeyMapManager.KeyEntry.html" title="class in android.device">KeyMapManager.KeyEntry</A>&gt; <B>getKeyList</B>()</PRE>
+<DL>
+<DD>Get all remap keys describes.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>Describes list <A HREF="../../android/device/KeyMapManager.KeyEntry.html" title="class in android.device"><CODE>KeyMapManager.KeyEntry</CODE></A>, null otherwise.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+
+<HR>
+
+</div> </div></div> </body>
+</HTML>

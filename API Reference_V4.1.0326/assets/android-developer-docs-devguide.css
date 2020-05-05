@@ -1,0 +1,23 @@
+
+@import url("android-developer-docs.css");
+
+/* Page title */
+
+#jd-header {
+  background-color: #02A7D4;;
+}
+#jd-header h1 {
+  padding: 8px 0 0 0;
+  background-color: #02A7D4;;
+}
+
+/* Page content container */
+
+#jd-header table {
+margin: 0 0 1em 1em;
+}
+
+#jd-content table table,
+#jd-content table img {
+  margin:1em 0;
+}

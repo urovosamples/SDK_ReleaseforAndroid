@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">ScanSample</string>
+    <string name="scan_title">Scan</string>
+    <string name="scan_result">Scan result</string>
+    <string name="scan_on">ON</string>
+    <string name="scan_off">OFF</string>
+    <string name="scan_settings">Settings</string>
+    <string name="scan_service">ScanService</string>
+    <string name="scan_trigger_start">Scan</string>
+    <string name="scan_trigger_end">Stop</string>
+    <string name="scan_lock_trigger">Lock Trigger</string>
+    <string name="scan_lock_trigger_summary">Set the scan trigger inactive</string>
+    <string name="scan_trigger_mode">Scan Trigger Mode</string>
+    <string name="scan_output_mode">Scan Output Mode</string>
+    <string name="scan_sound_mode">Scan Beep</string>
+    <string name="scan_cupture_image">Cupture Image</string>
+    <string name="scan_cupture_title">Cupture Image</string>
+    <string name="scan_cupture_summary">Intent Output Mode Cupture Image</string>
+    <string name="scan_reset_def_summary">Reset the decoding subsystem configuration </string>
+    <string name="scan_reset_def">Reset Configuration</string>
+    <string name="scan_reset_def_alert">Reset the decoding subsystem configuration?</string>
+    <string name="scan_reset_title">Reset</string>
+    <string name="scan_reset_progress">Reset ......</string>
+    <string name="scanner_toast">Scanner reset finished!</string>
+    <string name="scanner_intent_action">Intent action</string>
+    <string name="scanner_wedge_intent_title">Intent Output</string>
+    <string name="scanner_intent_stringlabel">Intent string extra</string>
+    <string name="scan_keyboard_output_type">Keyboard Output Type</string>
+    <string name="scan_intent_barcode_type">Intent Barcode Tag</string>
+    <string name="scan_barcode_symbology">Barcode Symbology</string>
+    <string name="scan_cupture_image_prompt">Please select the broadcast output.</string>
+</resources>

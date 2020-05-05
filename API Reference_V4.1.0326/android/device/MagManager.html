@@ -1,0 +1,418 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<!-- UBX SDK API for Android V3.1.1 -->
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>
+MagManager
+</TITLE>
+
+<META NAME="date" CONTENT="2019-05-09">
+
+<script src="../../assets/jquery-1.6.2.min.js"></script>		<script src="../../assets/bootstrap.min.js"></script>		<link href="../../assets/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">		<link rel="stylesheet" type="text/css" href="../../assets/menu.css">		<script type="text/javascript" src="../../assets/menu.js"></script>		<link href="../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />		<link href="../../assets/customizations.css" rel="stylesheet" type="text/css" />		<script src="../../assets/search_autocomplete.js" type="text/javascript"></script>		<script src="../../assets/jquery-resizable.min.js" type="text/javascript"></script>		<script src="../../assets/doclava-developer-docs.js" type="text/javascript"></script>		<script src="../../assets/prettify.js" type="text/javascript"></script>		<script src="../../assets/customizations.js" type="text/javascript"></script><LINK REL ="stylesheet" TYPE="text/css" HREF="../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="MagManager";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+	<div id="topdiv" class="clearfx">
+		<div id="menu">
+			<ul> <span class="style-summart">Summary:</span>
+				
+				<li class="cur">
+					<a href="#constructor_summary">CONSTR</a>
+				</li>
+				<li>
+					<a href="#methods_inherited_from_class_java.lang.Object">METHOD</a>
+				</li>
+			</ul>
+			<ul> <span class="style-summart">DETAIL:</span>
+			
+				<li class="cur">
+					<a href="#constructor_detail">CONSTR</a>
+				</li>
+				<li>
+					<A HREF="#method_detail">METHOD</A>
+				</li>
+			</ul>
+			<a class="totop" href="#topdiv"> </a>
+		</div>
+		<div class="bodyright">
+<!-- ======== START OF CLASS DATA ======== -->
+<H2><div class="class-div">
+<FONT SIZE="-1">
+android.device</FONT>
+<BR>
+Class MagManager</div></H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../resources/inherit.gif" ALT="extended by "><B>android.device.MagManager</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>MagManager</B><DT>extends java.lang.Object</DL>
+</PRE>
+
+<P>
+The MagManager class is used to initialize and control the MSR card reader, and has the function of obtaining all data of the card. 
+
+ <p>To control the MSR card reader with this class, according to the following steps,</p>
+
+ <ol>
+ <li>You can obtain an instance of this class by calling. MagManager manager = new MagManager();
+
+ <li>Initialize slot for the MSR card reader with <A HREF="../../android/device/MagManager.html#open()"><CODE>open</CODE></A>. 
+ 
+ <li>Query whether the MSR card is not swipe with <A HREF="../../android/device/MagManager.html#checkCard()"><CODE>checkCard</CODE></A>. 
+ 
+ <li>Get information on all 3 tracks with <A HREF="../../android/device/MagManager.html#getAllStripInfo(byte[])"><CODE>getAllStripInfo</CODE></A>. 
+ 
+ <li>Call <A HREF="../../android/device/MagManager.html#close()"><CODE>close</CODE></A> to close the slot for MSR card reader.
+ <p>For more information about the MSR card reader, read MagManager sample.</p>
+ </ol>
+<P>
+
+<P>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../android/device/MagManager.html#MagManager()">MagManager</A></B>()</CODE>
+
+<BR>
+The MagManager class is used to initialize and control the MSR card reader.</TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/MagManager.html#open()">open</A></B>()</CODE>
+
+<BR>
+Open the MSR reader.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/MagManager.html#close()">close</A></B>()</CODE>
+
+<BR>
+Close the MSR reader.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/MagManager.html#checkCard()">checkCard</A></B>()</CODE>
+<BR>
+Check if a card swipe action has taken place.</TD>
+</TR>
+
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/MagManager.html#getAllStripInfo(byte[])">getAllStripInfo</A></B>(byte[]&nbsp;info)</CODE>
+
+<BR>
+Get information on all 3 tracks.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/MagManager.html#getSingleStripInfo(int, byte[])">getSingleStripInfo</A></B>(int&nbsp;strip,
+                   byte[]&nbsp;info)</CODE>
+
+<BR>
+Get specific track information.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/MagManager.html#getEncryptStripInfo(int, int, byte[], byte[], byte[])">getEncryptStripInfo</A></B>(int&nbsp;AlgMode,
+                    int&nbsp;keyIndex,
+                    byte[]&nbsp;info,
+                    byte[]&nbsp;cardNo,
+                    byte[]&nbsp;KSN)</CODE>
+
+<BR>
+Get information on all 3 Encrypt track data and plain text card NO.</TD>
+</TR>
+</TABLE></div>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 180px; font-size: 16px;"><B>Constructor Detail</B></div></div>
+
+
+<A NAME="MagManager()"><!-- --></A><H3>
+MagManager</H3>
+<PRE>
+public <B>MagManager</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 160px; font-size: 16px;"><B>Method Detail</B></FONT></div></div>
+
+
+<A NAME="open()"><!-- --></A><H3>
+open</H3>
+<PRE>
+public int <B>open</B>()</PRE>
+<DL>
+<DD>Open the MSR reader.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>0 if the open operation succeeds, negative if the operation fails.
+<DT><B>Example:</B><DD><CODE>MagManager magManager = new MagManager();
+	<br>
+	int ret = magManager.open();
+	<br>
+	if (ret != 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;//open failed
+	<br>
+	}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="close()"><!-- --></A><H3>
+close</H3>
+<PRE>
+public int <B>close</B>()</PRE>
+<DL>
+<DD>Close the MSR reader.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>0 if successful, negative number if failed.
+<DT><B>Example:</B><DD><CODE>
+	int ret = magManager.open();
+	<br>if(ret == 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;magManager.close();
+	<br>
+	}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="checkCard()"><!-- --></A><H3>
+checkCard</H3>
+<PRE>
+public int <B>checkCard</B>()</PRE>
+<DL>
+<DD>Check if a card swipe action has taken place.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>0 if card swipe action has been detected, negative number if swipe action has not been detected.
+<DT><B>Example:</B><DD><CODE>magManager.open();
+	<br>
+	int ret = magManager.checkCard();
+	<br>
+	if (ret != 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;//No card swiping detected 
+	<br>
+	}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getAllStripInfo(byte[])"><!-- --></A><H3>
+getAllStripInfo</H3>
+<PRE>
+public int <B>getAllStripInfo</B>(byte[]&nbsp;info)</PRE>
+<DL>
+<DD>Get information on all track.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>info</CODE> - To store the information.  
+ The information is organized in TLV (tag length value) format. 
+  The tag is 1 byte, with the following meaning:
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;01 : track 1  
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;02 : track 2 
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03 : track 3 
+<DT><B>Returns:</B><DD>length of information, 0 if no information.
+<DT><B>Example:</B><DD><CODE>
+	magManager.open();
+	<br>StringBuffer buffer = new StringBuffer();
+	<br>
+	byte[] stripInfo = new byte[1024];
+	<br>
+	int allLen = magManager.getAllStripInfo(stripInfo);
+	<br>
+	if (allLen > 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;//analytical data, information stored in stripInfo
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;int len = stripInfo[1];
+	<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (len != 0)
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;//The first two digits of info should be 01, because it gets information of track 1.
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;buffer.append(" strip1: " + new String(stripInfo, 2, len));
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;int len2 = stripInfo[3 + len];
+	<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (len2 != 0)
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;//The first two digits of info should be 02, because it gets information of track 2.
+	<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;buffer.append(" \nstrip2: " + new String(stripInfo, 4 + len, len2));
+	<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;int len3 = stripInfo[5 + len+len2];
+	<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (len3 != 0 &amp;&amp; len3 &lt; 1024)
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;//The first two digits of info should be 03, because it gets information of track 3.
+	<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;buffer.append(" \nstrip3: " + new String(stripInfo, 6 + len + len2, len3));
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;buffer.append("\n");
+	<br>
+	}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSingleStripInfo(int, byte[])"><!-- --></A><H3>
+getSingleStripInfo</H3>
+<PRE>
+public int <B>getSingleStripInfo</B>(int&nbsp;strip,
+                              byte[]&nbsp;info)</PRE>
+<DL>
+<DD>Get specific track information.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>strip</CODE> - Number of track. Values are as follows:
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 : track 1
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 : track 2
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 : track 3 
+	<DD><CODE>info</CODE> - To store the track information. The information is organized in TLV (tag length value) format. The tag is 1 byte, with the following meaning:
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;01 : track 1  
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;02 : track 2 
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03 : track 3 
+<DT><B>Returns:</B><DD>the length of information, 0 if no information.
+<DT><B>Example:</B><DD><CODE>
+	StringBuffer buffer = new StringBuffer();
+	<br>
+	byte[] info = new byte[1024];
+	<br>
+	public static final int TRACK_1 = 1;   &nbsp;&nbsp;  //For track  1
+	<br>
+	int len = magManager.getSingleStripInfo(TRACK_1, info);
+	<br>
+	if (len > 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;//analytical data, information stored in info
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;//The first two digits of info should be 01, because it gets information of track 1.
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;buffer.append(" strip1: " + new String(info, 2, len));
+	
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;buffer.append("\n");
+	<br>
+	}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getEncryptStripInfo(int, int, byte[], byte[], byte[])"><!-- --></A><H3>
+getEncryptStripInfo</H3>
+<PRE>
+public int <B>getEncryptStripInfo</B>(int&nbsp;AlgMode,
+                               int&nbsp;keyIndex,
+                               byte[]&nbsp;info,
+                               byte[]&nbsp;cardNo,
+                               byte[]&nbsp;KSN)</PRE>
+<DL>
+<DD>Get information on all 3 Encrypt track data and plain text card NO.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>AlgMode</CODE> - Data DES algorithm type. 1 is dupkt key.
+	<DD><CODE>keyIndex</CODE> - The DES  Key index is 0 to 149.
+	<DD><CODE>info</CODE> - To store the encrypt information.  
+ The information is organized in TLV (tag length value) format. 
+  The tag is 1 byte, with the following meaning
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;01 : track 1  
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;02 : track 2 
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03 : track 3 
+  <DD><CODE>cardNo</CODE> - Output. To store the  plain text PAN.
+  <DD><CODE>KSN</CODE> - Output. To store the  KSN key(10 bytes).
+<DT><B>Returns:</B><DD>length of encrypt information, 0 if no information.
+<DT><B>Example:</B><DD><CODE>
+	byte[] Info = new byte[1024];
+	<br>
+	byte[] cardNo = new byte[1024];
+	<br>
+	byte[] KSN = new byte[10];
+	<br>
+	int AlgMode = 1;
+	<br>
+	int keyIndex = 101;
+	
+	<br>
+	int allLen = magManager.getEncryptStripInfo(AlgMode, keyIndex, Info, cardNo, KSN);
+	<br>
+	if (allLen > 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;//analytical data
+	<br>
+	}</CODE></DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+
+<HR>
+
+</div> </div></div> </body>
+</HTML>

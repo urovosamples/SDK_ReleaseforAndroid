@@ -1,0 +1,1012 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<!-- UBX SDK API for Android V3.1.1 -->
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>
+PrinterManager
+</TITLE>
+
+<META NAME="date" CONTENT="2019-05-09">
+
+<script src="../../assets/jquery-1.6.2.min.js"></script>		<script src="../../assets/bootstrap.min.js"></script>		<link href="../../assets/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">		<link rel="stylesheet" type="text/css" href="../../assets/menu.css">		<script type="text/javascript" src="../../assets/menu.js"></script>		<link href="../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />		<link href="../../assets/customizations.css" rel="stylesheet" type="text/css" />		<script src="../../assets/search_autocomplete.js" type="text/javascript"></script>		<script src="../../assets/jquery-resizable.min.js" type="text/javascript"></script>		<script src="../../assets/doclava-developer-docs.js" type="text/javascript"></script>		<script src="../../assets/prettify.js" type="text/javascript"></script>		<script src="../../assets/customizations.js" type="text/javascript"></script><LINK REL ="stylesheet" TYPE="text/css" HREF="../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="PrinterManager";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+	<div id="topdiv" class="clearfx">
+		<div id="menu">
+			<ul> <span class="style-summart">Summary:</span>
+				
+				<li class="cur">
+					<A HREF="#field_summary">FIELD</A>
+				</li>
+				<li>
+					<a href="#constructor_summary">CONSTR</a>
+				</li>
+				<li>
+					<a href="#methods_inherited_from_class_java.lang.Object">METHOD</a>
+				</li>
+			</ul>
+			<ul> <span class="style-summart">DETAIL:</span>
+				<li class="cur">
+					<A HREF="#field_detail">FIELD</A>
+				</li>
+				<li>
+					<a href="#constructor_detail">CONSTR</a>
+				</li>
+				<li>
+					<A HREF="#method_detail">METHOD</A>
+				</li>
+			</ul>
+			<a class="totop" href="#topdiv"> </a>
+		</div>
+		<div class="bodyright">
+<!-- ======== START OF CLASS DATA ======== -->
+<H2><div class="class-div">
+<FONT SIZE="-1">
+android.device</FONT>
+<BR>
+Class PrinterManager</div></H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../resources/inherit.gif" ALT="extended by "><B>android.device.PrinterManager</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>PrinterManager</B><DT>extends java.lang.Object</DL>
+</PRE>
+
+<P>
+The android.device.PriterManager provides a functional interface for initializing and controlling the printer. 
+
+ <p>To print data with this class, according to the following steps, </p>
+
+ <ol>
+ <li>You should import the class first.
+ <br><CODE>import android.device.PrinterManager;</CODE>
+<li>You can obtain an instance of this class by calling.
+ <br><CODE>PrinterManager printer = new PrinterManager()</CODE>;
+<!-- li>In the first step of calling function interface, you need to call <CODE><A HREF="../../android/device/PrinterManager.html#open()">open</A></CODE-->
+<li>After that, you can set up the paper through <CODE><A HREF="../../android/device/PrinterManager.html#setupPage(int, int)">setupPage</A></CODE>.
+<li>If necessary, set print content through <CODE><A HREF="../../android/device/PrinterManager.html#drawLine(int, int, int, int, int)">drawLine</A>, 
+				<A HREF="../../android/device/PrinterManager.html#drawText(java.lang.String, int, int, java.lang.String, int, boolean, boolean, int)">drawText</A>, 
+				<A HREF="../../android/device/PrinterManager.html#drawBarcode(java.lang.String, int, int, int, int, int, int)">drawBarcode</A></CODE>, etc.
+<li>Print out the small ticket by calling <CODE><A HREF="../../android/device/PrinterManager.html#printPage(int)">printPage</A></CODE>.
+<!-- li>Close the printer. with <CODE><A HREF="../../android/device/PrinterManager.html#close()">close</A></CODE-->
+ <p>For more information about the printer, read PrinterManager sample.</p>
+ </ol>
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#PRNSTS_BUSY">PRNSTS_BUSY</A></B></CODE>
+
+<BR>
+The printer is currently busy.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#PRNSTS_ERR">PRNSTS_ERR</A></B></CODE>
+
+<BR>
+An unknown error has occurred.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#PRNSTS_ERR_DRIVER">PRNSTS_ERR_DRIVER</A></B></CODE>
+
+<BR>
+An driver error has occurred.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#PRNSTS_OK">PRNSTS_OK</A></B></CODE>
+
+<BR>
+The printer is working OK.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#PRNSTS_OUT_OF_PAPER">PRNSTS_OUT_OF_PAPER</A></B></CODE>
+
+<BR>
+The printer is out of paper.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#PRNSTS_OVER_HEAT">PRNSTS_OVER_HEAT</A></B></CODE>
+
+<BR>
+The printer is over heat.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#PRNSTS_UNDER_VOLTAGE">PRNSTS_UNDER_VOLTAGE</A></B></CODE>
+
+<BR>
+Printer battery voltage too low.</TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#PrinterManager()">PrinterManager</A></B>()</CODE>
+
+<BR>
+The PriterManager provides a functional interface for initializing and controlling the printer. </TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#clearPage()">clearPage</A></B>()</CODE>
+
+<BR>
+Clear the current page.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#close()">close</A></B>()</CODE>
+
+<BR>
+Close the printer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#drawBarcode(java.lang.String, int, int, int, int, int, int)">drawBarcode</A></B>(java.lang.String&nbsp;data,
+            int&nbsp;x,
+            int&nbsp;y,
+            int&nbsp;barcodeType,
+            int&nbsp;width,
+            int&nbsp;height,
+            int&nbsp;rotate)</CODE>
+
+<BR>
+Draw barcode on the current page.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#drawBitmap(Bitmap, int, int)">drawBitmap</A></B>(Bitmap&nbsp;bmp,
+           int&nbsp;xDest,
+           int&nbsp;yDest)</CODE>
+
+<BR>
+Draw a bitmap on the current page.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#drawBitmapEx(byte[], int, int, int, int)">drawBitmapEx</A></B>(byte[]&nbsp;pbmp,
+             int&nbsp;xDest,
+             int&nbsp;yDest,
+             int&nbsp;widthDest,
+             int&nbsp;heightDest)</CODE>
+
+<BR>
+Draw a mono-bitmaps on the current page.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#drawLine(int, int, int, int, int)">drawLine</A></B>(int&nbsp;x0,
+         int&nbsp;y0,
+         int&nbsp;x1,
+         int&nbsp;y1,
+         int&nbsp;lineWidth)</CODE>
+
+<BR>
+Draw a line in the current page.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#drawText(java.lang.String, int, int, java.lang.String, int, boolean, boolean, int)">drawText</A></B>(java.lang.String&nbsp;data,
+         int&nbsp;x,
+         int&nbsp;y,
+         java.lang.String&nbsp;fontName,
+         int&nbsp;fontSize,
+         boolean&nbsp;bold,
+         boolean&nbsp;italic,
+         int&nbsp;rotate)</CODE>
+
+<BR>
+Draw text on the current page.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#drawTextEx(java.lang.String, int, int, int, int, java.lang.String, int, int, int, int)">drawTextEx</A></B>(java.lang.String&nbsp;data,
+           int&nbsp;x,
+           int&nbsp;y,
+           int&nbsp;width,
+           int&nbsp;height,
+           java.lang.String&nbsp;fontName,
+           int&nbsp;fontSize,
+           int&nbsp;rotate,
+           int&nbsp;style,
+           int&nbsp;format)</CODE>
+
+<BR>
+Draw text on the current page.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#getStatus()">getStatus</A></B>()</CODE>
+
+<BR>
+Get the current state of the printer. See 
+ 
+ <A HREF="../../android/device/PrinterManager.html#PRNSTS_OK"><CODE>PRNSTS_OK</CODE></A>
+<A HREF="../../android/device/PrinterManager.html#PRNSTS_OUT_OF_PAPER"><CODE>PRNSTS_OUT_OF_PAPER</CODE></A>
+<A HREF="../../android/device/PrinterManager.html#PRNSTS_OVER_HEAT"><CODE>PRNSTS_OVER_HEAT</CODE></A>
+<A HREF="../../android/device/PrinterManager.html#PRNSTS_UNDER_VOLTAGE"><CODE>PRNSTS_UNDER_VOLTAGE</CODE></A>
+<A HREF="../../android/device/PrinterManager.html#PRNSTS_BUSY"><CODE>PRNSTS_BUSY</CODE></A>
+<A HREF="../../android/device/PrinterManager.html#PRNSTS_ERR"><CODE>PRNSTS_ERR</CODE></A>
+<A HREF="../../android/device/PrinterManager.html#PRNSTS_ERR_DRIVER"><CODE>PRNSTS_ERR_DRIVER</CODE></A>
+</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#open()">open</A></B>()</CODE>
+
+<BR>
+Open the printer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#printPage(int)">printPage</A></B>(int&nbsp;rotate)</CODE>
+
+<BR>
+Print the current page.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#setSpeedLevel(int)">setSpeedLevel</A></B>(int&nbsp;level)</CODE>
+
+<BR>
+Set print speed level.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#setGrayLevel(int)">setGrayLevel</A></B>(int&nbsp;level)</CODE>
+
+<BR>
+Set print gray level.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#paperFeed(int)">paperFeed</A></B>(int&nbsp;level)</CODE>
+
+<BR>
+Set paper feed function.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/PrinterManager.html#setupPage(int, int)">setupPage</A></B>(int&nbsp;width,
+          int&nbsp;height)</CODE>
+
+<BR>
+Set the page size.</TD>
+</TR>
+</TABLE></div>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 160px; font-size: 16px;"><B>FIELD DETAIL</B></FONT></div></div>
+
+
+<A NAME="PRNSTS_OK"><!-- --></A><H3>
+PRNSTS_OK</H3>
+<PRE>
+public static final int <B>PRNSTS_OK</B></PRE>
+<DL>
+<DD>The printer is working OK
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.PrinterManager.PRNSTS_OK">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PRNSTS_OUT_OF_PAPER"><!-- --></A><H3>
+PRNSTS_OUT_OF_PAPER</H3>
+<PRE>
+public static final int <B>PRNSTS_OUT_OF_PAPER</B></PRE>
+<DL>
+<DD>The printer is out of paper
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.PrinterManager.PRNSTS_OUT_OF_PAPER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PRNSTS_OVER_HEAT"><!-- --></A><H3>
+PRNSTS_OVER_HEAT</H3>
+<PRE>
+public static final int <B>PRNSTS_OVER_HEAT</B></PRE>
+<DL>
+<DD>The printer is over heat
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.PrinterManager.PRNSTS_OVER_HEAT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PRNSTS_UNDER_VOLTAGE"><!-- --></A><H3>
+PRNSTS_UNDER_VOLTAGE</H3>
+<PRE>
+public static final int <B>PRNSTS_UNDER_VOLTAGE</B></PRE>
+<DL>
+<DD>The printer is under voltage
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.PrinterManager.PRNSTS_UNDER_VOLTAGE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PRNSTS_BUSY"><!-- --></A><H3>
+PRNSTS_BUSY</H3>
+<PRE>
+public static final int <B>PRNSTS_BUSY</B></PRE>
+<DL>
+<DD>The printer is currently busy
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.PrinterManager.PRNSTS_BUSY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PRNSTS_ERR"><!-- --></A><H3>
+PRNSTS_ERR</H3>
+<PRE>
+public static final int <B>PRNSTS_ERR</B></PRE>
+<DL>
+<DD>An unknown error has occurred
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.PrinterManager.PRNSTS_ERR">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="PRNSTS_ERR_DRIVER"><!-- --></A><H3>
+PRNSTS_ERR_DRIVER</H3>
+<PRE>
+public static final int <B>PRNSTS_ERR_DRIVER</B></PRE>
+<DL>
+<DD>An driver error has occurred
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.PrinterManager.PRNSTS_ERR_DRIVER">Constant Field Values</A></DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 180px; font-size: 16px;"><B>Constructor Detail</B></div></div>
+
+
+<A NAME="PrinterManager()"><!-- --></A><H3>
+PrinterManager</H3>
+<PRE>
+public <B>PrinterManager</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 160px; font-size: 16px;"><B>Method Detail</B></FONT></div></div>
+
+<A NAME="open()"><!-- --></A><H3>
+open</H3>
+<PRE>
+public int <B>open</B>()</PRE>
+<DL>
+<DD>Opens the printer.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>0 if open successful, -1 if failed.
+<DT><B>Example:</B><DD><CODE>
+	PrinterManager printerManager = new PrinterManager();
+	<br>
+	int ret = printerManager.open();
+	<br>
+	if (ret != 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;//open failed
+	<br>
+	}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="close()"><!-- --></A><H3>
+close</H3>
+<PRE>
+public int <B>close</B>()</PRE>
+<DL>
+<DD>Close the printer.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>0 if open successful, -1 if failed.
+<DT><B>Example:</B><DD><CODE>int ret = printerManager.open();
+	<br>
+	if(ret == 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;printerManager.close();
+	<br>
+	}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="paperFeed(int)"><!-- --></A><H3>
+paperFeed</H3>
+<PRE>
+public void <B>paperFeed</B>(int&nbsp;level)</PRE>
+<DL>
+<DD>Set paper feed function.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>level</CODE> - Number of steps required. The range of Gray level is 0 to 100, 1mm for every 1 units.
+<DT><B>Returns:</B><DD>none
+<DT><B>Example:</B><DD><CODE>int ret = printerManager.open();
+	<br>
+	if(ret == 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;int level = 8;
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;printerManager.paperFeed(level);
+	<br>
+	}
+	</CODE>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setSpeedLevel(int)"><!-- --></A><H3>
+setSpeedLevel</H3>
+<PRE>
+public void <B>setSpeedLevel</B>(int&nbsp;level)</PRE>
+<DL>
+<DD>Set print speed level.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>level</CODE>  -  The range of Gray level is 0 to 9. The default value is 9.
+<DT><B>Returns:</B><DD>none
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setGrayLevel(int)"><!-- --></A><H3>
+setGrayLevel</H3>
+<PRE>
+public void <B>setGrayLevel</B>(int&nbsp;level)</PRE>
+<DL>
+<DD>Set print gray level.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>level</CODE>  -  The range of Gray level is 0 to 4. The default value is 0.
+<DT><B>Returns:</B><DD>none
+<DT><B>Example:</B><DD><CODE>int ret = printerManager.open();
+	<br>
+	if(ret == 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;int grayLevel = 1;
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;printerManager.setGrayLevel(grayLevel);
+	<br>
+	}
+	</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setupPage(int, int)"><!-- --></A><H3>
+setupPage</H3>
+<PRE>
+public int <B>setupPage</B>(int&nbsp;width,
+                     int&nbsp;height)</PRE>
+<DL>
+<DD>Set the page size.  Unit is in pixel.  8 pixels is equivalent to 1 mm.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>width</CODE>  -  Page width. -1 means largest possible width (width = 384).
+	<DD><CODE>height</CODE> - Page height. -1 means printer driver to manage the page height.
+<DT><B>Returns:</B><DD>0 if success, -1 if failed.
+<DT><B>Example:</B><DD><CODE>int ret = printerManager.open();
+	<br>
+	if(ret == 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;int width = 384;
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;int height = -1;
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;int re = printerManager.setupPage(width, height);
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;if(re &lt; 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//setupPage failed
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;}
+	<br>
+	}
+	</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="clearPage()"><!-- --></A><H3>
+clearPage</H3>
+<PRE>
+public int <B>clearPage</B>()</PRE>
+<DL>
+<DD>Clear the current page.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>0 if successful, -1 if failed.
+<DT><B>Example:</B><DD><CODE>int ret = printerManager.open();
+	<br>
+	if(ret == 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;int re = printerManager.clearPage();
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;if (re &lt; 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//clear failed
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;}
+	<br>
+	}
+	</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="printPage(int)"><!-- --></A><H3>
+printPage</H3>
+<PRE>
+public int <B>printPage</B>(int&nbsp;rotate)</PRE>
+<DL>
+<DD>Print the current page.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>rotate</CODE> - The rotation angle, currently supports only 0
+            (non-rotating)
+<DT><B>Returns:</B><DD>print status. See 
+
+<DD><A HREF="../../android/device/PrinterManager.html#PRNSTS_OK"><CODE>PRNSTS_OK</CODE></A>
+<DD><A HREF="../../android/device/PrinterManager.html#PRNSTS_OUT_OF_PAPER"><CODE>PRNSTS_OUT_OF_PAPER</CODE></A>
+<DD><A HREF="../../android/device/PrinterManager.html#PRNSTS_OVER_HEAT"><CODE>PRNSTS_OVER_HEAT</CODE></A>
+<DD><A HREF="../../android/device/PrinterManager.html#PRNSTS_UNDER_VOLTAGE"><CODE>PRNSTS_UNDER_VOLTAGE</CODE></A>
+<DD><A HREF="../../android/device/PrinterManager.html#PRNSTS_BUSY"><CODE>PRNSTS_BUSY</CODE></A>
+<DD><A HREF="../../android/device/PrinterManager.html#PRNSTS_ERR"><CODE>PRNSTS_ERR</CODE></A>
+<DD><A HREF="../../android/device/PrinterManager.html#PRNSTS_ERR_DRIVER"><CODE>PRNSTS_ERR_DRIVER</CODE></A>
+
+<DT><B>Example:</B><DD><CODE>int ret = printerManager.open();
+	<br>
+	if(ret == 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;public static final int ROTATE = 0;
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;int status = printerManager.printPage(ROTATE);
+	<br>
+	}
+</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="drawLine(int, int, int, int, int)"><!-- --></A><H3>
+drawLine</H3>
+<PRE>
+public int <B>drawLine</B>(int&nbsp;x0,
+                    int&nbsp;y0,
+                    int&nbsp;x1,
+                    int&nbsp;y1,
+                    int&nbsp;lineWidth)</PRE>
+<DL>
+<DD>Draw a line in the current page. 
+   The (0,0) point axis is on the upper left corner of the screen.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>x0</CODE> - Start point X axis.
+	<DD><CODE>y0</CODE> - Start point Y axis.
+	<DD><CODE>x1</CODE> - End point X axis.
+	<DD><CODE>y1</CODE> - End point Y axis.
+	<DD><CODE>lineWidth</CODE> - In pixel. 8 pixels is equivalent to 1 mm. 
+<DT><B>Returns:</B><DD>0 if successful, -1 if failed.
+<DT><B>Example:</B><DD><CODE>int ret = printerManager.open();
+	<br>
+	if(ret == 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;int x0 = 16;
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;int y0 = 0;
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;int x1 = 300;
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;int y1 = 100;
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;int lineWidth = 4;
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;int re = printerManager.drawLine(x0,y0,x1,y1,lineWidth);
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;if (re &lt; 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//drawLine failed
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;}
+	<br>
+	}
+</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="drawText(java.lang.String, int, int, java.lang.String, int, boolean, boolean, int)"><!-- --></A><H3>
+drawText</H3>
+<PRE>
+public int <B>drawText</B>(java.lang.String&nbsp;data,
+                    int&nbsp;x,
+                    int&nbsp;y,
+                    java.lang.String&nbsp;fontName,
+                    int&nbsp;fontSize,
+                    boolean&nbsp;bold,
+                    boolean&nbsp;italic,
+                    int&nbsp;rotate)</PRE>
+<DL>
+<DD>Draw text on the current page.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>data</CODE> - The string to draw.
+	<DD><CODE>x</CODE> - Start point X axis.
+	<DD><CODE>y</CODE> - Start point Y axis.
+	<DD><CODE>fontName</CODE> - Font to use, otherwise, default system font will be used.  Custom fonts can be specified, for example, specifying the full path /mnt/sdcard/xxx.ttf.
+	<DD><CODE>fontSize</CODE> - The font size, in pixel.
+	<DD><CODE>bold</CODE> - Set font style to bold.
+	<DD><CODE>italic</CODE> - Set font style to italic.
+	<DD><CODE>rotate</CODE> - The text direction. Value: 
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 : no rotation 
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 : rotate 90 degree 
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 : rotate 180 degree 
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 : rotate 270 degree
+<DT><B>Returns:</B><DD>Actual printing height if successful, -1 if failed.
+<DT><B>Example:</B><DD><CODE>int ret = printerManager.open();
+	<br>
+	if(ret == 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;String data = "hello";
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;int x = 200;
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;int y = 200;
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;String fontName = "/system/fonts/kaishu.ttf";
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;int fontSize = 8;
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;public static final int NO_ROTATE = 0;
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;int height = printerManager.drawText(data,&nbsp;x,&nbsp;y,&nbsp;fontName,&nbsp;fontSize,&nbsp;false,&nbsp;false,&nbsp;NO_ROTATE);
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;if (height &lt; 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//drawText failed
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;}
+	<br>
+	}
+</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="drawTextEx(java.lang.String, int, int, int, int, java.lang.String, int, int, int, int)"><!-- --></A><H3>
+drawTextEx</H3>
+<PRE>
+public int <B>drawTextEx</B>(java.lang.String&nbsp;data,
+                      int&nbsp;x,
+                      int&nbsp;y,
+                      int&nbsp;width,
+                      int&nbsp;height,
+                      java.lang.String&nbsp;fontName,
+                      int&nbsp;fontSize,
+                      int&nbsp;rotate,
+                      int&nbsp;style,
+                      int&nbsp;format)</PRE>
+<DL>
+<DD>Draw text on the current page.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>
+	<CODE>data</CODE> - The string to draw.
+	<DD><CODE>x</CODE> - Start point X axis.
+	<DD><CODE>y</CODE> - Start point Y axis.
+	<DD><CODE>width</CODE> - Text is printed to the width of a rectangle on the page.
+	<DD><CODE>height</CODE> - Text is printed to the height of a rectangle on the page.
+	<DD><CODE>fontName</CODE> - Font to use, otherwise, default system font will be used. Or custom fonts i.e. /mnt/sdcard/xxx.ttf the path.
+	<DD><CODE>fontSize</CODE> - The font size, in pixel.
+	<DD><CODE>rotate</CODE> - Print the text rotated to requested degress. Value: 
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 : no rotation 
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 : rotate 90 degree 
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 : rotate 180 degree 
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 : rotate 270 degree
+	<DD><CODE>style</CODE> - Font style of value:
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x0001 : underline
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x0002 : italic
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x0004 : bold
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x0008 : reverse effect
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x0010 : strike out
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;you can mix the style by using the or operator,  style= 0x0002|0x0004.
+	<DD><CODE>format</CODE> - Set to 0 means word wrap at the specified width range 0 to 384, set to 1 means no word wrap.
+<DT><B>Returns:</B><DD>Actual printing height if successful, -1 if failed.
+<DT><B>Example:</B><DD><CODE>int ret = printerManager.open();
+	<br>
+	if(ret == 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;String data = "hello";
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;int x = 200;
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;int y = 200;
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;int width = 100;
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;int height = -1;
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;String fontName = "/system/fonts/kaishu.ttf";
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;int fontSize = 8;
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;public static final int NO_ROTATE = 0;
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;int style = 0x0001;
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;int format = 0;
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;int ret = printerManager.drawTextEx(data,&nbsp;x,&nbsp;y,&nbsp;width,&nbsp;height,&nbsp;fontName,&nbsp;fontSize,&nbsp;NO_ROTATE,&nbsp;style,&nbsp;format);
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;if (ret &lt; 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//drawTextEx failed
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;}
+	<br>
+	}
+</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="drawBarcode(java.lang.String, int, int, int, int, int, int)"><!-- --></A><H3>
+drawBarcode</H3>
+<PRE>
+public int <B>drawBarcode</B>(java.lang.String&nbsp;data,
+                       int&nbsp;x,
+                       int&nbsp;y,
+                       int&nbsp;barcodeType,
+                       int&nbsp;width,
+                       int&nbsp;height,
+                       int&nbsp;rotate)</PRE>
+<DL>
+<DD>Draw barcode on the current page.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>data</CODE> - The barcode text.
+	<DD><CODE>x</CODE> - Start point at X axis.
+	<DD><CODE>y</CODE> - Start point at Y axis.
+	<DD><CODE>barcodeType</CODE> - Following Table shows the supported symbology:
+ <table border=2>
+ <tr><td>BARCODE_CODE11</td><td>1</td></tr>
+ <tr><td>BARCODE_C25MATRIX</td><td>2</td></tr>
+ <tr><td>BARCODE_C25INTER</td><td>3</td><tr>
+ <tr><td>BARCODE_C25IATA</td><td>4</td></tr>
+ <tr><td>BARCODE_C25LOGIC</td><td>6<td></tr> 
+ <tr><td>BARCODE_C25IND</td><td>7</td></tr>
+ <tr><td>BARCODE_CODE39</td><td>8</td></tr>
+ <tr><td>BARCODE_EXCODE39</td><td>9</td></tr>
+ <tr><td>BARCODE_EANX</td><td>13</td></tr> 
+ <tr><td>BARCODE_EAN128</td><td>16</td></tr>
+ <tr><td>BARCODE_CODABAR</td><td>18</td></tr>
+ <tr><td>BARCODE_CODE128</td><td>20</td></tr>
+ <tr><td>BARCODE_DPLEIT</td><td>21</td></tr>
+ <tr><td>BARCODE_DPIDENT</td><td>22</td></tr> 
+ <tr><td>BARCODE_CODE16K</td><td>23</td><tr>
+ <tr><td>BARCODE_CODE49</td><td>24</td></tr>
+ <tr><td>BARCODE_CODE93</td><td>25</td></tr>
+ <tr><td>BARCODE_FLAT</td><td>28</td></tr>
+ <tr><td>BARCODE_RSS14</td><td>29</td></tr>
+ <tr><td>BARCODE_RSS_LTD</td><td>30</td></tr>
+ <tr><td>BARCODE_RSS_EXP</td><td>31</td></tr>
+ <tr><td>BARCODE_TELEPEN</td><td>32</td></tr>
+ <tr><td>BARCODE_UPCA</td><td>34</td></tr>
+ <tr><td>BARCODE_UPCE</td><td>37</td></tr>
+ <tr><td>BARCODE_POSTNET</td><td>40</td></tr>
+ <tr><td>BARCODE_MSI_PLESSEY</td><td>47</td></tr>
+ <tr><td>BARCODE_FIM</td><td>49</td></tr>
+ <tr><td>BARCODE_LOGMARS</td><td>50</td></tr> 
+ <tr><td>BARCODE_PHARMA</td><td>51</td></tr>
+ <tr><td>BARCODE_PZN</td><td>52</td><tr>
+ <tr><td>BARCODE_PHARMA_TWO</td><td>53</td></tr>
+ <tr><td>BARCODE_PDF417</td><td>55</td></tr>
+ <tr><td>BARCODE_PDF417TRUNC</td><td>56</td></tr>
+ <tr><td>BARCODE_MAXICODE</td><td>57</td></tr>
+ <tr><td>BARCODE_QRCODE</td><td>58</td></tr> 
+ <tr><td>BARCODE_CODE128B</td><td>60</td></tr>
+ <tr><td>BARCODE_AUSPOST</td><td>63</td></tr>
+ <tr><td>BARCODE_AUSREPLY</td><td>66</td></tr>
+ <tr><td>BARCODE_AUSROUTE</td><td>67</td><tr>
+ <tr><td>BARCODE_AUSREDIRECT</td><td>68</td></tr>
+ <tr><td>BARCODE_ISBNX</td><td>69</td></tr>
+ <tr><td>BARCODE_RM4SCC</td><td>70</td></tr> 
+ <tr><td> BARCODE_DATAMATRIX</td><td>71</td></tr>
+ <tr><td>BARCODE_EAN14</td><td>72</td></tr>
+ <tr><td>BARCODE_CODABLOCKF</td><td>74</td></tr>
+ <tr><td>BARCODE_NVE18</td><td>75</td></tr>
+ <tr><td>BARCODE_JAPANPOST</td><td>76</td></tr>
+ <tr><td>BARCODE_KOREAPOST</td><td>77</td></tr> 
+ <tr><td>BARCODE_RSS14STACK</td><td>79</td></tr> 
+ <tr><td>BARCODE_RSS14STACK_OMNI</td><td>80</td></tr>
+ <tr><td>BARCODE_RSS_EXPSTACK</td><td>81</td></tr>
+ <tr><td>BARCODE_PLANET</td><td>82</td></tr>
+ <tr><td>BARCODE_MICROPDF417</td><td>84</td></tr>
+ <tr><td>BARCODE_ONECODE</td><td>85</td></tr>
+ <tr><td>BARCODE_PLESSEY</td><td>86</td></tr>
+ <tr><td>BARCODE_AZTEC</td><td>92</td></tr>
+ </table><DD><CODE>width</CODE> - There are four thickness level to the lines, 1 being the thinnest and 4 being the thickest.
+ <DD><CODE>height</CODE> - The barcode height in pixel.
+<DD><CODE>rotate</CODE> - The barcode rotation, Value: 
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 : no rotation 
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 : rotate 90 degree 
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 : rotate 180 degree 
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 : rotate 270 degree
+<DT><B>Returns:</B><DD>Actual printing height if successful, -1 if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="drawBitmap(Bitmap, int, int)"><!-- --></A><H3>
+drawBitmap</H3>
+<PRE>
+public int <B>drawBitmap</B>(Bitmap&nbsp;bmp,
+                      int&nbsp;xDest,
+                      int&nbsp;yDest)</PRE>
+<DL>
+<DD>Draw a bitmap on the current page.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>bmp</CODE> - The bitmap to drawn.
+	<DD><CODE>xDest</CODE> - Start point at X axis.
+	<DD><CODE>yDest</CODE> - Start point at Y axis.
+<DT><B>Returns:</B><DD>Actual printing height is successful, -1 if failed.
+<DT><B>Example:</B><DD><CODE>int ret = printerManager.open();
+	<br>
+	if(ret == 0) {
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;int x = 100;
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;int y = 100;
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;BitmapFactory.Options opts = new BitmapFactory.Options();
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;Bitmap img = BitmapFactory.decodeResource(getResources(), R.drawable.ticket, opts);
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;int ret = printerManager.drawBitmap(img, x, y);
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;if(ret &lt; 0) {
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//drawBitmap failed
+	<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;}
+	<br>
+	}
+	</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="drawBitmapEx(byte[], int, int, int, int)"><!-- --></A><H3>
+drawBitmapEx</H3>
+<PRE>
+public int <B>drawBitmapEx</B>(byte[]&nbsp;bmp,
+                        int&nbsp;xDest,
+                        int&nbsp;yDest,
+                        int&nbsp;widthDest,
+                        int&nbsp;heightDest)</PRE>
+<DL>
+<DD>Draw a mono-bitmaps on the current page.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>bmp</CODE> - ByteArray data for mono-bitmaps.
+	<DD><CODE>xDest</CODE> - Start point at X axis.
+	<DD><CODE>yDest</CODE> - Start point at Y axis.
+	<DD><CODE>widthDest</CODE> - Horizontal width bytes.
+	<DD><CODE>heightDest</CODE> - Vertical height point.
+<DT><B>Returns:</B><DD>Actual printing height is successful, -1 if failed.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getStatus()"><!-- --></A><H3>
+getStatus</H3>
+<PRE>
+public int <B>getStatus</B>()</PRE>
+<DL>
+<DD>Get the current state of the printer.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>The printer status. See 
+<DD><A HREF="../../android/device/PrinterManager.html#PRNSTS_OK"><CODE>PRNSTS_OK</CODE></A>
+<DD><A HREF="../../android/device/PrinterManager.html#PRNSTS_OUT_OF_PAPER"><CODE>PRNSTS_OUT_OF_PAPER</CODE></A>
+<DD><A HREF="../../android/device/PrinterManager.html#PRNSTS_OVER_HEAT"><CODE>PRNSTS_OVER_HEAT</CODE></A>
+<DD><A HREF="../../android/device/PrinterManager.html#PRNSTS_UNDER_VOLTAGE"><CODE>PRNSTS_UNDER_VOLTAGE</CODE></A>
+<DD><A HREF="../../android/device/PrinterManager.html#PRNSTS_BUSY"><CODE>PRNSTS_BUSY</CODE></A>
+<DD><A HREF="../../android/device/PrinterManager.html#PRNSTS_ERR"><CODE>PRNSTS_ERR</CODE></A>
+<DD><A HREF="../../android/device/PrinterManager.html#PRNSTS_ERR_DRIVER"><CODE>PRNSTS_ERR_DRIVER</CODE></A>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+
+<HR>
+
+</div> </div></div> </body>
+</HTML>

@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<!-- UBX SDK API for Android V3.1.1  -->
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>
+SEManager.PedInputListener
+</TITLE>
+
+<META NAME="date" CONTENT="2019-05-09">
+
+<script src="../../assets/jquery-1.6.2.min.js"></script>		<script src="../../assets/bootstrap.min.js"></script>		<link href="../../assets/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">		<link rel="stylesheet" type="text/css" href="../../assets/menu.css">		<script type="text/javascript" src="../../assets/menu.js"></script>		<link href="../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />		<link href="../../assets/customizations.css" rel="stylesheet" type="text/css" />		<script src="../../assets/search_autocomplete.js" type="text/javascript"></script>		<script src="../../assets/jquery-resizable.min.js" type="text/javascript"></script>		<script src="../../assets/doclava-developer-docs.js" type="text/javascript"></script>		<script src="../../assets/prettify.js" type="text/javascript"></script>		<script src="../../assets/customizations.js" type="text/javascript"></script><LINK REL ="stylesheet" TYPE="text/css" HREF="../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="SEManager.PedInputListener";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+	<div id="topdiv" class="clearfx">
+		<div id="menu">
+		
+			<ul> <span class="style-summart">DETAIL:</span>
+				
+				<li class="cur">
+					<A HREF="#method_detail">METHOD</A>
+				</li>
+			</ul>
+			<a class="totop" href="#topdiv"> </a>
+		</div>
+		<div class="bodyright">
+<!-- ======== START OF CLASS DATA ======== -->
+<H2><div class="class-div">
+<FONT SIZE="-1">
+android.device</FONT>
+<BR>
+Interface SEManager.PedInputListener</div></H2>
+<DL>
+<DT><B>All Known Subinterfaces:</B> <DD><A HREF="../../android/device/SEManager.OperationPedInputListener.html" title="interface in android.device">SEManager.OperationPedInputListener</A></DD>
+</DL>
+<DL>
+<DT><B>Enclosing class:</B><DD><A HREF="../../android/device/SEManager.html" title="class in android.device">SEManager</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public static interface <B>SEManager.PedInputListener</B></DL>
+</PRE>
+
+<P>
+<HR>
+
+<P>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/SEManager.PedInputListener.html#onChanged(int, int, byte[])">onChanged</A></B>(int&nbsp;result,
+          int&nbsp;keyLen,
+          byte[]&nbsp;key)</CODE>
+
+<BR>
+To begin a PIN input session, call <CODE><A HREF="../../android/device/SEManager.html#getPinBlock(int, int, byte[], int, java.lang.String, long, android.device.SEManager.PedInputListener)">getPinBlock</A></CODE>. Your registered
+ PedInputListener will be called when a successful
+ PIN input occurs or if the configured timeout expires, etc..</TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 160px; font-size: 16px;">
+<B>Method Detail</B></FONT></div></div>
+
+<A NAME="onChanged(int, int, byte[])"><!-- --></A><H3>
+onChanged</H3>
+<PRE>
+void <B>onChanged</B>(int&nbsp;result,
+               int&nbsp;keyLen,
+               byte[]&nbsp;key)</PRE>
+<DL>
+<DD>To begin a PIN input session, call <CODE><A HREF="../../android/device/SEManager.html#getPinBlock(int, int, byte[], int, java.lang.String, long, android.device.SEManager.PedInputListener)">getPinBlock</A></CODE>. Your registered
+ PedInputListener will be called when a successful
+ PIN input occurs or if the configured timeout expires, etc.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>result</CODE> - Value:
+				<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(-1) : failed or timed out;
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 : enter PIN to complete;
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 : cancel input the PIN;
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 : PIN input;
+	<DD><CODE>keyLen</CODE> - PIN length has been entered.
+	<DD><CODE>key</CODE> - Output data, the Pin Block data.
+<DT><B>Returns:</B><DD>none</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+
+<HR>
+
+</div> </div></div> </body>
+</HTML>

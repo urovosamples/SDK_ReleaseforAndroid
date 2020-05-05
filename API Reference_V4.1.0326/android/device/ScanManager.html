@@ -1,0 +1,917 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<!-- UBX SDK API for Android V3.1.1 -->
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>
+ScanManager
+</TITLE>
+
+<META NAME="date" CONTENT="2019-05-09">
+
+<script src="../../assets/jquery-1.6.2.min.js"></script>		<script src="../../assets/bootstrap.min.js"></script>		<link href="../../assets/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">		<link rel="stylesheet" type="text/css" href="../../assets/menu.css">		<script type="text/javascript" src="../../assets/menu.js"></script>		<link href="../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />		<link href="../../assets/customizations.css" rel="stylesheet" type="text/css" />		<script src="../../assets/search_autocomplete.js" type="text/javascript"></script>		<script src="../../assets/jquery-resizable.min.js" type="text/javascript"></script>		<script src="../../assets/doclava-developer-docs.js" type="text/javascript"></script>		<script src="../../assets/prettify.js" type="text/javascript"></script>		<script src="../../assets/customizations.js" type="text/javascript"></script><LINK REL ="stylesheet" TYPE="text/css" HREF="../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="ScanManager";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+	<div id="topdiv" class="clearfx">
+		<div id="menu">
+			<ul> <span class="style-summart">Summary:</span>
+				
+				<li class="cur">
+					<A HREF="#field_summary">FIELD</A>
+				</li>
+				<li>
+					<a href="#constructor_summary">CONSTR</a>
+				</li>
+				<li>
+					<a href="#methods_inherited_from_class_java.lang.Object">METHOD</a>
+				</li>
+			</ul>
+			<ul> <span class="style-summart">DETAIL:</span>
+				<li class="cur">
+					<A HREF="#field_detail">FIELD</A>
+				</li>
+				<li>
+					<a href="#constructor_detail">CONSTR</a>
+				</li>
+				<li>
+					<A HREF="#method_detail">METHOD</A>
+				</li>
+			</ul>
+			<a class="totop" href="#topdiv"> </a>
+		</div>
+		<div class="bodyright">
+<!-- ======== START OF CLASS DATA ======== -->
+<H2><div class="class-div">
+<FONT SIZE="-1">
+android.device</FONT>
+<BR>
+Class ScanManager</div></H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../resources/inherit.gif" ALT="extended by "><B>android.device.ScanManager</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>ScanManager</B><DT>extends java.lang.Object</DL>
+</PRE>
+
+<P>
+The ScanManager class provides developers access to barcode reader in the device.
+ <p>To decode barcodes with this class, according to the following steps,</p>
+
+ <ol>
+ <li>Obtain an instance of BarCodeReader with ScanManager scan = new ScanManager().
+
+ <li>Call <A HREF="../../android/device/ScanManager.html#openScanner()"><CODE>openScanner</CODE></A> to power on the barcode reader.
+
+ <li>After that, the default output mode is TextBox Mode that send barcode data to the focused text box. User can check the output mode using <A HREF="../../android/device/ScanManager.html#getOutputMode()"><CODE>getOutputMode</CODE></A> and set the output mode using <A HREF="../../android/device/ScanManager.html#switchOutputMode(int)"><CODE>switchOutputMode</CODE></A>.
+ 
+ <li>Then, the default trigger mode is manually trigger signal. User can check the trigger mode using <A HREF="../../android/device/ScanManager.html#getTriggerMode()"><CODE>getTriggerMode</CODE></A> and set the trigger mode using <A HREF="../../android/device/ScanManager.html#setTriggerMode(android.device.scanner.configuration.Triggering)"><CODE>setTriggerMode</CODE></A>.
+ 
+ <li>If necessary, check the current settings using <A HREF="../../android/device/ScanManager.html#getParameterInts(int[])"><CODE>getParameterInts</CODE></A> or set the scanner configuration properties <A HREF="../../android/device/scanner/configuration/PropertyID.html" title="class in android.device.scanner.configuration"><CODE>PropertyID</CODE></A> using
+ <A HREF="../../android/device/ScanManager.html#setParameterInts(int[], int[])"><CODE>setParameterInts</CODE></A>.
+ 
+ <li>To begin a decode session, call <A HREF="../../android/device/ScanManager.html#startDecode()"><CODE>startDecode</CODE></A>. 
+  If the configured <CODE>PropertyID.WEDGE_KEYBOARD_ENABLE</CODE>  is 0, your registered broadcast receiver will be called when a successful decode occurs.
+ 
+ <li>If the output mode is intent mode, the captured data is sent as an implicit Intent. An application interestes in the scan data should register an action as android.intent.ACTION_DECODE_DATA broadcast listerner. To get a barcode data, see the example below. 
+ <CODE><br>byte[] barcode = arg1.getByteArrayExtra(<A HREF="../../android/device/ScanManager.html#DECODE_DATA_TAG">DECODE_DATA_TAG</A>); 
+ <br>String barcodeString = arg1.getStringExtra(<A HREF="../../android/device/ScanManager.html#BARCODE_STRING_TAG">BARCODE_STRING_TAG</A>); 
+<br>int barcodeLen = arg1.getIntExtra(<A HREF="../../android/device/ScanManager.html#BARCODE_LENGTH_TAG">BARCODE_LENGTH_TAG</A>,0); 
+<br>byte type = arg1.getByteExtra(<A HREF="../../android/device/ScanManager.html#BARCODE_TYPE_TAG">BARCODE_TYPE_TAG</A>,(byte)0); </CODE>
+
+ <li>To get a still image through an Android intent. After receiving the scan result, send "action.scanner_capture_image" broadcast, and then obtain the picture by registering "scanner_capture_image_result" broadcast receiver. To get a bitmap, see the example below. 
+	<CODE><br>private BroadcastReceiver mReceiver = new BroadcastReceiver() {
+		<br>&nbsp;&nbsp;@Override
+        <br>&nbsp;&nbsp;public void onReceive(Context context, Intent intent) {
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;String action = intent.getAction();
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;if ("scanner_capture_image_result".equals(action)) {
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;byte[] imageData = intent.getByteArrayExtra("bitmapBytes");
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(imageData!=null && imageData.length > 0) {
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bitmap bitmap = BitmapFactory.decodeByteArray(imageData, 0, imageData.length);
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(bitmap != null) {
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Success to get a bitmap
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Failed to get a bitmap
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log.i("onReceive , ignore imageData:" + imageData);
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;}
+        <br>&nbsp;&nbsp;}
+    <br>};</code>
+
+ <li>Call <A HREF="../../android/device/ScanManager.html#stopDecode()"><CODE>stopDecode</CODE></A> to end the decode session.
+
+ <li>Call <A HREF="../../android/device/ScanManager.html#closeScanner()"><CODE>closeScanner</CODE></A> to power off the barcode reader.
+ </ol>
+
+ <p>For more information about the Scanner, read ScanManager sample.</p>
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#ACTION_DECODE">ACTION_DECODE</A></B></CODE>
+
+<BR>
+Action sent as a broadcast Intent by the ScanManager when a successful decode occurs.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#BARCODE_LENGTH_TAG">BARCODE_LENGTH_TAG</A></B></CODE>
+
+<BR>
+Constant Value: "length"</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#BARCODE_STRING_TAG">BARCODE_STRING_TAG</A></B></CODE>
+
+<BR>
+Constant Value: "barcode_string"</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#BARCODE_TYPE_TAG">BARCODE_TYPE_TAG</A></B></CODE>
+
+<BR>
+Constant Value: "barcodeType"</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#DECODE_DATA_TAG">DECODE_DATA_TAG</A></B></CODE>
+
+<BR>
+Constant Value: "barcode"</TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#ScanManager()">ScanManager</A></B>()</CODE>
+
+<BR>
+The scanmanager class provides access to related barcode readers in the device. </TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#closeScanner()">closeScanner</A></B>()</CODE>
+
+<BR>
+Turn off the power for the barcode reader.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#enableAllSymbologies(boolean)">enableAllSymbologies</A></B>(boolean&nbsp;enable)</CODE>
+
+<BR>
+Enable or disable all supported symbologies.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#enableSymbology(android.device.scanner.configuration.Symbology, boolean)">enableSymbology</A></B>(<A HREF="../../android/device/scanner/configuration/Symbology.html" title="enum in android.device.scanner.configuration">Symbology</A>&nbsp;barcodeType,
+                boolean&nbsp;enable)</CODE>
+
+<BR>
+Enable or disable a barcode symbology type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#getOutputMode()">getOutputMode</A></B>()</CODE>
+
+<BR>
+Get the current scan result output mode.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#getParameterInts(int[])">getParameterInts</A></B>(int[]&nbsp;idBuffer)</CODE>
+
+<BR>
+Get all values of given scanner configuration properties.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#getParameterString(int[])">getParameterString</A></B>(int[]&nbsp;idBuffer)</CODE>
+
+<BR>
+Get all strings of given scanner configuration properties.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#getScannerState()">getScannerState</A></B>()</CODE>
+
+<BR>
+Get the scanner power states.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#getTriggerLockState()">getTriggerLockState</A></B>()</CODE>
+
+<BR>
+Get the scan trigger status.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../android/device/scanner/configuration/Triggering.html" title="enum in android.device.scanner.configuration">Triggering</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#getTriggerMode()">getTriggerMode</A></B>()</CODE>
+
+<BR>
+Get the current trigger mode.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#isSymbologyEnabled(android.device.scanner.configuration.Symbology)">isSymbologyEnabled</A></B>(<A HREF="../../android/device/scanner/configuration/Symbology.html" title="enum in android.device.scanner.configuration">Symbology</A>&nbsp;barcodeType)</CODE>
+
+<BR>
+Get current enable setting for a particular barcode symbology.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#isSymbologySupported(android.device.scanner.configuration.Symbology)">isSymbologySupported</A></B>(<A HREF="../../android/device/scanner/configuration/Symbology.html" title="enum in android.device.scanner.configuration">Symbology</A>&nbsp;barcodeType)</CODE>
+
+<BR>
+Judge whether the device decoder can read specific barcode symbology.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#lockTrigger()">lockTrigger</A></B>()</CODE>
+
+<BR>
+Set the scan trigger inactive (disable the scan button).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#openScanner()">openScanner</A></B>()</CODE>
+
+<BR>
+Turn on the power for the barcode reader.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#resetScannerParameters()">resetScannerParameters</A></B>()</CODE>
+
+<BR>
+Reset to factory default settings for all barcode symbology types.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#setParameterInts(int[], int[])">setParameterInts</A></B>(int[]&nbsp;idBuffer,
+                 int[]&nbsp;valueBuffer)</CODE>
+
+<BR>
+Set all values of given scanner configuration properties.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#setParameterString(int[], java.lang.String[])">setParameterString</A></B>(int[]&nbsp;idBuffer,
+                   java.lang.String[]&nbsp;valueBuffer)</CODE>
+
+<BR>
+Set all strings of given scanner configuration properties.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#setTriggerMode(android.device.scanner.configuration.Triggering)">setTriggerMode</A></B>(<A HREF="../../android/device/scanner/configuration/Triggering.html" title="enum in android.device.scanner.configuration">Triggering</A>&nbsp;mode)</CODE>
+
+<BR>
+Set a operational mode to control decode.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#startDecode()">startDecode</A></B>()</CODE>
+
+<BR>
+Call this method to start decoding.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#stopDecode()">stopDecode</A></B>()</CODE>
+
+<BR>
+This stops any data acquisition currently in progress.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#switchOutputMode(int)">switchOutputMode</A></B>(int&nbsp;mode)</CODE>
+
+<BR>
+Set the output mode of the barcode reader (either send output to text box or as Android intent).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../android/device/ScanManager.html#unlockTrigger()">unlockTrigger</A></B>()</CODE>
+
+<BR>
+Set the scan trigger active (enable the scan button).</TD>
+</TR>
+</TABLE></div>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<div class="nr-style"><TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE></div>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 160px; font-size: 16px;">
+<B>FIELD DETAIL</B></FONT></div></div>
+
+<A NAME="ACTION_DECODE"><!-- --></A><H3>
+ACTION_DECODE</H3>
+<PRE>
+public static final java.lang.String <B>ACTION_DECODE</B></PRE>
+<DL>
+<DD>Action sent as a broadcast Intent by the ScanManager when a successful decode occurs. 
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.ScanManager.ACTION_DECODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="BARCODE_STRING_TAG"><!-- --></A><H3>
+BARCODE_STRING_TAG</H3>
+<PRE>
+public static final java.lang.String <B>BARCODE_STRING_TAG</B></PRE>
+<DL>
+<DD>Tag set to obtain barcode string.
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.ScanManager.BARCODE_STRING_TAG">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="BARCODE_TYPE_TAG"><!-- --></A><H3>
+BARCODE_TYPE_TAG</H3>
+<PRE>
+public static final java.lang.String <B>BARCODE_TYPE_TAG</B></PRE>
+<DL>
+<DD>Tag set to obtain the label type of the barcode.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.ScanManager.BARCODE_TYPE_TAG">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="BARCODE_LENGTH_TAG"><!-- --></A><H3>
+BARCODE_LENGTH_TAG</H3>
+<PRE>
+public static final java.lang.String <B>BARCODE_LENGTH_TAG</B></PRE>
+<DL>
+<DD>Tag set to obtain the label length of the barcode.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.ScanManager.BARCODE_LENGTH_TAG">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="DECODE_DATA_TAG"><!-- --></A><H3>
+DECODE_DATA_TAG</H3>
+<PRE>
+public static final java.lang.String <B>DECODE_DATA_TAG</B></PRE>
+<DL>
+<DD>Tag set to obtain the output data as a byte array. In the case of concatenated barcodes, the decode data is
+  concatenated and sent out as a single array.
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../constant-values.html#android.device.ScanManager.DECODE_DATA_TAG">Constant Field Values</A></DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 180px; font-size: 16px;">
+<B>Constructor Detail</B></div></div>
+
+<A NAME="ScanManager()"><!-- --></A><H3>
+ScanManager</H3>
+<PRE>
+public <B>ScanManager</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<div class="aaa"><div class="title-mask" style="width: 160px; font-size: 16px;">
+<B>Method Detail</B></FONT></div></div>
+
+
+<A NAME="openScanner()"><!-- --></A><H3>
+openScanner</H3>
+<PRE>
+public boolean <B>openScanner</B>()</PRE>
+<DL>
+<DD>Turn on the power for the barcode reader.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>True if successful, false if failed.
+<DT><B>Example:</B><DD><CODE>ScanManager mScanManager = new ScanManager();
+<br>boolean ret = mScanManager.openScanner();
+<br>if(ret) {
+ <br>&nbsp;&nbsp;&nbsp;//open successful
+<br>} </CODE>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="closeScanner()"><!-- --></A><H3>
+closeScanner</H3>
+<PRE>
+public boolean <B>closeScanner</B>()</PRE>
+<DL>
+<DD>Turn off the power for the barcode reader.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>True if successful, false if failed.
+<DT><B>Example:</B><DD><CODE>mScanManager.openScanner();
+<br>boolean ret = mScanManager.closeScanner();
+<br>if(ret) {
+	<br>&nbsp;&nbsp;&nbsp;//close successful
+<br>}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="switchOutputMode(int)"><!-- --></A><H3>
+switchOutputMode</H3>
+<PRE>
+public boolean <B>switchOutputMode</B>(int&nbsp;mode)</PRE>
+<DL>
+<DD>Set the output mode of the barcode reader (either send output to text box or as Android intent). 
+	TextBox Mode allows the captured data to be sent to the text box in focus. 
+	Intent mode allows the captured data to be sent as an implicit Intent. 
+ Application interested in the scan data should register an action as
+ <A HREF="../../android/device/ScanManager.html#ACTION_DECODE">ACTION_DECODE</A> broadcast listerner. 	
+ 
+ In the onReceive method, get the information. The information are barcode data, bardcode string, length of barcode data, and barcode type (symbology).
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>mode</CODE> - 0 if barcode output is to be sent as intent, 1 if barcode output is to be sent to the text box in focus. The default output mode is TextBox Mode.
+<DT><B>Returns:</B><DD>True if successful, false if failed.
+<DT><B>Example:</B><DD><CODE>mScanManager.openScanner();
+				<br>int mode = 0;
+				<br>boolean ret = mScanManager.switchOutputMode(mode);
+				<br>if(ret) {
+				<br>&nbsp;&nbsp;&nbsp;//switch Output Successful
+				<br>}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getOutputMode()"><!-- --></A><H3>
+getOutputMode</H3>
+<PRE>
+public int <B>getOutputMode</B>()</PRE>
+<DL>
+<DD>get the current scan result output mode.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>0 if the barcode is sent as intent, 1 if barcode is sent to the text box in focus. Default 1.
+<DT><B>Example:</B><DD><CODE>mScanManager.openScanner();
+<br>int mode = mScanManager.getOutputMode();
+<br>if(mode == 0) {
+ <br>&nbsp;&nbsp;&nbsp;//barcode is sent as intent
+<br>} else if(mode == 1){
+ <br>&nbsp;&nbsp;&nbsp;//barcode is sent to the text box in focus
+<br>}</CODE></DL></DD>
+</DL>
+<HR>
+
+<A NAME="getScannerState()"><!-- --></A><H3>
+getScannerState</H3>
+<PRE>
+public boolean <B>getScannerState</B>()</PRE>
+<DL>
+<DD>Get the scanner power states.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>True if the scanner power on, false if power off.
+<DT><B>Example:</B><DD><CODE>ScanManager mScanManager = new ScanManager();
+<br>boolean ret = mScanManager.getScannerState();
+<br>if(ret) {
+	<br>&nbsp;&nbsp;&nbsp;//scanner power on
+<br>} else {
+	<br>&nbsp;&nbsp;&nbsp;//scanner power off
+<br>}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="stopDecode()"><!-- --></A><H3>
+stopDecode</H3>
+<PRE>
+public boolean <B>stopDecode</B>()</PRE>
+<DL>
+<DD>This stops any data acquisition currently in progress.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>True if successful, false if failed.
+<DT><B>Example:</B><DD><CODE>mScanManager.startDecode();
+<br>//After calling startDecode, stopDecode is called before timeout to stop scanning
+<br>boolean ret = mScanManager.stopDecode();
+<br>if(ret) {
+	<br>&nbsp;&nbsp;&nbsp;//scanner stop decode successful
+<br>} else {
+	<br>&nbsp;&nbsp;&nbsp;//scanner stop decode failed
+<br>}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="startDecode()"><!-- --></A><H3>
+startDecode</H3>
+<PRE>
+public boolean <B>startDecode</B>()</PRE>
+<DL>
+<DD>Call this method to start decoding.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>True if successful, false if failed.
+<DT><B>Example:</B><DD><CODE>mScanManager.openScanner();
+<br>boolean ret = mScanManager.startDecode();
+<br>if(ret) {
+	<br>&nbsp;&nbsp;&nbsp;//scanner start decoding
+<br>}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="lockTrigger()"><!-- --></A><H3>
+lockTrigger</H3>
+<PRE>
+public boolean <B>lockTrigger</B>()</PRE>
+<DL>
+<DD>Set the scan trigger inactive (disable the scan button).
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>True if successful, false if failed.
+<DT><B>Example:</B><DD><CODE>mScanManager.openScanner();
+<br>boolean ret = mScanManager.lockTrigger();
+<br>if(ret) {
+	<br>&nbsp;&nbsp;&nbsp;//disable the scan button successful
+<br>}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unlockTrigger()"><!-- --></A><H3>
+unlockTrigger</H3>
+<PRE>
+public boolean <B>unlockTrigger</B>()</PRE>
+<DL>
+<DD>Set the scan trigger active (enable the scan button).
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>True if successful, false if failed.
+<DT><B>Example:</B><DD><CODE>mScanManager.lockTrigger();
+<br>boolean ret = mScanManager.unlockTrigger();
+<br>if(ret) {
+	<br>&nbsp;&nbsp;&nbsp;//enable the scan button successful
+<br>}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTriggerLockState()"><!-- --></A><H3>
+getTriggerLockState</H3>
+<PRE>
+public boolean <B>getTriggerLockState</B>()</PRE>
+<DL>
+<DD>Get the scan trigger status.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>True if the scan trigger is already active.
+<DT><B>Example:</B><DD><CODE>mScanManager.openScanner();
+<br>boolean ret = mScanManager.getTriggerLockState();
+<br>if(ret) {
+	<br>&nbsp;&nbsp;&nbsp;//scanner trigger is already active
+<br>}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="resetScannerParameters()"><!-- --></A><H3>
+resetScannerParameters</H3>
+<PRE>
+public boolean <B>resetScannerParameters</B>()</PRE>
+<DL>
+<DD>Reset to factory default settings for all barcode symbology types.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>True if successful, false if failed.
+<DT><B>Example:</B><DD><CODE>mScanManager.openScanner();
+<br>boolean ret = mScanManager.resetScannerParameters();
+<br>if(ret) {
+	<br>&nbsp;&nbsp;&nbsp;//Reset to factory default settings for all barcode symbology types successful
+<br>}</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setTriggerMode(android.device.scanner.configuration.Triggering)"><!-- --></A><H3>
+setTriggerMode</H3>
+<PRE>
+public void <B>setTriggerMode</B>(<A HREF="../../android/device/scanner/configuration/Triggering.html" title="enum in android.device.scanner.configuration">Triggering</A>&nbsp;mode)</PRE>
+<DL>
+<DD>Set a operational mode to control decode.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>mode</CODE> - These are the different operational modes you choose first when setting up your trigger mode. The default is HOST mode.   
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PULSE : a trigger will activate the scan engine, and start decoding.  It will be deactivated when a valid code is found, or when the trigger is released, or when the time out is reached.  
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONTINUOUS : a trigger pull activates the laser and decode processing. The laser remains on and decode processing continues until a valid decode or the laser on time out is reached. 
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOST : a host command issues the triggering signal. The scan engine interprets an actual trigger pull as a Level triggering option. 
+<DT><B>Returns:</B><DD>none
+<DT><B>Example:</B><DD><CODE>import android.device.scanner.configuration.Triggering;
+<br>mScanManager.openScanner();
+
+<br>Triggering mode = Triggering.HOST; &nbsp;&nbsp;&nbsp;//Set the HOST mode
+<br>mScanManager.setTriggerMode(mode);</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTriggerMode()"><!-- --></A><H3>
+getTriggerMode</H3>
+<PRE>
+public <A HREF="../../android/device/scanner/configuration/Triggering.html" title="enum in android.device.scanner.configuration">Triggering</A> <B>getTriggerMode</B>()</PRE>
+<DL>
+<DD>Get the current trigger mode.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD>none
+<DT><B>Returns:</B><DD>the current trigger mode. See <A HREF="../../android/device/scanner/configuration/Triggering.html" title="enum in android.device.scanner.configuration"><CODE>Triggering</CODE></A> for possible values.
+<DT><B>Example:</B><DD><CODE>import android.device.scanner.configuration.Triggering;
+<br>mScanManager.openScanner();
+<br>Triggering mode = mScanManager.getTriggerMode();
+<br>//The return value could be Triggering.HOST, Triggering.CONTINUOUS, or Triggering.PULSE.</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setParameterInts(int[], int[])"><!-- --></A><H3>
+setParameterInts</H3>
+<PRE>
+public int <B>setParameterInts</B>(int[]&nbsp;idBuffer,
+                            int[]&nbsp;valueBuffer)</PRE>
+<DL>
+<DD>Set all values of given scanner configuration properties. 
+<P>
+<DD><DL>
+<DT><B>Parameters:</B>
+	<DD><CODE>idBuffer</CODE> - The indexes to the parameters to be set. See <A HREF="../../android/device/scanner/configuration/PropertyID.html" title="class in android.device.scanner.configuration"><CODE>PropertyID</CODE></A>.
+	<DD><CODE>valueBuffer</CODE> - The values to be set.
+<DT><B>Returns:</B><DD>0 if successful, -1 if failed.
+<DT><B>Example:</B><DD><CODE>
+mScanManager.openScanner();
+ <br>int[] index = new int[]{
+                                            PropertyID.WEDGE_KEYBOARD_ENABLE, 
+                                            PropertyID.WEDGE_KEYBOARD_TYPE,
+                                            PropertyID.GOOD_READ_BEEP_ENABLE};
+ <br> int[] value = new int[]{1, 1, 1};                             
+ <br> int ret = mScanManager.setParameterInts(index, value);
+ <br>if(ret == 0) {
+ <br>&nbsp;&nbsp;&nbsp;//set success
+ <br>}</code></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getParameterInts(int[])"><!-- --></A><H3>
+getParameterInts</H3>
+<PRE>
+public int[] <B>getParameterInts</B>(int[]&nbsp;idBuffer)</PRE>
+<DL>
+<DD>Get all values of given scanner configuration properties.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>idBuffer</CODE> - The indexes to the programming parameteres. See  <A HREF="../../android/device/scanner/configuration/PropertyID.html" title="class in android.device.scanner.configuration"><CODE>PropertyID</CODE></A>.
+<DT><B>Returns:</B><DD>Int arrary of the parameters.
+<DT><B>Example:</B><DD>
+ <code>mScanManager.openScanner();
+ <br> int[] index = new int[]{ PropertyID.WEDGE_KEYBOARD_ENABLE };
+ <br> int[] value = mScanManager.getParameterInts(index);
+ <br>//value of PropertyID.WEDGE_KEYBOARD_ENABLE
+</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setParameterString(int[], java.lang.String[])"><!-- --></A><H3>
+setParameterString</H3>
+<PRE>
+public boolean <B>setParameterString</B>(int[]&nbsp;idBuffer,
+                                  java.lang.String[]&nbsp;valueBuffer)</PRE>
+<DL>
+<DD>Set all strings of given scanner configuration properties.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>idBuffer</CODE> - to the parameter that is to be set. See <A HREF="../../android/device/scanner/configuration/PropertyID.html" title="class in android.device.scanner.configuration"><CODE>PropertyID</CODE></A>.
+	<DD><CODE>valueBuffer</CODE> - The string used to set the parameter.
+<DT><B>Returns:</B><DD>False if the index or value is error, and otherwise true.
+<DT><B>Example:</B><DD><code>import android.device.scanner.configuration.PropertyID;
+<br>mScanManager.openScanner();
+<br>int[] key = new int[]{ PropertyID.WEDGE_INTENT_ACTION_NAME };
+<br>String[] action = { "udroid.test.action" };
+<br>boolean ret = mScanManager.setParameterString(key, action);
+<br>if(ret) {
+	<br>&nbsp;&nbsp;&nbsp;//update successful
+<br>} else {
+	<br>&nbsp;&nbsp;&nbsp;//index or value is error
+<br>}
+</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getParameterString(int[])"><!-- --></A><H3>
+getParameterString</H3>
+<PRE>
+public java.lang.String[] <B>getParameterString</B>(int[]&nbsp;idBuffer)</PRE>
+<DL>
+<DD>Get all strings of given scanner configuration properties.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>idBuffer</CODE> - The indexes to the programming parameteres. See <A HREF="../../android/device/scanner/configuration/PropertyID.html" title="class in android.device.scanner.configuration"><CODE>PropertyID</CODE></A>.
+<DT><B>Returns:</B><DD>String arrary of the parameters.
+<DT><B>Example:</B><DD><code>import android.device.scanner.configuration.PropertyID;
+<br>mScanManager.openScanner();
+ <br> int[] index = new int[]{ PropertyID.WEDGE_INTENT_ACTION_NAME, PropertyID.WEDGE_INTENT_DATA_STRING_TAG };
+ <br> String[] value = mScanManager.getParameterString(index);
+ <br> //value is string arrary of the parameters
+ </code><br>
+ <code></code></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isSymbologySupported(android.device.scanner.configuration.Symbology)"><!-- --></A><H3>
+isSymbologySupported</H3>
+<PRE>
+public boolean <B>isSymbologySupported</B>(<A HREF="../../android/device/scanner/configuration/Symbology.html" title="enum in android.device.scanner.configuration">Symbology</A>&nbsp;barcodeType)</PRE>
+<DL>
+<DD>Judge whether the device decoder can read specific barcode symbology.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>barcodeType</CODE> - Barcode type is one of the Symbology.
+<DT><B>Returns:</B><DD>False if the decoder is not able to read the particular barcode type, and otherwise true.
+<DT><B>Example:</B><DD>
+             <code>import android.device.scanner.configuration.Symbology
+			 <br>public boolean isQRSupported(ScanManager decoder) {
+ <br>&nbsp;&nbsp;&nbsp;return decoder.isSymbologySupported(Symbology.QRCODE);
+ <br>}</code><br></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isSymbologyEnabled(android.device.scanner.configuration.Symbology)"><!-- --></A><H3>
+isSymbologyEnabled</H3>
+<PRE>
+public boolean <B>isSymbologyEnabled</B>(<A HREF="../../android/device/scanner/configuration/Symbology.html" title="enum in android.device.scanner.configuration">Symbology</A>&nbsp;barcodeType)</PRE>
+<DL>
+<DD>Get current enable setting for a particular barcode symbology.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>barcodeType</CODE> - This get the current enable setting for a particular data
+            type(one of the barcode typein the Symbology class).
+<DT><B>Returns:</B><DD>False if the particular data type is disabled, and otherwise true.
+<DT><B>Example:</B><DD>
+             <code>import android.device.scanner.configuration.Symbology
+			 <br>public boolean isCode128Enabled(ScanManager decoder) {
+ <br>&nbsp;&nbsp;&nbsp;return decoder.isSymbologyEnabled(Symbology.CODE128);
+ <br>}</code><br></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="enableAllSymbologies(boolean)"><!-- --></A><H3>
+enableAllSymbologies</H3>
+<PRE>
+public void <B>enableAllSymbologies</B>(boolean&nbsp;enable)</PRE>
+<DL>
+<DD>Enable or disable all supported symbologies.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>enable</CODE> - Specifies whether or not the symbologies will be enabled. If
+            false, the symbologies are disabled, otherwise they are enabled.
+<DT><B>Returns:</B><DD>none
+<DT><B>Note:</B>When the decoding configuration changes due a call to this method, the Scanner engine must be in the power on state. <br>
+<DT><B>Example:</B><DD>
+             <code>public void enableAll(ScanManager decoder) {
+             <br> &nbsp;&nbsp;&nbsp;decoder.enableAllSymbologies(true);
+             <br>}</code></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="enableSymbology(android.device.scanner.configuration.Symbology, boolean)"><!-- --></A><H3>
+enableSymbology</H3>
+<PRE>
+public void <B>enableSymbology</B>(<A HREF="../../android/device/scanner/configuration/Symbology.html" title="enum in android.device.scanner.configuration">Symbology</A>&nbsp;barcodeType,
+                            boolean&nbsp;enable)</PRE>
+<DL>
+<DD>Enable or disable a barcode symbology type.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>barcodeType</CODE> - Indicates the type of data whose enable setting is to be altered. See <A HREF="../../android/device/scanner/configuration/Symbology.html" title="enum in android.device.scanner.configuration">Symbology</A>.
+			<DD><CODE>enable</CODE> - Specifies whether or not the data type will be enabled. Set to true to enable.
+<DT><B>Returns:</B><DD>none
+<DT><B>Note:</B>
+             When the decoding configuration changes due a call to this
+             method, the Scanner engine must be in the power on state.  <br>
+<DT><B>Example:</B><DD>
+             <code>import android.device.scanner.configuration.Symbology
+			 <br>public void enableCode128(ScanManager decoder) {
+ <br>&nbsp;&nbsp;&nbsp;decoder.enableSymbology(Symbology.CODE128, true);
+ <br>}</code></DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+
+<HR>
+
+</div> </div></div> </body>
+</HTML>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Welcome developer docs for Android</title>
+
+    <style type="text/css">
+
+        * {
+            box-sizing: border-box;
+        }
+        html, body{
+        	width: 100%;
+        	height: 100%;
+        }
+        body {
+            font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Main header */
+
+        #landingPageHeaderContainer {
+            background-color: #02A7D4;
+            color: white;
+            text-align:center;
+        }
+
+        #landingPageHeader {
+            transition: all 0.2s linear;
+            display: block;
+            /*max-width: 768px;*/
+            position: relative;
+            margin: 0 auto;
+            height: 100%;
+            width: 100%;
+            background: url("./API Reference_V4.1.0326/assets/images/LOGO.png")  no-repeat center center;;
+            /*background-repeat:no-repeat;*/
+        }
+
+
+        #landingPageHeaderTextContainer {
+            transition: all 0.2s linear;
+            padding-left: 175px;
+            padding-right: 60px;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .header-text {
+            display: block;
+        }
+
+        #headerWelcomeText {
+            transition: all 0.2s linear;
+            color: #ffcc33;
+            font-size: 2.5em;
+            font-weight: 100;
+            letter-spacing: 4px;
+        }
+
+
+        #headerPlatformText {
+            transition: all 0.2s linear;
+            font-weight: 200;
+        }
+
+        /* Section links */
+        
+        #mainContentContainer {
+            background-color: #ddd;
+        }
+
+        #sectionLinkMainContainer {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-link-grid-container {
+            float: left;
+            padding: 55px 15px 15px 15px;
+            width: 33%;
+            height: 270px;
+        }
+
+        .section-link-container {
+            transition: all 0.2s linear;
+            text-align: center;
+            border-radius: 10px;
+            background-color: transparent;
+            padding: 30px;
+            height: 100%;
+        }
+
+        .section-link-container:hover {
+            background-color: #eee;
+            cursor: pointer;
+        }
+
+        .section-link-icon-container {
+            transition: all 0.2s linear;
+            margin: 0 auto;
+            /*background: #ddd;*/
+            height: 130px;
+            width: 130px;
+            text-align: center;
+            border-radius: 5px;
+            background: url("./API Reference_V4.1.0326/assets/images/API_Reference.png")  no-repeat center center;
+        }
+
+        .section-link-icon-container:hover {
+            /*box-shadow: 0 4px 12px rgba(0,0,0,0.15);*/
+        }
+        .section-link-icon-container1 {
+            transition: all 0.2s linear;
+            margin: 0 auto;
+            /*background: #ddd;*/
+            height: 130px;
+            width: 130px;
+            text-align: center;
+            border-radius: 5px;
+            background: url("./API Reference_V4.1.0326/assets/images/SDK_release.png")  no-repeat center center;
+        }
+        .section-link-icon-container2 {
+            transition: all 0.2s linear;
+            margin: 0 auto;
+            /*background: #ddd;*/
+            height: 130px;
+            width: 130px;
+            text-align: center;
+            border-radius: 5px;
+            background: url("./API Reference_V4.1.0326/assets/images/Samples.png")  no-repeat center center;
+        }
+
+        .section-link-icon-container1:hover {
+            /*box-shadow: 0 4px 12px rgba(0,0,0,0.15);*/
+        }
+
+        .section-link-icon {
+            max-height: 50px;
+            max-width: 50px;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .section-link-heading {
+            color: #505050;
+            letter-spacing: 2px;
+            font-size: 18px;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .section-link-text {
+            margin: 0;
+            font-size: 0.8em;
+            font-weight: 200;
+        }
+
+        /* Main footer */
+
+        #landingPageFooter {
+            display: block;
+            background: white;
+            color: #aaa;
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 30px;
+        }
+
+        #landingPageFooterText {
+            font-size: 0.7em;
+        }
+
+        /* Media queries */
+        @media (max-width: 500px) {
+            #landingPageHeader {
+                height: 160px;
+            }
+
+        
+        
+
+            #landingPageHeaderTextContainer {
+                padding-left: 145px;
+            }
+
+            #headerWelcomeText {
+                font-size: 1.5em;
+            }
+
+
+            .section-link-grid-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+	<div style="height: 100%;">
+    <div id="landingPageHeaderContainer" style="height: 30%;width: 100%;">
+        <header id="landingPageHeader">
+            
+        </header>
+    </div>
+    <div id="mainContentContainer" style="height: 70%;width: 100%;">
+        <div id="sectionLinkMainContainer" class="clearfix">
+            <div class="section-link-grid-container">
+                <div id="APIReference" class="section-link-container">
+                    <div class="section-link-icon-container">
+                      
+                    </div>
+                    <h4 class="section-link-heading">API Reference</h4>
+                </div>
+            </div>
+            
+            
+            <div class="section-link-grid-container">
+                <div id="Samples" class="section-link-container">
+                    <div class="section-link-icon-container2">
+                        
+                    </div>
+                    <h4 class="section-link-heading">Samples</h4>
+                </div>
+            </div>
+            
+            <div class="section-link-grid-container">
+                <div id="SDK_release" class="section-link-container">
+                    <div class="section-link-icon-container1">
+                        
+                    </div>
+                    <h4 class="section-link-heading">SDK Release</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        // Click handlers
+        document.getElementById('APIReference').onclick = function() {
+            window.location.href = './API Reference_V4.1.0326/index.html';
+        }
+        document.getElementById('Samples').onclick = function() {
+            window.location.href = './Samples/Samples_Path.html';
+        }
+        document.getElementById('SDK_release').onclick = function() {
+            window.location.href = './SDK Release/SDK_release_Path.html';
+        }
+    </script>
+</body>
+</html>

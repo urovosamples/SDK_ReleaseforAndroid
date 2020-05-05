@@ -14,16 +14,14 @@ git clone https://github.com/urovosamples/SDK_ReleaseforAndroid.git
 https://github.com/urovosamples/SDK_ReleaseforAndroid/archive/master.zip
 
 - Open the project in [Android Studio][studio].
-- Compile and deploy to your Urovo Android device (such as a Smart POS I9000S model, PDA I6310 model).
+- Compile and deploy to your Urovo Android device (such as a Smart POS I9000S/I9100 model, PDA I6310/DT50/DT40/DT30 model).
 
 Need more information about getting started with Urovo Android device? Check the [official docs][getting-started].
 
 ## Explore the repository
 - API Reference 
-- SDK_release ALL samples for android devices.
-  - sdklibrary sdk develop library
-  - BarcodeScan 
-  - BarcodescanConfig
+- Samples ALL samples for android devices.
+  - ScanManager 
   - DeviceManager
   [Smart POS samples]
 	- IccManagerSample
@@ -32,7 +30,7 @@ Need more information about getting started with Urovo Android device? Check the
 	- PinPadSample
 	- PrinterSample
 	- SLE4442Sample
-
+- SDK_release sdk develop library
 
 
 ## Dependencies

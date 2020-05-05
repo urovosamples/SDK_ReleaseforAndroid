@@ -1,0 +1,3 @@
+table tr:nth-child(even) > th{background: #FFFFFF;}
+
+th{font-weight: 100;}
